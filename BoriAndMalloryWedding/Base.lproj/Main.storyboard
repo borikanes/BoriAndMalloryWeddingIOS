@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rMM-Ur-egH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BoriAndMalloryWedding" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vLt-6w-a96">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="299"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="home_icon" selectedImage="home_icon_highlighted" id="b1J-e4-SRB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1040.8" y="-1035.832083958021"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="SmD-4Z-PoN">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="rMM-Ur-egH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PlX-16-C0J">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.0" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="QFK-18-zyY"/>
+                        <segue destination="MAe-9S-Djg" kind="relationship" relationship="viewControllers" id="mtF-NV-piJ"/>
+                        <segue destination="xEz-sz-oiF" kind="relationship" relationship="viewControllers" id="Mqu-me-Gg7"/>
+                        <segue destination="cXE-Uz-Cur" kind="relationship" relationship="viewControllers" id="6vh-zH-SVc"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WbJ-E4-PfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Schedule-->
+        <scene sceneID="Mpm-ES-SNp">
+            <objects>
+                <viewController id="MAe-9S-Djg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s50-al-6SB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="3U3-kz-CNE"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Schedule" image="schedule_icon" selectedImage="schedule_icon_highlighted" id="hbl-BY-UBv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xfg-bA-Zdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1041" y="-304"/>
+        </scene>
+        <!--Seating-->
+        <scene sceneID="n2Z-qC-aio">
+            <objects>
+                <viewController id="xEz-sz-oiF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D7A-Qy-DbS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="MN4-V2-Hha"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Seating" image="seating_icon" selectedImage="seating_icon_highlighted" id="fMa-Hr-ge9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XAf-Yg-SEZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1041" y="432"/>
+        </scene>
+        <!--Food-->
+        <scene sceneID="of3-WQ-wDd">
+            <objects>
+                <viewController id="cXE-Uz-Cur" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qvA-hJ-EBv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="4qX-Gi-3rm"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Food" image="food_icon" selectedImage="food_icon_highlighted" id="7ze-LT-AVz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rF4-nP-9hk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1041" y="1313"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="food_icon" width="28" height="23"/>
+        <image name="food_icon_highlighted" width="28" height="23"/>
+        <image name="home_icon" width="29" height="28"/>
+        <image name="home_icon_highlighted" width="29" height="28"/>
+        <image name="schedule_icon" width="27" height="28"/>
+        <image name="schedule_icon_highlighted" width="27" height="28"/>
+        <image name="seating_icon" width="26" height="25"/>
+        <image name="seating_icon_highlighted" width="26" height="25"/>
+    </resources>
+</document>
