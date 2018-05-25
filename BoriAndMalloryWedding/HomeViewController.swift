@@ -10,17 +10,24 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet var imageHeightConstraint: NSLayoutConstraint!
     @IBOutlet var topImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    fileprivate func setupViews() {
+        // set image height constraint based on iphone
+        if isIphone5AndBelow() {
+            imageHeightConstraint.constant = 215.0
+        }
     }
     
 

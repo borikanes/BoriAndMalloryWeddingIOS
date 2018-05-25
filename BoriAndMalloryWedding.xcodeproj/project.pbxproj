@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		51B71A4320B7A4F20073DB3D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B71A4220B7A4F20073DB3D /* HomeViewController.swift */; };
+		51B71A4620B8AD5A0073DB3D /* UtilityExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B71A4520B8AD5A0073DB3D /* UtilityExtensions.swift */; };
+		51B71A4920B8B7850073DB3D /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B71A4820B8B7850073DB3D /* HelperFunctions.swift */; };
 		51B8C52F2084204D00FD5358 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B8C52E2084204D00FD5358 /* AppDelegate.swift */; };
 		51B8C5312084204D00FD5358 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B8C5302084204D00FD5358 /* ViewController.swift */; };
 		51B8C5342084204D00FD5358 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51B8C5322084204D00FD5358 /* Main.storyboard */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		51B71A4220B7A4F20073DB3D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		51B71A4520B8AD5A0073DB3D /* UtilityExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityExtensions.swift; sourceTree = "<group>"; };
+		51B71A4820B8B7850073DB3D /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		51B8C52B2084204D00FD5358 /* BoriAndMalloryWedding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoriAndMalloryWedding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51B8C52E2084204D00FD5358 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51B8C5302084204D00FD5358 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +86,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51B71A4420B8AD190073DB3D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				51B71A4520B8AD5A0073DB3D /* UtilityExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		51B71A4720B8B7670073DB3D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				51B71A4820B8B7850073DB3D /* HelperFunctions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		51B8C5222084204C00FD5358 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +126,8 @@
 		51B8C52D2084204D00FD5358 /* BoriAndMalloryWedding */ = {
 			isa = PBXGroup;
 			children = (
+				51B71A4720B8B7670073DB3D /* Utilities */,
+				51B71A4420B8AD190073DB3D /* Extensions */,
 				51B8C52E2084204D00FD5358 /* AppDelegate.swift */,
 				51B8C5302084204D00FD5358 /* ViewController.swift */,
 				51B8C5322084204D00FD5358 /* Main.storyboard */,
@@ -287,8 +309,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51B71A4920B8B7850073DB3D /* HelperFunctions.swift in Sources */,
 				51B8C5312084204D00FD5358 /* ViewController.swift in Sources */,
 				51B8C52F2084204D00FD5358 /* AppDelegate.swift in Sources */,
+				51B71A4620B8AD5A0073DB3D /* UtilityExtensions.swift in Sources */,
 				51B71A4320B7A4F20073DB3D /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
