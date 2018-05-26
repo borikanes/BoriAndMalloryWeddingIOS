@@ -10,6 +10,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet var timerViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet var leftViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet var imageHeightConstraint: NSLayoutConstraint!
     @IBOutlet var topImageView: UIImageView!
     @IBOutlet var timerTopConstraintToScrollView: NSLayoutConstraint!
@@ -18,6 +20,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.setupViews()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,7 +33,17 @@ class HomeViewController: UIViewController {
         if isIphone5AndBelow() {
             imageHeightConstraint.constant = 215.0
         } else if isIphone10() {
+            //TODO: change this constant
             imageHeightConstraint.constant = 215.0
+        } else if isIpadPro129() {
+            imageHeightConstraint.constant = imageHeightConstraint.constant + 115.0
+            leftViewHeightConstraint.constant = leftViewHeightConstraint.constant + 160.0
+            timerViewHeightConstraint.constant = timerViewHeightConstraint.constant + 58.0
+        } else if isPlusPhone() {
+            timerViewHeightConstraint.constant = timerViewHeightConstraint.constant + 20.0
+            imageHeightConstraint.constant = imageHeightConstraint.constant + 35.0
+            leftViewHeightConstraint.constant = leftViewHeightConstraint.constant + 30.0
+            timerTopConstraintToScrollView.constant = timerTopConstraintToScrollView.constant + 20.0
         }
     }
     
