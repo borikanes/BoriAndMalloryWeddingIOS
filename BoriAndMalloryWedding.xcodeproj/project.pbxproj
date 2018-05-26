@@ -86,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5150865020B8C6800084D15C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				51B71A4220B7A4F20073DB3D /* HomeViewController.swift */,
+				51B8C5302084204D00FD5358 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		51B71A4420B8AD190073DB3D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,15 +135,14 @@
 		51B8C52D2084204D00FD5358 /* BoriAndMalloryWedding */ = {
 			isa = PBXGroup;
 			children = (
+				5150865020B8C6800084D15C /* ViewControllers */,
 				51B71A4720B8B7670073DB3D /* Utilities */,
 				51B71A4420B8AD190073DB3D /* Extensions */,
 				51B8C52E2084204D00FD5358 /* AppDelegate.swift */,
-				51B8C5302084204D00FD5358 /* ViewController.swift */,
 				51B8C5322084204D00FD5358 /* Main.storyboard */,
 				51B8C5352084204E00FD5358 /* Assets.xcassets */,
 				51B8C5372084204E00FD5358 /* LaunchScreen.storyboard */,
 				51B8C53A2084204E00FD5358 /* Info.plist */,
-				51B71A4220B7A4F20073DB3D /* HomeViewController.swift */,
 			);
 			path = BoriAndMalloryWedding;
 			sourceTree = "<group>";

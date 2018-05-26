@@ -12,10 +12,12 @@ class HomeViewController: UIViewController {
 
     @IBOutlet var imageHeightConstraint: NSLayoutConstraint!
     @IBOutlet var topImageView: UIImageView!
+    @IBOutlet var timerTopConstraintToScrollView: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.setupViews()
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,6 +28,8 @@ class HomeViewController: UIViewController {
     fileprivate func setupViews() {
         // set image height constraint based on iphone
         if isIphone5AndBelow() {
+            imageHeightConstraint.constant = 215.0
+        } else if isIphone10() {
             imageHeightConstraint.constant = 215.0
         }
     }
