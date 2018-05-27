@@ -7,13 +7,7 @@
 //
 
 import UIKit
-/**
- if let dir = ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] {
- print(dir)
- } else {
- print("Couldn't get screen")
- }
- */
+
 func isIphone5AndBelow() -> Bool {
     if let currentModelSimulator = ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] {
         return (currentModelSimulator.range(of: "iPhone5") != nil ||

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14112" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rMM-Ur-egH">
-    <device id="retina5_5" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rMM-Ur-egH">
+    <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="BoriAndMalloryWedding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_image_default" translatesAutoresizingMaskIntoConstraints="NO" id="vLt-6w-a96">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="450"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="UWT-FO-MB5"/>
                                     <constraint firstAttribute="height" constant="450" id="lPp-Vf-xKW"/>
@@ -42,10 +42,10 @@
                                 </variation>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mvF-Ij-9lj">
-                                <rect key="frame" x="0.0" y="300" width="414" height="387"/>
+                                <rect key="frame" x="0.0" y="450" width="1024" height="867"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u0w-nw-mzI" userLabel="Timer View">
-                                        <rect key="frame" x="8" y="8" width="398" height="85"/>
+                                        <rect key="frame" x="20" y="20" width="984" height="160"/>
                                         <color key="backgroundColor" red="0.94901960780000005" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="85" id="WBg-hl-TCm"/>
@@ -71,7 +71,7 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tGK-lK-6FI" userLabel="Left View">
-                                        <rect key="frame" x="8" y="107" width="193.66666666666666" height="184"/>
+                                        <rect key="frame" x="20" y="210" width="477" height="280"/>
                                         <color key="backgroundColor" red="0.0" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="184" id="SVp-UX-LeX">
@@ -97,7 +97,7 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F4y-TL-X3Q" userLabel="Right View">
-                                        <rect key="frame" x="212.66666666666663" y="107" width="193.33333333333337" height="184"/>
+                                        <rect key="frame" x="527" y="210" width="477" height="280"/>
                                         <color key="backgroundColor" red="0.50196078430000002" green="0.0" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                 </subviews>
@@ -167,8 +167,14 @@
                     <tabBarItem key="tabBarItem" title="Home" image="home_icon" selectedImage="home_icon_highlighted" id="b1J-e4-SRB"/>
                     <connections>
                         <outlet property="imageHeightConstraint" destination="UWT-FO-MB5" id="XCz-g2-EGl"/>
+                        <outlet property="imageHeightConstraintRR" destination="lPp-Vf-xKW" id="Lrf-Vc-R1R"/>
+                        <outlet property="leftView" destination="tGK-lK-6FI" id="4b3-4t-KkD"/>
                         <outlet property="leftViewHeightConstraint" destination="SVp-UX-LeX" id="NA6-cG-5Vb"/>
+                        <outlet property="leftViewHeightConstraintRR" destination="SVp-UX-LeX" id="FuF-H9-IBt"/>
+                        <outlet property="rightView" destination="F4y-TL-X3Q" id="sET-0D-MZ0"/>
+                        <outlet property="timerHeightConstraintCR" destination="WBg-hl-TCm" id="10X-rX-Yb7"/>
                         <outlet property="timerTopConstraintToScrollView" destination="XfV-X3-dOv" id="JcL-YW-4eU"/>
+                        <outlet property="timerView" destination="u0w-nw-mzI" id="MD4-cx-yOd"/>
                         <outlet property="timerViewHeightConstraint" destination="s9A-Ti-wIw" id="Lv1-oY-Bxb"/>
                         <outlet property="topImageView" destination="vLt-6w-a96" id="Wxe-hw-1kz"/>
                     </connections>
@@ -209,7 +215,7 @@
             <objects>
                 <viewController id="MAe-9S-Djg" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s50-al-6SB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="3U3-kz-CNE"/>
@@ -225,7 +231,7 @@
             <objects>
                 <viewController id="xEz-sz-oiF" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D7A-Qy-DbS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="MN4-V2-Hha"/>
@@ -241,7 +247,7 @@
             <objects>
                 <viewController id="cXE-Uz-Cur" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qvA-hJ-EBv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4qX-Gi-3rm"/>
