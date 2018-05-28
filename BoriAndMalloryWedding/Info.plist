@@ -24,6 +24,7 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Cookie-Regular</string>
 		<string>Satisfy-Regular</string>
 		<string>GreatVibes-Regular</string>
 		<string>MeriendaOne-Regular</string>

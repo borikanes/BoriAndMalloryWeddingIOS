@@ -10,6 +10,7 @@
 		51B71A4320B7A4F20073DB3D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B71A4220B7A4F20073DB3D /* HomeViewController.swift */; };
 		51B71A4620B8AD5A0073DB3D /* UtilityExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B71A4520B8AD5A0073DB3D /* UtilityExtensions.swift */; };
 		51B71A4920B8B7850073DB3D /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B71A4820B8B7850073DB3D /* HelperFunctions.swift */; };
+		51B71A4B20BBCBF90073DB3D /* Cookie-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51B71A4A20BBCBF80073DB3D /* Cookie-Regular.ttf */; };
 		51B8C52F2084204D00FD5358 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B8C52E2084204D00FD5358 /* AppDelegate.swift */; };
 		51B8C5312084204D00FD5358 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B8C5302084204D00FD5358 /* ViewController.swift */; };
 		51B8C5342084204D00FD5358 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51B8C5322084204D00FD5358 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		51B71A4220B7A4F20073DB3D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		51B71A4520B8AD5A0073DB3D /* UtilityExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityExtensions.swift; sourceTree = "<group>"; };
 		51B71A4820B8B7850073DB3D /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
+		51B71A4A20BBCBF80073DB3D /* Cookie-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cookie-Regular.ttf"; sourceTree = "<group>"; };
 		51B8C52B2084204D00FD5358 /* BoriAndMalloryWedding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoriAndMalloryWedding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51B8C52E2084204D00FD5358 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51B8C5302084204D00FD5358 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 		51B8C55D2084206E00FD5358 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				51B71A4A20BBCBF80073DB3D /* Cookie-Regular.ttf */,
 				51B8C5612084218400FD5358 /* MeriendaOne-Regular.ttf */,
 				51B8C560208420C100FD5358 /* GreatVibes-Regular.ttf */,
 				51B8C55E2084208500FD5358 /* Satisfy-Regular.ttf */,
@@ -289,6 +292,7 @@
 			files = (
 				51B8C563208421F400FD5358 /* GreatVibes-Regular.ttf in Resources */,
 				51B8C5622084218400FD5358 /* MeriendaOne-Regular.ttf in Resources */,
+				51B71A4B20BBCBF90073DB3D /* Cookie-Regular.ttf in Resources */,
 				51B8C5392084204E00FD5358 /* LaunchScreen.storyboard in Resources */,
 				51B8C55F2084208500FD5358 /* Satisfy-Regular.ttf in Resources */,
 				51B8C5362084204E00FD5358 /* Assets.xcassets in Resources */,

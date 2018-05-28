@@ -9,10 +9,10 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
     @IBOutlet var leftViewHeightConstraintRR: NSLayoutConstraint!
     @IBOutlet var imageHeightConstraintRR: NSLayoutConstraint!
-    @IBOutlet var timerViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet var timerViewHeightConstraintRR: NSLayoutConstraint!
     @IBOutlet var leftViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet var imageHeightConstraint: NSLayoutConstraint!
     @IBOutlet var topImageView: UIImageView!
@@ -21,6 +21,9 @@ class HomeViewController: UIViewController {
     @IBOutlet var rightView: UIView!
     @IBOutlet var leftView: UIView!
     @IBOutlet var timerView: UIView!
+    
+    // Labels
+    @IBOutlet var numberOfDaysLabel: UILabel!
     
     let viewsCornerRadius = 7.0
     
@@ -59,12 +62,11 @@ class HomeViewController: UIViewController {
             setDropShadow(on: leftView, bounds: nil)
             
         } else if isIpadPro129() {
-
-            imageHeightConstraintRR.constant = imageHeightConstraintRR.constant + 115.0
-            leftViewHeightConstraintRR.constant = leftViewHeightConstraintRR.constant + 160.0
-            timerViewHeightConstraint.constant = timerViewHeightConstraint.constant + 158.0
-            
+            imageHeightConstraintRR.constant = imageHeightConstraintRR.constant + 215.0
+            leftViewHeightConstraintRR.constant = leftViewHeightConstraintRR.constant + 260.0
+            timerViewHeightConstraintRR.constant = 300
             self.view.layoutIfNeeded()
+            
             let leftViewBounds = CGRect(x: leftView.bounds.origin.x, y: leftView.bounds.origin.y, width: leftView.bounds.size.width, height: leftView.bounds.size.height)
             setDropShadow(on: leftView, bounds: leftViewBounds)
             let timerViewBounds = CGRect(x: timerView.bounds.origin.x, y: timerView.bounds.origin.y, width: timerView.bounds.size.width, height: timerView.bounds.size.height)
