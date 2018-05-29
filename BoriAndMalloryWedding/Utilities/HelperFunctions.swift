@@ -30,9 +30,9 @@ func isIphone10() -> Bool {
         return (currentModelSimulator.range(of: "iPhone10,3") != nil ||
             currentModelSimulator.range(of: "iPhone10,6") != nil)
     }
-    
+
     let currentModel = UIDevice.current.modelName
-    
+
     return (currentModel.range(of: "iPhone10,3") != nil ||
         currentModel.range(of: "iPhone10,6") != nil)
 }
@@ -44,7 +44,7 @@ func isIpadPro129() -> Bool {
             currentModelSimulator.range(of: "iPad7,1") != nil ||
             currentModelSimulator.range(of: "iPad7,2") != nil )
     }
-    
+
     let currentModel = UIDevice.current.modelName
 
     return (currentModel.range(of: "iPad6,7") != nil ||
@@ -62,9 +62,9 @@ func isPlusPhone() -> Bool {
             currentModelSimulator.range(of: "iPhone10,2") != nil ||
             currentModelSimulator.range(of: "iPhone10,5") != nil)
     }
-    
+
     let currentModel = UIDevice.current.modelName
-    
+
     return (currentModel.range(of: "iPhone7,1") != nil ||
         currentModel.range(of: "iPhone8,2") != nil ||
         currentModel.range(of: "iPhone9,2") != nil ||
@@ -78,9 +78,9 @@ func isIpad105() -> Bool {
         return (currentModelSimulator.range(of: "iPad7,4") != nil ||
             currentModelSimulator.range(of: "iPad7,3") != nil )
     }
-    
+
     let currentModel = UIDevice.current.modelName
-    
+
     return (currentModel.range(of: "iPad7,4") != nil ||
         currentModel.range(of: "iPad7,3") != nil )
 }
