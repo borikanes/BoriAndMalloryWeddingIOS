@@ -1,14 +1,15 @@
 //
-//  BoriAndMalloryWeddingUITests.swift
+//  HomeViewControllerTest.swift
 //  BoriAndMalloryWeddingUITests
 //
-//  Created by Bori Oludemi on 4/15/18.
+//  Created by Bori Oludemi on 5/29/18.
 //  Copyright © 2018 borikanes. All rights reserved.
 //
 
 import XCTest
 
-class BoriAndMalloryWeddingUITests: XCTestCase {
+class HomeViewControllerTest: XCTestCase {
+    let app = XCUIApplication()
 
     override func setUp() {
         super.setUp()
@@ -28,9 +29,18 @@ class BoriAndMalloryWeddingUITests: XCTestCase {
         super.tearDown()
     }
 
-    func testExample() {
+    func testUIElements() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+        let elementsQuery = app.scrollViews.otherElements
+        XCTAssert(elementsQuery.staticTexts["Time to wedding day"].exists)
+        XCTAssert(elementsQuery.staticTexts["College Park"].exists)
+        XCTAssert(elementsQuery.staticTexts["&"].exists)
+        XCTAssert(elementsQuery.staticTexts["Laurel, MD"].exists)
+        XCTAssert(elementsQuery.staticTexts["September"].exists)
+        XCTAssert(elementsQuery.staticTexts["22"].exists)
+        XCTAssert(elementsQuery.staticTexts["#maluwabori"].exists)
+        XCTAssert(app.staticTexts["Bori & Mallory"].exists)
 
+    }
 }
