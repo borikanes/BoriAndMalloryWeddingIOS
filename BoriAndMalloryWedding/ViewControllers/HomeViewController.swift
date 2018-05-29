@@ -10,8 +10,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet var leftViewHeightConstraintCR: NSLayoutConstraint!
     @IBOutlet var leftViewHeightConstraintRR: NSLayoutConstraint!
-    @IBOutlet var imageHeightConstraintRR: NSLayoutConstraint!
     @IBOutlet var timerViewHeightConstraintRR: NSLayoutConstraint!
     @IBOutlet var leftViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet var imageHeightConstraint: NSLayoutConstraint!
@@ -21,17 +21,31 @@ class HomeViewController: UIViewController {
     @IBOutlet var rightView: UIView!
     @IBOutlet var leftView: UIView!
     @IBOutlet var timerView: UIView!
+    @IBOutlet var imageHeightConstraintRR: NSLayoutConstraint!
     
     // Labels
     @IBOutlet var numberOfDaysLabel: UILabel!
+    @IBOutlet var collegeParkLabel: UILabel!
+    @IBOutlet var laurelLabel: UILabel!
+    @IBOutlet var septemberLabel: UILabel!
+    @IBOutlet var hashtagLabel: UILabel!
+    @IBOutlet var dayLabel: UILabel!
     
     let viewsCornerRadius = 7.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.setupViews()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
 
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.setupViews()
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,16 +57,23 @@ class HomeViewController: UIViewController {
         // set image height constraint based on iphone
         if isIphone5AndBelow() {
             
-            imageHeightConstraint.constant = 215.0
+            imageHeightConstraint.constant = 255.0
+            leftViewHeightConstraintCR.constant = 144.0
+            timerHeightConstraintCR.constant = 85.0
+            collegeParkLabel.font = collegeParkLabel.font.withSize(30)
+            laurelLabel.font = laurelLabel.font.withSize(30)
             
-            self.view.layoutIfNeeded()
+            septemberLabel.font = septemberLabel.font.withSize(30)
+            hashtagLabel.font = hashtagLabel.font.withSize(30)
+            dayLabel.font = dayLabel.font.withSize(30)
+            
+
             setDropShadow(on: rightView, bounds: nil)
             setDropShadow(on: leftView, bounds: nil)
             setDropShadow(on: timerView, bounds: nil)
         } else if isIphone10() {
             imageHeightConstraint.constant = 380.0
-            timerHeightConstraintCR.constant = timerHeightConstraintCR.constant + 20.0
-            
+            timerHeightConstraintCR.constant = timerHeightConstraintCR.constant + 10.0
             self.view.layoutIfNeeded()
             // Because constraints have changed for this particular iphone, need to set
             // height of view to the constraint set here in order for the shadow to look good.
@@ -61,36 +82,53 @@ class HomeViewController: UIViewController {
             setDropShadow(on: rightView, bounds: nil)
             setDropShadow(on: leftView, bounds: nil)
             
-        } else if isIpadPro129() {
-            imageHeightConstraintRR.constant = imageHeightConstraintRR.constant + 215.0
-            leftViewHeightConstraintRR.constant = leftViewHeightConstraintRR.constant + 260.0
-            timerViewHeightConstraintRR.constant = 300
-            self.view.layoutIfNeeded()
+            self.numberOfDaysLabel.font = numberOfDaysLabel.font.withSize(35)
             
-            let leftViewBounds = CGRect(x: leftView.bounds.origin.x, y: leftView.bounds.origin.y, width: leftView.bounds.size.width, height: leftView.bounds.size.height)
+        } else if isIpadPro129() {
+            imageHeightConstraintRR.constant = imageHeightConstraintRR.constant + 90.0
+            leftViewHeightConstraintRR.constant = leftViewHeightConstraintRR.constant + 60.0
+            timerViewHeightConstraintRR.constant = timerViewHeightConstraintRR.constant + 30.0
+            
+            collegeParkLabel.font = collegeParkLabel.font.withSize(75)
+            laurelLabel.font = laurelLabel.font.withSize(75)
+            septemberLabel.font = septemberLabel.font.withSize(75)
+            hashtagLabel.font = hashtagLabel.font.withSize(75)
+            dayLabel.font = dayLabel.font.withSize(75)
+            self.numberOfDaysLabel.font = numberOfDaysLabel.font.withSize(55)
+            
+            let leftViewBounds = CGRect(x: leftView.bounds.origin.x, y: leftView.bounds.origin.y, width: leftView.bounds.size.width, height: leftViewHeightConstraintRR.constant)
             setDropShadow(on: leftView, bounds: leftViewBounds)
-            let timerViewBounds = CGRect(x: timerView.bounds.origin.x, y: timerView.bounds.origin.y, width: timerView.bounds.size.width, height: timerView.bounds.size.height)
+            let timerViewBounds = CGRect(x: timerView.bounds.origin.x, y: timerView.bounds.origin.y, width: timerView.bounds.size.width, height: timerViewHeightConstraintRR.constant)
             setDropShadow(on: timerView, bounds: timerViewBounds)
-            setDropShadow(on: rightView, bounds: nil)
+            setDropShadow(on: rightView, bounds: leftViewBounds)
             
         } else if isPlusPhone() {
-            
-            timerHeightConstraintCR.constant = timerHeightConstraintCR.constant + 20.0
-            imageHeightConstraint.constant = imageHeightConstraint.constant + 35.0
-            leftViewHeightConstraint.constant = leftViewHeightConstraint.constant + 30.0
-            timerTopConstraintToScrollView.constant = timerTopConstraintToScrollView.constant + 20.0
-            
-            self.view.layoutIfNeeded()
+            timerHeightConstraintCR.constant = timerHeightConstraintCR.constant + 5.0
+            imageHeightConstraint.constant = imageHeightConstraint.constant + 25.0
+            timerTopConstraintToScrollView.constant = timerTopConstraintToScrollView.constant + 2.0
+
             setDropShadow(on: rightView, bounds: nil)
-            
-            let leftViewBounds = CGRect(x: leftView.bounds.origin.x, y: leftView.bounds.origin.y, width: leftView.bounds.size.width, height: leftView.bounds.size.height)
+            let leftViewBounds = CGRect(x: leftView.bounds.origin.x, y: leftView.bounds.origin.y, width: leftView.bounds.size.width, height: leftViewHeightConstraintCR.constant)
             setDropShadow(on: leftView, bounds: leftViewBounds)
-            
-            let timerViewBounds = CGRect(x: timerView.bounds.origin.x, y: timerView.bounds.origin.y, width: timerView.bounds.size.width, height: timerView.bounds.size.height)
+            let timerViewBounds = CGRect(x: timerView.bounds.origin.x, y: timerView.bounds.origin.y, width: timerView.bounds.size.width, height: timerHeightConstraintCR.constant)
             setDropShadow(on: timerView, bounds: timerViewBounds)
+            
+            self.numberOfDaysLabel.font = numberOfDaysLabel.font.withSize(32)
+            
+        } else if isIpad105() {
+            imageHeightConstraintRR.constant = imageHeightConstraintRR.constant + 30.0
+            leftViewHeightConstraintRR.constant = leftViewHeightConstraintRR.constant + 10.0
+            timerViewHeightConstraintRR.constant = timerViewHeightConstraintRR.constant + 10.0
+            
+            let leftViewBounds = CGRect(x: leftView.bounds.origin.x, y: leftView.bounds.origin.y, width: leftView.bounds.size.width, height: leftViewHeightConstraintRR.constant)
+            setDropShadow(on: leftView, bounds: leftViewBounds)
+            let timerViewBounds = CGRect(x: timerView.bounds.origin.x, y: timerView.bounds.origin.y, width: timerView.bounds.size.width, height: timerViewHeightConstraintRR.constant)
+            setDropShadow(on: timerView, bounds: timerViewBounds)
+            setDropShadow(on: rightView, bounds: leftViewBounds)
+            self.numberOfDaysLabel.font = numberOfDaysLabel.font.withSize(40)
+            
         } else {
             self.view.layoutIfNeeded()
-            
             setDropShadow(on: rightView, bounds: nil)
             setDropShadow(on: leftView, bounds: nil)
             setDropShadow(on: timerView, bounds: nil)

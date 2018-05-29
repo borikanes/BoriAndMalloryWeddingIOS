@@ -72,3 +72,15 @@ func isPlusPhone() -> Bool {
         currentModel.range(of: "iPhone10,2") != nil ||
         currentModel.range(of: "iPhone10,5") != nil)
 }
+
+func isIpad105() -> Bool {
+    if let currentModelSimulator = ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] {
+        return (currentModelSimulator.range(of: "iPad7,4") != nil ||
+            currentModelSimulator.range(of: "iPad7,3") != nil )
+    }
+    
+    let currentModel = UIDevice.current.modelName
+    
+    return (currentModel.range(of: "iPad7,4") != nil ||
+        currentModel.range(of: "iPad7,3") != nil )
+}
