@@ -11,6 +11,7 @@
 		51B71A4620B8AD5A0073DB3D /* UtilityExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B71A4520B8AD5A0073DB3D /* UtilityExtensions.swift */; };
 		51B71A4920B8B7850073DB3D /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B71A4820B8B7850073DB3D /* HelperFunctions.swift */; };
 		51B71A4B20BBCBF90073DB3D /* Cookie-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51B71A4A20BBCBF80073DB3D /* Cookie-Regular.ttf */; };
+		51B71A4D20BD14660073DB3D /* HomeViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B71A4C20BD14660073DB3D /* HomeViewControllerTest.swift */; };
 		51B8C52F2084204D00FD5358 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B8C52E2084204D00FD5358 /* AppDelegate.swift */; };
 		51B8C5312084204D00FD5358 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B8C5302084204D00FD5358 /* ViewController.swift */; };
 		51B8C5342084204D00FD5358 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51B8C5322084204D00FD5358 /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		51B71A4520B8AD5A0073DB3D /* UtilityExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityExtensions.swift; sourceTree = "<group>"; };
 		51B71A4820B8B7850073DB3D /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		51B71A4A20BBCBF80073DB3D /* Cookie-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cookie-Regular.ttf"; sourceTree = "<group>"; };
+		51B71A4C20BD14660073DB3D /* HomeViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTest.swift; sourceTree = "<group>"; };
 		51B8C52B2084204D00FD5358 /* BoriAndMalloryWedding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoriAndMalloryWedding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51B8C52E2084204D00FD5358 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51B8C5302084204D00FD5358 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			children = (
 				51B8C54E2084204E00FD5358 /* BoriAndMalloryWeddingUITests.swift */,
 				51B8C5502084204E00FD5358 /* Info.plist */,
+				51B71A4C20BD14660073DB3D /* HomeViewControllerTest.swift */,
 			);
 			path = BoriAndMalloryWeddingUITests;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51B8C54F2084204E00FD5358 /* BoriAndMalloryWeddingUITests.swift in Sources */,
+				51B71A4D20BD14660073DB3D /* HomeViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

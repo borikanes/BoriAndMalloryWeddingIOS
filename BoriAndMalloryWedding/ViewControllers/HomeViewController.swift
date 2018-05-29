@@ -36,11 +36,15 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self,
+           selector: #selector(updateDayLabel),
+           name: NSNotification.Name.UIApplicationWillEnterForeground,
+           object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        updateDayLabel()
     }
     
     override func viewDidLayoutSubviews() {
@@ -160,15 +164,39 @@ class HomeViewController: UIViewController {
         view.layer.rasterizationScale = 1
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @objc func updateDayLabel() {
+        var dateText = "Wedding day is near"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        guard let weddingDate = dateFormatter.date(from: "2018-09-22T11:00:00") else {
+            numberOfDaysLabel.text = dateText
+            return
+        }
+        // Current date
+        let date = Date()
+        
+        let timeDifferenceInDays = Int(weddingDate.timeIntervalSince(date) / (60 * 60 * 24))
+        
+        if timeDifferenceInDays > 1 {
+            dateText = "\(timeDifferenceInDays) days"
+        } else if timeDifferenceInDays == 1 {
+            dateText = "\(timeDifferenceInDays) day"
+        } else if timeDifferenceInDays == 0 {
+            let timeDifferenceInHours = Int(weddingDate.timeIntervalSince(date) / (60 * 60))
+            if timeDifferenceInHours > 1 {
+                dateText = "\(timeDifferenceInHours) hours"
+            } else if timeDifferenceInHours == 1 {
+                dateText = "\(timeDifferenceInHours) hour"
+            } else if timeDifferenceInHours == 0 {
+                dateText = "Happens this hour"
+            } else {
+                dateText = "Been there, done that"
+            }
+        } else {
+            dateText = "Been there, done that"
+        }
+        
+        numberOfDaysLabel.text = dateText
     }
-    */
 
 }
