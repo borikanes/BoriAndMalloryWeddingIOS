@@ -22,6 +22,8 @@
 		51B8C55F2084208500FD5358 /* Satisfy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51B8C55E2084208500FD5358 /* Satisfy-Regular.ttf */; };
 		51B8C5622084218400FD5358 /* MeriendaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51B8C5612084218400FD5358 /* MeriendaOne-Regular.ttf */; };
 		51B8C563208421F400FD5358 /* GreatVibes-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51B8C560208420C100FD5358 /* GreatVibes-Regular.ttf */; };
+		51E66DDE20BFC503002DFAD1 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E66DDD20BFC503002DFAD1 /* GradientView.swift */; };
+		51E66DE020BFCAC2002DFAD1 /* BMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E66DDF20BFCAC2002DFAD1 /* BMView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		51B8C55E2084208500FD5358 /* Satisfy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satisfy-Regular.ttf"; sourceTree = "<group>"; };
 		51B8C560208420C100FD5358 /* GreatVibes-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GreatVibes-Regular.ttf"; sourceTree = "<group>"; };
 		51B8C5612084218400FD5358 /* MeriendaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MeriendaOne-Regular.ttf"; sourceTree = "<group>"; };
+		51E66DDD20BFC503002DFAD1 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		51E66DDF20BFCAC2002DFAD1 /* BMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,7 @@
 		51B8C52D2084204D00FD5358 /* BoriAndMalloryWedding */ = {
 			isa = PBXGroup;
 			children = (
+				51E66DDC20BFC4B9002DFAD1 /* Views */,
 				5150865020B8C6800084D15C /* ViewControllers */,
 				51B71A4720B8B7670073DB3D /* Utilities */,
 				51B71A4420B8AD190073DB3D /* Extensions */,
@@ -187,6 +192,15 @@
 				51B8C55E2084208500FD5358 /* Satisfy-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		51E66DDC20BFC4B9002DFAD1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				51E66DDD20BFC503002DFAD1 /* GradientView.swift */,
+				51E66DDF20BFCAC2002DFAD1 /* BMView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +357,8 @@
 			files = (
 				51B71A4920B8B7850073DB3D /* HelperFunctions.swift in Sources */,
 				51B8C5312084204D00FD5358 /* ViewController.swift in Sources */,
+				51E66DDE20BFC503002DFAD1 /* GradientView.swift in Sources */,
+				51E66DE020BFCAC2002DFAD1 /* BMView.swift in Sources */,
 				51B8C52F2084204D00FD5358 /* AppDelegate.swift in Sources */,
 				51B71A4620B8AD5A0073DB3D /* UtilityExtensions.swift in Sources */,
 				51B71A4320B7A4F20073DB3D /* HomeViewController.swift in Sources */,
