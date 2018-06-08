@@ -24,13 +24,13 @@ class GradientView: UIView {
             updateView()
         }
     }
-    
+
     override class var layerClass: AnyClass {
         get {
             return CAGradientLayer.self
         }
     }
-    
+
     func updateView() {
         let layer = self.layer as! CAGradientLayer
         layer.colors = [firstColor, secondColor].map{$0.cgColor}
