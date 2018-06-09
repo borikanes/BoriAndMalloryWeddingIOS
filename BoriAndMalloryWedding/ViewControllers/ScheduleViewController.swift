@@ -10,6 +10,7 @@ import UIKit
 
 class ScheduleViewController: UIViewController {
 
+    @IBOutlet var firstStackTopConstraint: NSLayoutConstraint!
     let iphoneSmallFont = CGFloat(27)
 
     override func viewDidLoad() {
@@ -24,8 +25,8 @@ class ScheduleViewController: UIViewController {
     }
 
     private func setupView() {
-        if isIphone5AndBelow() {
-
+        if isIphone10() {
+            firstStackTopConstraint.constant += 60.0
         }
     }
 
