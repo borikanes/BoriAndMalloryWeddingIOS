@@ -18,7 +18,7 @@ class GradientView: UIView {
             updateView()
         }
     }
-    
+
     @IBInspectable var secondColor: UIColor = UIColor.clear {
         didSet {
             updateView()
@@ -26,13 +26,12 @@ class GradientView: UIView {
     }
 
     override class var layerClass: AnyClass {
-        get {
-            return CAGradientLayer.self
-        }
+        return CAGradientLayer.self
     }
 
     func updateView() {
-        let layer = self.layer as! CAGradientLayer
-        layer.colors = [firstColor, secondColor].map{$0.cgColor}
+        if let layer = self.layer as? CAGradientLayer {
+            layer.colors = [firstColor, secondColor].map { $0.cgColor }
+        }
     }
 }
