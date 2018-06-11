@@ -388,7 +388,7 @@
                                                 </constraints>
                                             </stackView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="church_image" translatesAutoresizingMaskIntoConstraints="NO" id="4tr-2z-RPx">
-                                                <rect key="frame" x="207" y="16.5" width="88" height="83"/>
+                                                <rect key="frame" x="194" y="16.5" width="101" height="83"/>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dOp-yC-D3F">
                                                 <rect key="frame" x="8" y="24" width="86.5" height="67"/>
@@ -422,6 +422,7 @@
                                             <constraint firstItem="dOp-yC-D3F" firstAttribute="centerY" secondItem="Zv0-YL-xGm" secondAttribute="centerY" id="WcL-Zo-JOZ"/>
                                             <constraint firstItem="haI-kj-akb" firstAttribute="centerY" secondItem="Zv0-YL-xGm" secondAttribute="centerY" id="n0g-Cy-c7K"/>
                                             <constraint firstItem="haI-kj-akb" firstAttribute="centerY" secondItem="Zv0-YL-xGm" secondAttribute="centerY" id="oJJ-YK-Ax9"/>
+                                            <constraint firstItem="4tr-2z-RPx" firstAttribute="width" secondItem="Zv0-YL-xGm" secondAttribute="width" multiplier="1:3" id="rcC-rJ-xy8"/>
                                             <constraint firstAttribute="trailing" secondItem="4tr-2z-RPx" secondAttribute="trailing" constant="8" id="yh1-XG-UlG">
                                                 <variation key="heightClass=regular-widthClass=compact" constant="8"/>
                                             </constraint>
