@@ -25,6 +25,12 @@ class ScheduleViewController: UIViewController {
     @IBOutlet var nigerianCeremonyBaseView: GradientView!
     @IBOutlet var receptionBaseView: GradientView!
 
+    @IBOutlet var churchLabel: UILabel!
+    @IBOutlet var ceremonyLabel: UILabel!
+
+    @IBOutlet var churchLabelSVConstraintCR: NSLayoutConstraint!
+    @IBOutlet var churchImageTrailingConstraintCR: NSLayoutConstraint!
+
     @IBOutlet var firstStackTopConstraint: NSLayoutConstraint!
 
     let iphoneSmallFont = CGFloat(27)
@@ -45,6 +51,12 @@ class ScheduleViewController: UIViewController {
     private func setupView() {
         if isIphone10() {
             firstStackTopConstraint.constant += 40.0
+        } else if isIphone5AndBelow() {
+            churchLabel.font = churchLabel.font.withSize(25)
+            ceremonyLabel.font = ceremonyLabel.font.withSize(25)
+
+            churchLabelSVConstraintCR.constant = 1
+            churchImageTrailingConstraintCR.constant = 1
         } else if isIpadPro129() {
             firstStackTopConstraint.constant += 130.0
 
