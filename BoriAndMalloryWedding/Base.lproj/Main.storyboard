@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rMM-Ur-egH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rMM-Ur-egH">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -58,7 +56,7 @@
                                         <rect key="frame" x="8" y="8" width="304" height="100"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6MA-GB-2hr">
-                                                <rect key="frame" x="8" y="12.5" width="288" height="76"/>
+                                                <rect key="frame" x="8" y="12" width="288" height="76"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time to wedding day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JA3-fu-nX5">
                                                         <rect key="frame" x="46" y="0.0" width="196" height="36"/>
@@ -177,7 +175,7 @@
                                         <rect key="frame" x="165.5" y="122" width="146.5" height="184"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Njx-iW-711">
-                                                <rect key="frame" x="8" y="32.5" width="130.5" height="120"/>
+                                                <rect key="frame" x="8" y="32" width="130.5" height="120"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="September" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLm-bm-i9u">
                                                         <rect key="frame" x="10" y="0.0" width="111" height="40"/>
@@ -352,150 +350,33 @@
             <objects>
                 <viewController id="MAe-9S-Djg" customClass="ScheduleViewController" customModule="BoriAndMalloryWedding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s50-al-6SB">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="B0e-bi-wCd">
-                                <rect key="frame" x="6" y="61.5" width="308" height="116.5"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fxb-NP-r6e">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:00am" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8J7-zt-Eq3">
-                                        <rect key="frame" x="0.0" y="49.5" width="0.0" height="17.5"/>
-                                        <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:00am" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOt-Dw-p8d">
+                                        <rect key="frame" x="8" y="36" width="304" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="30"/>
-                                        </variation>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zv0-YL-xGm">
-                                        <rect key="frame" x="5" y="0.0" width="303" height="116.5"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="haI-kj-akb">
-                                                <rect key="frame" x="111" y="16" width="80.5" height="83.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UMD Chapel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ala-49-t8Z">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80.5" height="22.5"/>
-                                                        <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="20"/>
-                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="couple_image" translatesAutoresizingMaskIntoConstraints="NO" id="zXL-Ot-V3d">
-                                                        <rect key="frame" x="0.0" y="22.5" width="80.5" height="61"/>
-                                                    </imageView>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="haI-kj-akb" secondAttribute="height" multiplier="80:83" id="Yqs-8q-35S"/>
-                                                </constraints>
-                                            </stackView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="church_image" translatesAutoresizingMaskIntoConstraints="NO" id="4tr-2z-RPx">
-                                                <rect key="frame" x="194" y="16.5" width="101" height="83"/>
-                                            </imageView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dOp-yC-D3F">
-                                                <rect key="frame" x="8" y="24" width="86.5" height="67"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Church" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8AR-LW-em0">
-                                                        <rect key="frame" x="0.0" y="0.0" width="86.5" height="33.5"/>
-                                                        <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="30"/>
-                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ceremony" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8j-db-vu9">
-                                                        <rect key="frame" x="0.0" y="33.5" width="86.5" height="33.5"/>
-                                                        <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="30"/>
-                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.0078431372549019607" green="0.71372549019607845" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="Zv0-YL-xGm" secondAttribute="height" multiplier="242:93" constant="40" id="51s-bb-PuI">
-                                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
-                                            </constraint>
-                                            <constraint firstItem="dOp-yC-D3F" firstAttribute="leading" secondItem="Zv0-YL-xGm" secondAttribute="leading" constant="8" id="8vr-Vb-ibc">
-                                                <variation key="heightClass=regular-widthClass=compact" constant="8"/>
-                                            </constraint>
-                                            <constraint firstItem="haI-kj-akb" firstAttribute="centerX" secondItem="Zv0-YL-xGm" secondAttribute="centerX" id="EHO-uW-QOL"/>
-                                            <constraint firstItem="4tr-2z-RPx" firstAttribute="centerY" secondItem="Zv0-YL-xGm" secondAttribute="centerY" id="Gdu-Bg-iRa"/>
-                                            <constraint firstAttribute="height" constant="200" id="IJ3-MR-QXS"/>
-                                            <constraint firstItem="dOp-yC-D3F" firstAttribute="centerY" secondItem="Zv0-YL-xGm" secondAttribute="centerY" id="WcL-Zo-JOZ"/>
-                                            <constraint firstItem="haI-kj-akb" firstAttribute="centerY" secondItem="Zv0-YL-xGm" secondAttribute="centerY" id="n0g-Cy-c7K"/>
-                                            <constraint firstItem="haI-kj-akb" firstAttribute="centerY" secondItem="Zv0-YL-xGm" secondAttribute="centerY" id="oJJ-YK-Ax9"/>
-                                            <constraint firstItem="4tr-2z-RPx" firstAttribute="width" secondItem="Zv0-YL-xGm" secondAttribute="width" multiplier="1:3" id="rcC-rJ-xy8"/>
-                                            <constraint firstAttribute="trailing" secondItem="4tr-2z-RPx" secondAttribute="trailing" constant="8" id="yh1-XG-UlG">
-                                                <variation key="heightClass=regular-widthClass=compact" constant="8"/>
-                                            </constraint>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="IJ3-MR-QXS"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <mask key="constraints">
-                                                <include reference="IJ3-MR-QXS"/>
-                                            </mask>
-                                        </variation>
-                                    </view>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QX4-94-5Q2">
-                                <rect key="frame" x="6" y="195" width="308" height="116"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:30pm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQc-Z6-rtV">
-                                        <rect key="frame" x="0.0" y="49.5" width="1" height="17.5"/>
-                                        <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:30pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uon-GE-YHY">
+                                        <rect key="frame" x="8" y="225.5" width="304" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="30"/>
-                                        </variation>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ma6-8L-Gv9">
-                                        <rect key="frame" x="6" y="0.0" width="302" height="116"/>
-                                        <color key="backgroundColor" red="0.96862745098039216" green="0.90588235294117647" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="bfg-Ey-F9F"/>
-                                            <constraint firstAttribute="width" secondItem="Ma6-8L-Gv9" secondAttribute="height" multiplier="242:93" id="pZL-yZ-0yf">
-                                                <variation key="heightClass=regular-widthClass=regular" constant="40"/>
-                                            </constraint>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="bfg-Ey-F9F"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <mask key="constraints">
-                                                <include reference="bfg-Ey-F9F"/>
-                                            </mask>
-                                        </variation>
-                                    </view>
-                                </subviews>
-                                <variation key="heightClass=regular-widthClass=regular" spacing="5"/>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QCX-gw-Mhl">
-                                <rect key="frame" x="6" y="328" width="308" height="116.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02:00pm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGZ-H7-rqx">
-                                        <rect key="frame" x="0.0" y="49.5" width="0.0" height="17.5"/>
-                                        <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02:00pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVI-SV-mzT">
+                                        <rect key="frame" x="8" y="414.5" width="304" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="30"/>
-                                        </variation>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="osS-g9-H36" customClass="GradientView" customModule="BoriAndMalloryWedding" customModuleProvider="target">
-                                        <rect key="frame" x="5" y="0.0" width="303" height="116.5"/>
+                                        <rect key="frame" x="8" y="446" width="304" height="142"/>
                                         <color key="backgroundColor" red="0.50196078431372548" green="0.0" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="osS-g9-H36" secondAttribute="height" multiplier="242:93" id="cUR-RH-XgV">
-                                                <variation key="heightClass=regular-widthClass=regular" constant="40"/>
-                                            </constraint>
-                                            <constraint firstAttribute="height" constant="200" id="l8S-P7-M0R"/>
-                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
                                                 <color key="value" red="0.50196078431372548" green="0.0" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
@@ -504,40 +385,16 @@
                                                 <color key="value" red="0.71338921785354614" green="0.62799998277685487" blue="0.68530081375186547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="l8S-P7-M0R"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <mask key="constraints">
-                                                <include reference="l8S-P7-M0R"/>
-                                            </mask>
-                                        </variation>
                                     </view>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bc0-oy-xFo">
-                                <rect key="frame" x="6" y="461.5" width="308" height="116.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="04:00pm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wfg-Mg-PYs">
-                                        <rect key="frame" x="0.0" y="49.5" width="0.0" height="17.5"/>
-                                        <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="04:00pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ae9-do-om4">
+                                        <rect key="frame" x="8" y="604" width="304" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="30"/>
-                                        </variation>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wII-Lg-djA" customClass="GradientView" customModule="BoriAndMalloryWedding" customModuleProvider="target">
-                                        <rect key="frame" x="5" y="0.0" width="303" height="116.5"/>
+                                        <rect key="frame" x="8" y="635.5" width="304" height="141.5"/>
                                         <color key="backgroundColor" red="0.0078431372550000003" green="0.71372549019999998" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="i3M-3n-NzZ"/>
-                                            <constraint firstAttribute="width" secondItem="wII-Lg-djA" secondAttribute="height" multiplier="242:93" id="iGm-or-s5R">
-                                                <variation key="heightClass=regular-widthClass=regular" constant="40"/>
-                                            </constraint>
-                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
                                                 <color key="value" red="0.0" green="0.17176553564133984" blue="0.63092735140931366" alpha="1" colorSpace="calibratedRGB"/>
@@ -546,95 +403,120 @@
                                                 <color key="value" red="0.20392156862745098" green="0.72561785130718959" blue="0.89337565104166672" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="i3M-3n-NzZ"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <mask key="constraints">
-                                                <include reference="i3M-3n-NzZ"/>
-                                            </mask>
-                                        </variation>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zv0-YL-xGm">
+                                        <rect key="frame" x="8" y="67.5" width="304" height="142"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="rWu-Ub-cm7">
+                                                <rect key="frame" x="4" y="4" width="296" height="134"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="dOp-yC-D3F">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100.5" height="134"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Church" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8AR-LW-em0">
+                                                                <rect key="frame" x="0.0" y="0.0" width="62" height="72"/>
+                                                                <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="30"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ceremony" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8j-db-vu9">
+                                                                <rect key="frame" x="0.0" y="62" width="86.5" height="72"/>
+                                                                <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="30"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="haI-kj-akb">
+                                                        <rect key="frame" x="100.5" y="0.0" width="93.5" height="134"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UMD Chapel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ala-49-t8Z">
+                                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="22.5"/>
+                                                                <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="20"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="couple_image" translatesAutoresizingMaskIntoConstraints="NO" id="zXL-Ot-V3d">
+                                                                <rect key="frame" x="0.0" y="22.5" width="93.5" height="111.5"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="church_image" translatesAutoresizingMaskIntoConstraints="NO" id="4tr-2z-RPx">
+                                                        <rect key="frame" x="194" y="0.0" width="102" height="134"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0078431372549019607" green="0.71372549019607845" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="rWu-Ub-cm7" firstAttribute="top" secondItem="Zv0-YL-xGm" secondAttribute="top" constant="4" id="KXp-zn-nNF"/>
+                                            <constraint firstItem="rWu-Ub-cm7" firstAttribute="leading" secondItem="Zv0-YL-xGm" secondAttribute="leading" constant="4" id="MSX-oG-TbE"/>
+                                            <constraint firstAttribute="bottom" secondItem="rWu-Ub-cm7" secondAttribute="bottom" constant="4" id="Qe9-un-dK1"/>
+                                            <constraint firstAttribute="trailing" secondItem="rWu-Ub-cm7" secondAttribute="trailing" constant="4" id="jlG-Y4-WNM"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ma6-8L-Gv9">
+                                        <rect key="frame" x="8" y="257" width="304" height="141.5"/>
+                                        <color key="backgroundColor" red="0.96862745098039216" green="0.90588235294117647" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
-                            </stackView>
+                                <constraints>
+                                    <constraint firstItem="hVI-SV-mzT" firstAttribute="top" secondItem="Ma6-8L-Gv9" secondAttribute="bottom" constant="16" id="2TB-Uz-6ss"/>
+                                    <constraint firstItem="Zv0-YL-xGm" firstAttribute="trailing" secondItem="Uon-GE-YHY" secondAttribute="trailing" id="4Pc-uy-O8g"/>
+                                    <constraint firstItem="Ma6-8L-Gv9" firstAttribute="height" secondItem="Fxb-NP-r6e" secondAttribute="height" multiplier="1:6" constant="8.4166666666666714" id="9xY-mW-F43"/>
+                                    <constraint firstItem="Uon-GE-YHY" firstAttribute="top" secondItem="Zv0-YL-xGm" secondAttribute="bottom" constant="16" id="E9K-bA-ucE"/>
+                                    <constraint firstItem="Ae9-do-om4" firstAttribute="trailing" secondItem="wII-Lg-djA" secondAttribute="trailing" id="FUH-d4-K1B"/>
+                                    <constraint firstItem="osS-g9-H36" firstAttribute="trailing" secondItem="Ae9-do-om4" secondAttribute="trailing" id="IP2-6x-Vhi"/>
+                                    <constraint firstAttribute="bottom" secondItem="wII-Lg-djA" secondAttribute="bottom" constant="20" id="Jng-Vz-50I"/>
+                                    <constraint firstItem="wII-Lg-djA" firstAttribute="height" secondItem="Fxb-NP-r6e" secondAttribute="height" multiplier="1:6" constant="8.4199999999999999" id="Mjf-Wu-sf3"/>
+                                    <constraint firstItem="Uon-GE-YHY" firstAttribute="trailing" secondItem="Ma6-8L-Gv9" secondAttribute="trailing" id="Njs-3H-TIM"/>
+                                    <constraint firstItem="Ae9-do-om4" firstAttribute="leading" secondItem="Zv0-YL-xGm" secondAttribute="leading" id="OBS-Zm-vTY"/>
+                                    <constraint firstItem="Zv0-YL-xGm" firstAttribute="leading" secondItem="aOt-Dw-p8d" secondAttribute="leading" id="RA5-0f-kLO"/>
+                                    <constraint firstItem="aOt-Dw-p8d" firstAttribute="trailing" secondItem="Zv0-YL-xGm" secondAttribute="trailing" id="Run-yH-pbt"/>
+                                    <constraint firstItem="osS-g9-H36" firstAttribute="height" secondItem="Fxb-NP-r6e" secondAttribute="height" multiplier="1:6" constant="8.4199999999999999" id="UG3-T1-gZg"/>
+                                    <constraint firstItem="Ae9-do-om4" firstAttribute="top" secondItem="osS-g9-H36" secondAttribute="bottom" constant="16" id="UrE-bc-JSN"/>
+                                    <constraint firstItem="osS-g9-H36" firstAttribute="top" secondItem="hVI-SV-mzT" secondAttribute="bottom" constant="8" id="W9Y-3q-8cw"/>
+                                    <constraint firstItem="Zv0-YL-xGm" firstAttribute="top" secondItem="aOt-Dw-p8d" secondAttribute="bottom" constant="8" id="Xma-46-VqF"/>
+                                    <constraint firstItem="wII-Lg-djA" firstAttribute="leading" secondItem="Zv0-YL-xGm" secondAttribute="leading" id="Zhl-B3-C1V"/>
+                                    <constraint firstItem="hVI-SV-mzT" firstAttribute="trailing" secondItem="osS-g9-H36" secondAttribute="trailing" id="dDa-EN-X0r"/>
+                                    <constraint firstItem="aOt-Dw-p8d" firstAttribute="top" secondItem="Fxb-NP-r6e" secondAttribute="topMargin" constant="8" id="hgA-vC-Ltt"/>
+                                    <constraint firstItem="hVI-SV-mzT" firstAttribute="leading" secondItem="Zv0-YL-xGm" secondAttribute="leading" id="juA-Os-ku6"/>
+                                    <constraint firstItem="osS-g9-H36" firstAttribute="leading" secondItem="Zv0-YL-xGm" secondAttribute="leading" id="lK3-2b-H7j"/>
+                                    <constraint firstItem="wII-Lg-djA" firstAttribute="top" secondItem="Ae9-do-om4" secondAttribute="bottom" constant="8" id="mYf-iq-lDP"/>
+                                    <constraint firstItem="Ma6-8L-Gv9" firstAttribute="top" secondItem="Uon-GE-YHY" secondAttribute="bottom" constant="8" id="o5F-kx-AjZ"/>
+                                    <constraint firstItem="Ma6-8L-Gv9" firstAttribute="leading" secondItem="Zv0-YL-xGm" secondAttribute="leading" id="sjk-sM-EAh"/>
+                                    <constraint firstItem="Ma6-8L-Gv9" firstAttribute="trailing" secondItem="hVI-SV-mzT" secondAttribute="trailing" id="tOE-5c-RrY"/>
+                                    <constraint firstItem="Zv0-YL-xGm" firstAttribute="height" secondItem="Fxb-NP-r6e" secondAttribute="height" multiplier="1:6" constant="8.4199999999999999" id="u2u-NZ-taA"/>
+                                    <constraint firstItem="aOt-Dw-p8d" firstAttribute="leading" secondItem="Fxb-NP-r6e" secondAttribute="leading" constant="8" id="wPq-et-OB2"/>
+                                    <constraint firstItem="Uon-GE-YHY" firstAttribute="leading" secondItem="Zv0-YL-xGm" secondAttribute="leading" id="x8b-FX-1hU"/>
+                                    <constraint firstItem="aOt-Dw-p8d" firstAttribute="centerX" secondItem="Fxb-NP-r6e" secondAttribute="centerX" id="xAC-e6-lOE"/>
+                                    <constraint firstAttribute="trailing" secondItem="aOt-Dw-p8d" secondAttribute="trailing" constant="8" id="zA0-Sb-mog"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="3U3-kz-CNE" firstAttribute="trailing" secondItem="B0e-bi-wCd" secondAttribute="trailing" constant="6" id="Gu0-Eg-zbG"/>
-                            <constraint firstItem="QX4-94-5Q2" firstAttribute="top" secondItem="B0e-bi-wCd" secondAttribute="bottom" constant="17" id="QNy-Us-QUq"/>
-                            <constraint firstItem="B0e-bi-wCd" firstAttribute="top" secondItem="3U3-kz-CNE" secondAttribute="top" multiplier="5:3" constant="28" id="UWY-Me-g0h"/>
-                            <constraint firstItem="QX4-94-5Q2" firstAttribute="leading" secondItem="3U3-kz-CNE" secondAttribute="leading" constant="6" id="VLy-1j-AzG">
-                                <variation key="heightClass=regular-widthClass=regular" constant="10"/>
-                            </constraint>
-                            <constraint firstItem="bc0-oy-xFo" firstAttribute="top" secondItem="QCX-gw-Mhl" secondAttribute="bottom" constant="17" id="aar-j5-KfO"/>
-                            <constraint firstItem="3U3-kz-CNE" firstAttribute="trailing" secondItem="QCX-gw-Mhl" secondAttribute="trailing" constant="6" id="bqv-uK-eMa">
-                                <variation key="heightClass=regular-widthClass=regular" constant="20"/>
-                            </constraint>
-                            <constraint firstItem="QCX-gw-Mhl" firstAttribute="top" secondItem="QX4-94-5Q2" secondAttribute="bottom" constant="17" id="hXW-Jq-LEd"/>
-                            <constraint firstItem="3U3-kz-CNE" firstAttribute="trailing" secondItem="bc0-oy-xFo" secondAttribute="trailing" constant="6" id="jfd-Qt-Al8">
-                                <variation key="heightClass=regular-widthClass=regular" constant="20"/>
-                            </constraint>
-                            <constraint firstItem="B0e-bi-wCd" firstAttribute="leading" secondItem="3U3-kz-CNE" secondAttribute="leading" constant="10" id="lIj-y5-chf"/>
-                            <constraint firstItem="QCX-gw-Mhl" firstAttribute="leading" secondItem="3U3-kz-CNE" secondAttribute="leading" constant="6" id="o6l-Nk-7Xi">
-                                <variation key="heightClass=regular-widthClass=regular" constant="10"/>
-                            </constraint>
-                            <constraint firstItem="3U3-kz-CNE" firstAttribute="trailing" secondItem="QX4-94-5Q2" secondAttribute="trailing" constant="6" id="ov0-BH-DY3">
-                                <variation key="heightClass=regular-widthClass=regular" constant="20"/>
-                            </constraint>
-                            <constraint firstItem="B0e-bi-wCd" firstAttribute="leading" secondItem="3U3-kz-CNE" secondAttribute="leading" constant="6" id="pUX-Pg-Q8d"/>
-                            <constraint firstItem="bc0-oy-xFo" firstAttribute="leading" secondItem="3U3-kz-CNE" secondAttribute="leading" constant="6" id="rcK-Xm-6ds">
-                                <variation key="heightClass=regular-widthClass=regular" constant="10"/>
-                            </constraint>
-                            <constraint firstItem="3U3-kz-CNE" firstAttribute="trailing" secondItem="B0e-bi-wCd" secondAttribute="trailing" constant="20" id="szg-ak-2h2"/>
+                            <constraint firstItem="Fxb-NP-r6e" firstAttribute="top" secondItem="s50-al-6SB" secondAttribute="top" id="UVv-Tr-x7s"/>
+                            <constraint firstItem="Fxb-NP-r6e" firstAttribute="leading" secondItem="s50-al-6SB" secondAttribute="leading" id="Zk2-ML-0Aw"/>
+                            <constraint firstAttribute="bottom" secondItem="Fxb-NP-r6e" secondAttribute="bottom" id="b1w-ng-KMg"/>
+                            <constraint firstAttribute="trailing" secondItem="Fxb-NP-r6e" secondAttribute="trailing" id="uyE-Mh-rav"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3U3-kz-CNE"/>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="Gu0-Eg-zbG"/>
-                                <exclude reference="szg-ak-2h2"/>
-                                <exclude reference="lIj-y5-chf"/>
-                                <exclude reference="pUX-Pg-Q8d"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="constraints">
-                                <include reference="Gu0-Eg-zbG"/>
-                                <include reference="pUX-Pg-Q8d"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=regular">
-                            <mask key="constraints">
-                                <include reference="szg-ak-2h2"/>
-                                <include reference="lIj-y5-chf"/>
-                            </mask>
-                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Schedule" image="schedule_icon" selectedImage="schedule_icon_highlighted" id="hbl-BY-UBv"/>
+                    <size key="freeformSize" width="320" height="800"/>
                     <connections>
                         <outlet property="ceremonyLabel" destination="t8j-db-vu9" id="sh9-xx-2WK"/>
                         <outlet property="churchBaseView" destination="Zv0-YL-xGm" id="hUm-k1-9yZ"/>
-                        <outlet property="churchImageTrailingConstraintCR" destination="yh1-XG-UlG" id="LCy-t9-pnQ"/>
                         <outlet property="churchLabel" destination="8AR-LW-em0" id="WEt-sk-UtB"/>
-                        <outlet property="churchLabelSVConstraintCR" destination="8vr-Vb-ibc" id="BOm-HE-EmC"/>
-                        <outlet property="churchTimeLabel" destination="8J7-zt-Eq3" id="pxY-7n-unC"/>
-                        <outlet property="churchTimeSV" destination="B0e-bi-wCd" id="CZK-jd-LjW"/>
-                        <outlet property="firstStackTopConstraint" destination="UWY-Me-g0h" id="u9V-al-teQ"/>
-                        <outlet property="horsDeovresSV" destination="QX4-94-5Q2" id="mph-5u-QKO"/>
                         <outlet property="horsDoeuvresBaseView" destination="Ma6-8L-Gv9" id="djT-Ck-5s9"/>
-                        <outlet property="horsdoeuvresLabel" destination="oQc-Z6-rtV" id="cWA-rO-ro5"/>
                         <outlet property="nigerianCeremonyBaseView" destination="osS-g9-H36" id="TxT-7T-Elw"/>
-                        <outlet property="nigerianCeremonyLabel" destination="UGZ-H7-rqx" id="dR9-lq-gl0"/>
-                        <outlet property="nigerianCeremonySV" destination="QCX-gw-Mhl" id="cj9-1k-oZx"/>
                         <outlet property="receptionBaseView" destination="wII-Lg-djA" id="dAQ-sp-BFP"/>
-                        <outlet property="receptionLabel" destination="Wfg-Mg-PYs" id="CId-CV-kSU"/>
-                        <outlet property="receptionSV" destination="bc0-oy-xFo" id="bpe-f4-1Na"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xfg-bA-Zdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1036.875" y="-307.3943661971831"/>
+            <point key="canvasLocation" x="1031.25" y="-196.47887323943661"/>
         </scene>
         <!--Seating-->
         <scene sceneID="n2Z-qC-aio">
@@ -650,7 +532,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XAf-Yg-SEZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1041" y="432"/>
+            <point key="canvasLocation" x="1033" y="580"/>
         </scene>
         <!--Food-->
         <scene sceneID="of3-WQ-wDd">
