@@ -376,7 +376,38 @@
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="osS-g9-H36" customClass="GradientView" customModule="BoriAndMalloryWedding" customModuleProvider="target">
                                         <rect key="frame" x="8" y="446" width="304" height="142"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LfL-Df-KMZ">
+                                                <rect key="frame" x="5" y="21" width="294" height="100"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nigerian traditional ceremony" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZD-5p-SUE" customClass="BMLabel" customModule="BoriAndMalloryWedding" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="143" height="100"/>
+                                                        <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="30"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="kerning">
+                                                                <real key="value" value="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="60"/>
+                                                        </variation>
+                                                    </label>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nigerian_image" translatesAutoresizingMaskIntoConstraints="NO" id="MjZ-RE-fqV">
+                                                        <rect key="frame" x="151" y="0.0" width="143" height="100"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <variation key="heightClass=regular-widthClass=regular" distribution="fillEqually"/>
+                                            </stackView>
+                                        </subviews>
                                         <color key="backgroundColor" red="0.50196078431372548" green="0.0" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="LfL-Df-KMZ" firstAttribute="leading" secondItem="osS-g9-H36" secondAttribute="leading" constant="5" id="Mot-IG-6qW"/>
+                                            <constraint firstItem="LfL-Df-KMZ" firstAttribute="centerY" secondItem="osS-g9-H36" secondAttribute="centerY" id="Mpq-TQ-we8"/>
+                                            <constraint firstAttribute="trailing" secondItem="LfL-Df-KMZ" secondAttribute="trailing" constant="5" id="frb-PB-s74"/>
+                                            <constraint firstItem="LfL-Df-KMZ" firstAttribute="centerX" secondItem="osS-g9-H36" secondAttribute="centerX" id="pls-iJ-L3T"/>
+                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
                                                 <color key="value" red="0.50196078431372548" green="0.0" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
@@ -394,7 +425,38 @@
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wII-Lg-djA" customClass="GradientView" customModule="BoriAndMalloryWedding" customModuleProvider="target">
                                         <rect key="frame" x="8" y="635.5" width="304" height="141.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="YJq-23-zBO">
+                                                <rect key="frame" x="5" y="33" width="294" height="75"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lunch &amp; Reception" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Isj-g6-EV5" customClass="BMLabel" customModule="BoriAndMalloryWedding" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="135.5" height="75"/>
+                                                        <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="30"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="kerning">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="60"/>
+                                                        </variation>
+                                                    </label>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="disco_image" translatesAutoresizingMaskIntoConstraints="NO" id="KDO-9Y-j0u">
+                                                        <rect key="frame" x="158.5" y="0.0" width="135.5" height="75"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <variation key="heightClass=regular-widthClass=regular" distribution="fillEqually"/>
+                                            </stackView>
+                                        </subviews>
                                         <color key="backgroundColor" red="0.0078431372550000003" green="0.71372549019999998" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="YJq-23-zBO" firstAttribute="centerX" secondItem="wII-Lg-djA" secondAttribute="centerX" id="DZi-Tr-KKZ"/>
+                                            <constraint firstItem="YJq-23-zBO" firstAttribute="leading" secondItem="wII-Lg-djA" secondAttribute="leading" constant="5" id="RaJ-WR-tUe"/>
+                                            <constraint firstItem="YJq-23-zBO" firstAttribute="centerY" secondItem="wII-Lg-djA" secondAttribute="centerY" id="Zfa-uZ-m2t"/>
+                                            <constraint firstAttribute="trailing" secondItem="YJq-23-zBO" secondAttribute="trailing" constant="5" id="vpJ-lz-OdL"/>
+                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
                                                 <color key="value" red="0.0" green="0.17176553564133984" blue="0.63092735140931366" alpha="1" colorSpace="calibratedRGB"/>
@@ -407,44 +469,51 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zv0-YL-xGm">
                                         <rect key="frame" x="8" y="67.5" width="304" height="142"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="rWu-Ub-cm7">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="rWu-Ub-cm7">
                                                 <rect key="frame" x="4" y="4" width="296" height="134"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="dOp-yC-D3F">
-                                                        <rect key="frame" x="0.0" y="0.0" width="100.5" height="134"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="-40" translatesAutoresizingMaskIntoConstraints="NO" id="dOp-yC-D3F">
+                                                        <rect key="frame" x="0.0" y="0.0" width="86.5" height="134"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Church" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8AR-LW-em0">
-                                                                <rect key="frame" x="0.0" y="0.0" width="62" height="72"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="62" height="87"/>
                                                                 <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="30"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="60"/>
+                                                                </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ceremony" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8j-db-vu9">
-                                                                <rect key="frame" x="0.0" y="62" width="86.5" height="72"/>
+                                                                <rect key="frame" x="0.0" y="47" width="86.5" height="87"/>
                                                                 <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="30"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="60"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="haI-kj-akb">
-                                                        <rect key="frame" x="100.5" y="0.0" width="93.5" height="134"/>
+                                                        <rect key="frame" x="107.5" y="0.0" width="80.5" height="134"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UMD Chapel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ala-49-t8Z">
-                                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="22.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="80.5" height="22.5"/>
                                                                 <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="20"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="couple_image" translatesAutoresizingMaskIntoConstraints="NO" id="zXL-Ot-V3d">
-                                                                <rect key="frame" x="0.0" y="22.5" width="93.5" height="111.5"/>
+                                                                <rect key="frame" x="0.0" y="22.5" width="80.5" height="111.5"/>
                                                             </imageView>
                                                         </subviews>
                                                     </stackView>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="church_image" translatesAutoresizingMaskIntoConstraints="NO" id="4tr-2z-RPx">
-                                                        <rect key="frame" x="194" y="0.0" width="102" height="134"/>
+                                                        <rect key="frame" x="208" y="0.0" width="88" height="134"/>
                                                     </imageView>
                                                 </subviews>
+                                                <variation key="heightClass=regular-widthClass=regular" distribution="fillEqually"/>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0078431372549019607" green="0.71372549019607845" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
@@ -457,7 +526,33 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ma6-8L-Gv9">
                                         <rect key="frame" x="8" y="257" width="304" height="141.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="L4U-4x-vKf">
+                                                <rect key="frame" x="5" y="34.5" width="294" height="72"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hors d’oeuvres / snacks" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="I3j-8P-qJc" customClass="BMLabel" customModule="BoriAndMalloryWedding" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="134.5" height="72"/>
+                                                        <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="30"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="60"/>
+                                                        </variation>
+                                                    </label>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grape_image" translatesAutoresizingMaskIntoConstraints="NO" id="B4k-jI-hct">
+                                                        <rect key="frame" x="210" y="0.0" width="84" height="72"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <variation key="heightClass=regular-widthClass=regular" distribution="fill"/>
+                                            </stackView>
+                                        </subviews>
                                         <color key="backgroundColor" red="0.96862745098039216" green="0.90588235294117647" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="L4U-4x-vKf" firstAttribute="centerX" secondItem="Ma6-8L-Gv9" secondAttribute="centerX" id="AxK-sI-0XY"/>
+                                            <constraint firstAttribute="trailing" secondItem="L4U-4x-vKf" secondAttribute="trailing" constant="5" id="GBo-Wx-ii9"/>
+                                            <constraint firstItem="L4U-4x-vKf" firstAttribute="centerY" secondItem="Ma6-8L-Gv9" secondAttribute="centerY" id="LXf-MY-mKN"/>
+                                            <constraint firstItem="L4U-4x-vKf" firstAttribute="leading" secondItem="Ma6-8L-Gv9" secondAttribute="leading" constant="5" id="vLR-sc-bgw"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -487,10 +582,14 @@
                                     <constraint firstItem="Ma6-8L-Gv9" firstAttribute="leading" secondItem="Zv0-YL-xGm" secondAttribute="leading" id="sjk-sM-EAh"/>
                                     <constraint firstItem="Ma6-8L-Gv9" firstAttribute="trailing" secondItem="hVI-SV-mzT" secondAttribute="trailing" id="tOE-5c-RrY"/>
                                     <constraint firstItem="Zv0-YL-xGm" firstAttribute="height" secondItem="Fxb-NP-r6e" secondAttribute="height" multiplier="1:6" constant="8.4199999999999999" id="u2u-NZ-taA"/>
-                                    <constraint firstItem="aOt-Dw-p8d" firstAttribute="leading" secondItem="Fxb-NP-r6e" secondAttribute="leading" constant="8" id="wPq-et-OB2"/>
+                                    <constraint firstItem="aOt-Dw-p8d" firstAttribute="leading" secondItem="Fxb-NP-r6e" secondAttribute="leading" constant="8" id="wPq-et-OB2">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="32"/>
+                                    </constraint>
                                     <constraint firstItem="Uon-GE-YHY" firstAttribute="leading" secondItem="Zv0-YL-xGm" secondAttribute="leading" id="x8b-FX-1hU"/>
                                     <constraint firstItem="aOt-Dw-p8d" firstAttribute="centerX" secondItem="Fxb-NP-r6e" secondAttribute="centerX" id="xAC-e6-lOE"/>
-                                    <constraint firstAttribute="trailing" secondItem="aOt-Dw-p8d" secondAttribute="trailing" constant="8" id="zA0-Sb-mog"/>
+                                    <constraint firstAttribute="trailing" secondItem="aOt-Dw-p8d" secondAttribute="trailing" constant="8" id="zA0-Sb-mog">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="32"/>
+                                    </constraint>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -554,11 +653,14 @@
     <resources>
         <image name="church_image" width="88" height="83"/>
         <image name="couple_image" width="63" height="61"/>
+        <image name="disco_image" width="78" height="75"/>
         <image name="food_icon" width="28" height="23"/>
         <image name="food_icon_highlighted" width="28" height="23"/>
+        <image name="grape_image" width="84" height="72"/>
         <image name="home_icon" width="29" height="28"/>
         <image name="home_icon_highlighted" width="29" height="28"/>
         <image name="home_image_default" width="377" height="252"/>
+        <image name="nigerian_image" width="85" height="78"/>
         <image name="schedule_icon" width="27" height="28"/>
         <image name="schedule_icon_highlighted" width="27" height="28"/>
         <image name="seating_icon" width="26" height="25"/>

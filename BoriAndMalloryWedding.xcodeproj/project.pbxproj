@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		519DA0EF20D25C73002A43A7 /* BMLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519DA0EE20D25C73002A43A7 /* BMLabel.swift */; };
 		51B71A4320B7A4F20073DB3D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B71A4220B7A4F20073DB3D /* HomeViewController.swift */; };
 		51B71A4620B8AD5A0073DB3D /* UtilityExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B71A4520B8AD5A0073DB3D /* UtilityExtensions.swift */; };
 		51B71A4920B8B7850073DB3D /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B71A4820B8B7850073DB3D /* HelperFunctions.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		519DA0EE20D25C73002A43A7 /* BMLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMLabel.swift; sourceTree = "<group>"; };
 		51B71A4220B7A4F20073DB3D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		51B71A4520B8AD5A0073DB3D /* UtilityExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityExtensions.swift; sourceTree = "<group>"; };
 		51B71A4820B8B7850073DB3D /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			children = (
 				51E66DDD20BFC503002DFAD1 /* GradientView.swift */,
 				51E66DDF20BFCAC2002DFAD1 /* BMView.swift */,
+				519DA0EE20D25C73002A43A7 /* BMLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51B71A4920B8B7850073DB3D /* HelperFunctions.swift in Sources */,
+				519DA0EF20D25C73002A43A7 /* BMLabel.swift in Sources */,
 				51B8C5312084204D00FD5358 /* ViewController.swift in Sources */,
 				51E66DDE20BFC503002DFAD1 /* GradientView.swift in Sources */,
 				51E66DE220C4D090002DFAD1 /* ScheduleViewController.swift in Sources */,
