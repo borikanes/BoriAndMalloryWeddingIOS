@@ -21,4 +21,13 @@ class BMLabel: UILabel {
             }
         }
     }
+
+    func kern(value: CGFloat) {
+        if let labelText = self.text {
+            // https://stackoverflow.com/questions/27535901/ios-8-change-character-spacing-on-uilabel-within-interface-builder
+            let attributedString = NSMutableAttributedString(string: labelText)
+            attributedString.addAttribute(NSAttributedStringKey.kern, value: value, range: NSRange(location: 0, length: attributedString.length - 1))
+            attributedText = attributedString
+        }
+    }
 }
