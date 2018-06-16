@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		519DA0EF20D25C73002A43A7 /* BMLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519DA0EE20D25C73002A43A7 /* BMLabel.swift */; };
+		519DA0F020D4A7A2002A43A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51B8C5352084204E00FD5358 /* Assets.xcassets */; };
 		51B71A4320B7A4F20073DB3D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B71A4220B7A4F20073DB3D /* HomeViewController.swift */; };
 		51B71A4620B8AD5A0073DB3D /* UtilityExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B71A4520B8AD5A0073DB3D /* UtilityExtensions.swift */; };
 		51B71A4920B8B7850073DB3D /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B71A4820B8B7850073DB3D /* HelperFunctions.swift */; };
@@ -16,7 +17,6 @@
 		51B8C52F2084204D00FD5358 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B8C52E2084204D00FD5358 /* AppDelegate.swift */; };
 		51B8C5312084204D00FD5358 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B8C5302084204D00FD5358 /* ViewController.swift */; };
 		51B8C5342084204D00FD5358 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51B8C5322084204D00FD5358 /* Main.storyboard */; };
-		51B8C5362084204E00FD5358 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51B8C5352084204E00FD5358 /* Assets.xcassets */; };
 		51B8C5392084204E00FD5358 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51B8C5372084204E00FD5358 /* LaunchScreen.storyboard */; };
 		51B8C5442084204E00FD5358 /* BoriAndMalloryWeddingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B8C5432084204E00FD5358 /* BoriAndMalloryWeddingTests.swift */; };
 		51B8C54F2084204E00FD5358 /* BoriAndMalloryWeddingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B8C54E2084204E00FD5358 /* BoriAndMalloryWeddingUITests.swift */; };
@@ -318,8 +318,8 @@
 				51B8C5622084218400FD5358 /* MeriendaOne-Regular.ttf in Resources */,
 				51B71A4B20BBCBF90073DB3D /* Cookie-Regular.ttf in Resources */,
 				51B8C5392084204E00FD5358 /* LaunchScreen.storyboard in Resources */,
+				519DA0F020D4A7A2002A43A7 /* Assets.xcassets in Resources */,
 				51B8C55F2084208500FD5358 /* Satisfy-Regular.ttf in Resources */,
-				51B8C5362084204E00FD5358 /* Assets.xcassets in Resources */,
 				51B8C5342084204D00FD5358 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
