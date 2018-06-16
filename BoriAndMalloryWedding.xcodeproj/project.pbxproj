@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		519DA0EF20D25C73002A43A7 /* BMLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519DA0EE20D25C73002A43A7 /* BMLabel.swift */; };
+		519DA0F020D4A7A2002A43A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51B8C5352084204E00FD5358 /* Assets.xcassets */; };
 		51B71A4320B7A4F20073DB3D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B71A4220B7A4F20073DB3D /* HomeViewController.swift */; };
 		51B71A4620B8AD5A0073DB3D /* UtilityExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B71A4520B8AD5A0073DB3D /* UtilityExtensions.swift */; };
 		51B71A4920B8B7850073DB3D /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B71A4820B8B7850073DB3D /* HelperFunctions.swift */; };
@@ -15,13 +17,15 @@
 		51B8C52F2084204D00FD5358 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B8C52E2084204D00FD5358 /* AppDelegate.swift */; };
 		51B8C5312084204D00FD5358 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B8C5302084204D00FD5358 /* ViewController.swift */; };
 		51B8C5342084204D00FD5358 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51B8C5322084204D00FD5358 /* Main.storyboard */; };
-		51B8C5362084204E00FD5358 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51B8C5352084204E00FD5358 /* Assets.xcassets */; };
 		51B8C5392084204E00FD5358 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51B8C5372084204E00FD5358 /* LaunchScreen.storyboard */; };
 		51B8C5442084204E00FD5358 /* BoriAndMalloryWeddingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B8C5432084204E00FD5358 /* BoriAndMalloryWeddingTests.swift */; };
 		51B8C54F2084204E00FD5358 /* BoriAndMalloryWeddingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B8C54E2084204E00FD5358 /* BoriAndMalloryWeddingUITests.swift */; };
 		51B8C55F2084208500FD5358 /* Satisfy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51B8C55E2084208500FD5358 /* Satisfy-Regular.ttf */; };
 		51B8C5622084218400FD5358 /* MeriendaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51B8C5612084218400FD5358 /* MeriendaOne-Regular.ttf */; };
 		51B8C563208421F400FD5358 /* GreatVibes-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51B8C560208420C100FD5358 /* GreatVibes-Regular.ttf */; };
+		51E66DDE20BFC503002DFAD1 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E66DDD20BFC503002DFAD1 /* GradientView.swift */; };
+		51E66DE020BFCAC2002DFAD1 /* BMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E66DDF20BFCAC2002DFAD1 /* BMView.swift */; };
+		51E66DE220C4D090002DFAD1 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E66DE120C4D090002DFAD1 /* ScheduleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		519DA0EE20D25C73002A43A7 /* BMLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMLabel.swift; sourceTree = "<group>"; };
 		51B71A4220B7A4F20073DB3D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		51B71A4520B8AD5A0073DB3D /* UtilityExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityExtensions.swift; sourceTree = "<group>"; };
 		51B71A4820B8B7850073DB3D /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
@@ -63,6 +68,9 @@
 		51B8C55E2084208500FD5358 /* Satisfy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satisfy-Regular.ttf"; sourceTree = "<group>"; };
 		51B8C560208420C100FD5358 /* GreatVibes-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GreatVibes-Regular.ttf"; sourceTree = "<group>"; };
 		51B8C5612084218400FD5358 /* MeriendaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MeriendaOne-Regular.ttf"; sourceTree = "<group>"; };
+		51E66DDD20BFC503002DFAD1 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		51E66DDF20BFCAC2002DFAD1 /* BMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMView.swift; sourceTree = "<group>"; };
+		51E66DE120C4D090002DFAD1 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +103,7 @@
 			children = (
 				51B71A4220B7A4F20073DB3D /* HomeViewController.swift */,
 				51B8C5302084204D00FD5358 /* ViewController.swift */,
+				51E66DE120C4D090002DFAD1 /* ScheduleViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -139,6 +148,7 @@
 		51B8C52D2084204D00FD5358 /* BoriAndMalloryWedding */ = {
 			isa = PBXGroup;
 			children = (
+				51E66DDC20BFC4B9002DFAD1 /* Views */,
 				5150865020B8C6800084D15C /* ViewControllers */,
 				51B71A4720B8B7670073DB3D /* Utilities */,
 				51B71A4420B8AD190073DB3D /* Extensions */,
@@ -187,6 +197,16 @@
 				51B8C55E2084208500FD5358 /* Satisfy-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		51E66DDC20BFC4B9002DFAD1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				51E66DDD20BFC503002DFAD1 /* GradientView.swift */,
+				51E66DDF20BFCAC2002DFAD1 /* BMView.swift */,
+				519DA0EE20D25C73002A43A7 /* BMLabel.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,8 +318,8 @@
 				51B8C5622084218400FD5358 /* MeriendaOne-Regular.ttf in Resources */,
 				51B71A4B20BBCBF90073DB3D /* Cookie-Regular.ttf in Resources */,
 				51B8C5392084204E00FD5358 /* LaunchScreen.storyboard in Resources */,
+				519DA0F020D4A7A2002A43A7 /* Assets.xcassets in Resources */,
 				51B8C55F2084208500FD5358 /* Satisfy-Regular.ttf in Resources */,
-				51B8C5362084204E00FD5358 /* Assets.xcassets in Resources */,
 				51B8C5342084204D00FD5358 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,7 +362,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				51B71A4920B8B7850073DB3D /* HelperFunctions.swift in Sources */,
+				519DA0EF20D25C73002A43A7 /* BMLabel.swift in Sources */,
 				51B8C5312084204D00FD5358 /* ViewController.swift in Sources */,
+				51E66DDE20BFC503002DFAD1 /* GradientView.swift in Sources */,
+				51E66DE220C4D090002DFAD1 /* ScheduleViewController.swift in Sources */,
+				51E66DE020BFCAC2002DFAD1 /* BMView.swift in Sources */,
 				51B8C52F2084204D00FD5358 /* AppDelegate.swift in Sources */,
 				51B71A4620B8AD5A0073DB3D /* UtilityExtensions.swift in Sources */,
 				51B71A4320B7A4F20073DB3D /* HomeViewController.swift in Sources */,
