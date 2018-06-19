@@ -9,7 +9,7 @@
 import UIKit
 
 class SeatingInfoViewController: UIViewController {
-    
+
     let data: [SeatInfo] = [SeatInfo(name: "Mallory Oludemi", table: "1"),
                             SeatInfo(name: "Bori Oludemi", table: "2"),
                             SeatInfo(name: "Daddy Oludemi", table: "3")]
@@ -36,7 +36,8 @@ class SeatingInfoViewController: UIViewController {
         if isPlusPhone() {
             seatingInfoLabel.font = seatingInfoLabel.font.withSize(35)
         }
-
+//        seatingTableView.estimatedRowHeight = 71.0
+//        seatingTableView.rowHeight = UITableViewAutomaticDimension
     }
 }
 
