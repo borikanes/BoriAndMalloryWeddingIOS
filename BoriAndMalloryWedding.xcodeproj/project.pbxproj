@@ -26,6 +26,9 @@
 		51E66DDE20BFC503002DFAD1 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E66DDD20BFC503002DFAD1 /* GradientView.swift */; };
 		51E66DE020BFCAC2002DFAD1 /* BMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E66DDF20BFCAC2002DFAD1 /* BMView.swift */; };
 		51E66DE220C4D090002DFAD1 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E66DE120C4D090002DFAD1 /* ScheduleViewController.swift */; };
+		51EEEF3B20D5744C00E26E9F /* SeatingInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EEEF3A20D5744C00E26E9F /* SeatingInfoViewController.swift */; };
+		51EEEF3D20D5D64700E26E9F /* SeatingInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EEEF3C20D5D64700E26E9F /* SeatingInfoTableViewCell.swift */; };
+		51EEEF3F20D5F71400E26E9F /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EEEF3E20D5F71400E26E9F /* DataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		51E66DDD20BFC503002DFAD1 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		51E66DDF20BFCAC2002DFAD1 /* BMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMView.swift; sourceTree = "<group>"; };
 		51E66DE120C4D090002DFAD1 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		51EEEF3A20D5744C00E26E9F /* SeatingInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatingInfoViewController.swift; sourceTree = "<group>"; };
+		51EEEF3C20D5D64700E26E9F /* SeatingInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatingInfoTableViewCell.swift; sourceTree = "<group>"; };
+		51EEEF3E20D5F71400E26E9F /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,7 @@
 				51B71A4220B7A4F20073DB3D /* HomeViewController.swift */,
 				51B8C5302084204D00FD5358 /* ViewController.swift */,
 				51E66DE120C4D090002DFAD1 /* ScheduleViewController.swift */,
+				51EEEF3A20D5744C00E26E9F /* SeatingInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -120,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				51B71A4820B8B7850073DB3D /* HelperFunctions.swift */,
+				51EEEF3E20D5F71400E26E9F /* DataModel.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -205,6 +213,7 @@
 				51E66DDD20BFC503002DFAD1 /* GradientView.swift */,
 				51E66DDF20BFCAC2002DFAD1 /* BMView.swift */,
 				519DA0EE20D25C73002A43A7 /* BMLabel.swift */,
+				51EEEF3C20D5D64700E26E9F /* SeatingInfoTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -365,10 +374,13 @@
 				519DA0EF20D25C73002A43A7 /* BMLabel.swift in Sources */,
 				51B8C5312084204D00FD5358 /* ViewController.swift in Sources */,
 				51E66DDE20BFC503002DFAD1 /* GradientView.swift in Sources */,
+				51EEEF3D20D5D64700E26E9F /* SeatingInfoTableViewCell.swift in Sources */,
+				51EEEF3F20D5F71400E26E9F /* DataModel.swift in Sources */,
 				51E66DE220C4D090002DFAD1 /* ScheduleViewController.swift in Sources */,
 				51E66DE020BFCAC2002DFAD1 /* BMView.swift in Sources */,
 				51B8C52F2084204D00FD5358 /* AppDelegate.swift in Sources */,
 				51B71A4620B8AD5A0073DB3D /* UtilityExtensions.swift in Sources */,
+				51EEEF3B20D5744C00E26E9F /* SeatingInfoViewController.swift in Sources */,
 				51B71A4320B7A4F20073DB3D /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
