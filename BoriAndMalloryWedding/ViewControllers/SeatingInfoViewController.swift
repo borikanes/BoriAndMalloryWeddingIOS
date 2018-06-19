@@ -36,8 +36,6 @@ class SeatingInfoViewController: UIViewController {
         if isPlusPhone() {
             seatingInfoLabel.font = seatingInfoLabel.font.withSize(35)
         }
-//        seatingTableView.estimatedRowHeight = 71.0
-//        seatingTableView.rowHeight = UITableViewAutomaticDimension
     }
 }
 
