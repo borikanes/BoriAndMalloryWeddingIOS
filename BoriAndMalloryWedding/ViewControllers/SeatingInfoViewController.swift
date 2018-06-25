@@ -26,6 +26,17 @@ class SeatingInfoViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if isThereNewSeatingData() {
+            // Start indicator?
+            // get new json from API
+            // call function in SeatingInfoDataController to save json from API to disk
+            // update time of modification
+            // reload tableView?
+        }
+    }
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.setupView()
@@ -36,7 +47,19 @@ class SeatingInfoViewController: UIViewController {
         if isPlusPhone() {
             seatingInfoLabel.font = seatingInfoLabel.font.withSize(35)
         }
+
+        writeToDisk()
+        getFile()
+        print(getSeatInformationArray()!)
     }
+
+    private func isThereNewSeatingData() -> Bool {
+        // Make call to get last modified date via API
+        // Compare date with date saved locally(UserDefaults?)
+        // return true or false based on if date is changed or not
+        return false
+    }
+
 }
 
 extension SeatingInfoViewController: UITableViewDelegate {
@@ -51,7 +74,9 @@ extension SeatingInfoViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "seatingInformationCell", for: indexPath) as! SeatingInfoTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "seatingInformationCell", for: indexPath) as? SeatingInfoTableViewCell else {
+            return UITableViewCell() // what should i return here
+        }
         cell.nameLabel.text = data[indexPath.row].name
         cell.seatingNumberLabel.text = data[indexPath.row].table
         return cell

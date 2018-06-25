@@ -29,6 +29,7 @@
 		51EEEF3B20D5744C00E26E9F /* SeatingInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EEEF3A20D5744C00E26E9F /* SeatingInfoViewController.swift */; };
 		51EEEF3D20D5D64700E26E9F /* SeatingInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EEEF3C20D5D64700E26E9F /* SeatingInfoTableViewCell.swift */; };
 		51EEEF3F20D5F71400E26E9F /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EEEF3E20D5F71400E26E9F /* DataModel.swift */; };
+		EDDB734920DB453100F342BF /* SeatingInfoDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDB734820DB453100F342BF /* SeatingInfoDataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		51EEEF3A20D5744C00E26E9F /* SeatingInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatingInfoViewController.swift; sourceTree = "<group>"; };
 		51EEEF3C20D5D64700E26E9F /* SeatingInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatingInfoTableViewCell.swift; sourceTree = "<group>"; };
 		51EEEF3E20D5F71400E26E9F /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		EDDB734820DB453100F342BF /* SeatingInfoDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatingInfoDataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			children = (
 				51B71A4820B8B7850073DB3D /* HelperFunctions.swift */,
 				51EEEF3E20D5F71400E26E9F /* DataModel.swift */,
+				EDDB734820DB453100F342BF /* SeatingInfoDataController.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -361,7 +364,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -373,6 +376,7 @@
 				51B71A4920B8B7850073DB3D /* HelperFunctions.swift in Sources */,
 				519DA0EF20D25C73002A43A7 /* BMLabel.swift in Sources */,
 				51B8C5312084204D00FD5358 /* ViewController.swift in Sources */,
+				EDDB734920DB453100F342BF /* SeatingInfoDataController.swift in Sources */,
 				51E66DDE20BFC503002DFAD1 /* GradientView.swift in Sources */,
 				51EEEF3D20D5D64700E26E9F /* SeatingInfoTableViewCell.swift in Sources */,
 				51EEEF3F20D5F71400E26E9F /* DataModel.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import Foundation
 
-var json = """
+private var json = """
 [
     {
         "name": "Mallory McDonald",
@@ -34,7 +34,7 @@ func getSeatInformationArray() -> [SeatInfo]? {
     let decoder = JSONDecoder()
     var seatInfoArray: [SeatInfo]?
     do {
-       seatInfoArray = try decoder.decode([SeatInfo].self, from: json)
+        seatInfoArray = try decoder.decode([SeatInfo].self, from: json)
     } catch {
         print("Error Parsing array")
         seatInfoArray = nil
