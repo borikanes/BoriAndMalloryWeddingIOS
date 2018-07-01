@@ -30,11 +30,11 @@ struct SeatInfo: Decodable {
     var table: String
 }
 
-func getSeatInformationArray() -> [SeatInfo]? {
+func getSeatInformationArray(jsonData: Data = json) -> [SeatInfo]? {
     let decoder = JSONDecoder()
     var seatInfoArray: [SeatInfo]?
     do {
-        seatInfoArray = try decoder.decode([SeatInfo].self, from: json)
+        seatInfoArray = try decoder.decode([SeatInfo].self, from: jsonData)
     } catch {
         print("Error Parsing array")
         seatInfoArray = nil

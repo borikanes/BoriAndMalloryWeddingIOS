@@ -29,6 +29,7 @@ private var json = """
 
 func writeToDisk(json: Data = json) {
     let file = getDocumentsDirectory().appendingPathComponent(filename)
+    print(file.absoluteString)
     do {
         try json.write(to: file, options: .atomic)
     } catch {
@@ -37,7 +38,40 @@ func writeToDisk(json: Data = json) {
 }
 
 func saveModifiedTimeToUserDefaultDB(time: String) {
-    return
+    let defaults = UserDefaults.standard
+    defaults.set(time, forKey: "LastModifiedTime")
+}
+
+func getTimeFromAPI(withCompletion completion: @escaping (String?) -> Void ) {
+    // Call API here and save to UserDefault
+    let timeEndpoint = "https://styf7r70gj.execute-api.us-east-1.amazonaws.com/prod/time"
+    guard let timeUrl = URL(string: timeEndpoint) else {
+        print("Error: cannot create URL")
+        completion(nil)
+        return
+    }
+    print("Get TIME called")
+    let urlRequest = URLRequest(url: timeUrl)
+    let session = URLSession(configuration: URLSessionConfiguration.default)
+    let task = session.dataTask(with: urlRequest) {
+        (data, response, error) in
+        guard error == nil else {
+            print("error calling time API")
+            print(error!)
+            completion(nil)
+            return
+        }
+        guard let responseData = data else {
+            print("Error: did not receive data")
+            completion(nil)
+            return
+        }
+
+        let responseString = String(data: responseData, encoding: .utf8)!
+        print("RESPONSE --- \(responseString)")
+        completion(responseString)
+    }
+    task.resume()
 }
 
 func getDocumentsDirectory() -> URL {
@@ -56,7 +90,41 @@ func getFile() -> String? {
     return jsonString
 }
 
-func getLatestSeatingData() {
-    // Do all the magic of fetching data and saving to disk. May need call back so i know it's done?
-    return
+func doesJsonFileExistInFileSystem() -> Bool {
+    let filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
+    let fileURL = URL(fileURLWithPath: filePath)
+    let fileComponentPath = fileURL.appendingPathComponent(filename)
+
+    return FileManager.default.fileExists(atPath: fileComponentPath.path)
+}
+
+func makeNetworkCallForSeatingData(withCompletion completion: @escaping (Data?) -> Void) {
+    let timeEndpoint = "https://styf7r70gj.execute-api.us-east-1.amazonaws.com/prod/seating"
+    guard let timeUrl = URL(string: timeEndpoint) else {
+        print("Error: cannot create URL")
+        completion(nil)
+        return
+    }
+    let urlRequest = URLRequest(url: timeUrl)
+    let session = URLSession(configuration: URLSessionConfiguration.default)
+    let task = session.dataTask(with: urlRequest) {
+        (data, response, error) in
+        guard error == nil else {
+            print("error calling time API")
+            print(error!)
+            completion(nil)
+            return
+        }
+        guard let responseData = data else {
+            print("Error: did not receive data")
+            completion(nil)
+            return
+        }
+
+        let responseString = String(data: responseData, encoding: .utf8)!
+        print("RESPONSE --- \(responseString)")
+        completion(responseData)
+    }
+    task.resume()
+
 }
