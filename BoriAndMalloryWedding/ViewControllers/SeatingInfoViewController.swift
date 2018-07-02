@@ -80,12 +80,12 @@ class SeatingInfoViewController: UIViewController {
             }
             guard let jsonDataUnwrapped = jsonData else {
                 self.stopActivityIndicator()
+                self.showAlert(title: "Something went awry", message: "Something went wrong internally, please try again")
                 return
             }
 
             writeToDisk(json: jsonDataUnwrapped)
             self.prepareDataSourceForTableView(json: jsonDataUnwrapped)
-            // Convert json String to SeatInfo object
         }
     }
 
@@ -98,6 +98,8 @@ class SeatingInfoViewController: UIViewController {
                 guard let seatInfoArray = getSeatInformationArray(jsonData: jsonData),
                     (getSeatInformationArray(jsonData: jsonData)?.count)! > 0 else {
                         // Error handle not able to get seat info array
+                        self.stopActivityIndicator()
+                        self.showAlert(title: "Something went awry", message: "Something went wrong internally, please try again")
                         return
                 }
                 self.dataFromDisk = seatInfoArray
@@ -114,6 +116,7 @@ class SeatingInfoViewController: UIViewController {
             (getSeatInformationArray(jsonData: jsonUnwrapped)?.count)! > 0 else {
                 // Error handle not able to get seat info array
                 self.stopActivityIndicator()
+                self.showAlert(title: "Something went awry", message: "Something went wrong internally, please try again")
                 return
         }
         self.dataFromDisk = seatInfoArray
