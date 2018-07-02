@@ -10,12 +10,12 @@ import UIKit
 
 class SeatingInfoViewController: UIViewController {
 
-    private let data: [SeatInfo] = [SeatInfo(name: "Mallory Oludemi", table: "1"),
-                                    SeatInfo(name: "Bori Oludemi", table: "2"),
-                                    SeatInfo(name: "Daddy Oludemi", table: "3")]
     private var dataFromDisk: [SeatInfo] = []
     let activityIndicator = UIActivityIndicatorView()
     let activityIndicatorDarkBaseView = UIView()
+
+    let noInternetAlertTitle = "No Internet Connection"
+    let noInternetAlertMessage = "Looks like you're not connected to the internet"
 
     @IBOutlet var seatingInfoLabel: UILabel!
     @IBOutlet var searchBar: UISearchBar!
@@ -33,7 +33,10 @@ class SeatingInfoViewController: UIViewController {
         super.viewWillAppear(animated)
         startActivityIndicator()
         getTimeFromAPI { timeString in
-            guard timeString != nil else {
+            guard let time = timeString else {
+                // Handle error here
+                self.stopActivityIndicator()
+                self.showAlert(title: "Network Error", message: "Something went wrong")
                 return
             }
 
@@ -44,7 +47,7 @@ class SeatingInfoViewController: UIViewController {
             }
             // if time exists already, just check to make sure the time is the same
             if let timeSavedInDefaults = defaults.object(forKey: "LastModifiedTime") as? String {
-                if timeSavedInDefaults != timeString! {
+                if timeSavedInDefaults != time {
                     // New data, re-fetch json
                     self.fetchDataAndSaveLocally()
                     self.stopActivityIndicator()
@@ -55,7 +58,7 @@ class SeatingInfoViewController: UIViewController {
                 // Stop indicator here
             } else {
                 // Save time in user defaults
-                saveModifiedTimeToUserDefaultDB(time: timeString!)
+                saveModifiedTimeToUserDefaultDB(time: time)
                 // Get Json from API
                 self.fetchDataAndSaveLocally()
             }
@@ -71,12 +74,15 @@ class SeatingInfoViewController: UIViewController {
     private func fetchDataAndSaveLocally() {
         makeNetworkCallForSeatingData { jsonData in
             guard jsonData != nil else {
+                self.stopActivityIndicator()
+                self.showAlert(title: "Network Error", message: "Something went wrong")
                 return
             }
             guard let jsonDataUnwrapped = jsonData else {
+                self.stopActivityIndicator()
                 return
             }
-            print(jsonDataUnwrapped)
+
             writeToDisk(json: jsonDataUnwrapped)
             self.prepareDataSourceForTableView(json: jsonDataUnwrapped)
             // Convert json String to SeatInfo object
@@ -107,6 +113,7 @@ class SeatingInfoViewController: UIViewController {
         guard let seatInfoArray = getSeatInformationArray(jsonData: jsonUnwrapped),
             (getSeatInformationArray(jsonData: jsonUnwrapped)?.count)! > 0 else {
                 // Error handle not able to get seat info array
+                self.stopActivityIndicator()
                 return
         }
         self.dataFromDisk = seatInfoArray
@@ -139,6 +146,21 @@ class SeatingInfoViewController: UIViewController {
             self.activityIndicator.stopAnimating()
 
             self.activityIndicatorDarkBaseView.removeFromSuperview()
+        }
+    }
+
+    func showAlert(title: String, message: String) {
+        // No internet connection
+        if !Reachability.isConnectedToNetwork() {
+            DispatchQueue.main.async {
+                let alertController = UIAlertController(title: "No Internet Connection", message: "Looks like you're not connected to the internet", preferredStyle: .alert)
+                self.present(alertController, animated: true, completion: nil)
+            }
+        } else {
+            DispatchQueue.main.async {
+                let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+                self.present(alertController, animated: true, completion: nil)
+            }
         }
     }
 }

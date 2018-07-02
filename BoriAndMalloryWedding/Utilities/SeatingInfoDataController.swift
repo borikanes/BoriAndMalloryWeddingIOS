@@ -34,6 +34,7 @@ func writeToDisk(json: Data = json) {
         try json.write(to: file, options: .atomic)
     } catch {
         // failed to write file – bad permissions, bad filename, missing permissions, or more likely it can't be converted to the encoding
+        // i don't care if it doesnt write, right?
     }
 }
 
@@ -54,7 +55,7 @@ func getTimeFromAPI(withCompletion completion: @escaping (String?) -> Void ) {
     let urlRequest = URLRequest(url: timeUrl)
     let session = URLSession(configuration: URLSessionConfiguration.default)
     let task = session.dataTask(with: urlRequest) {
-        (data, response, error) in
+        (data, _, error) in
         guard error == nil else {
             print("error calling time API")
             print(error!)
@@ -84,6 +85,7 @@ func getFile() -> String? {
         jsonString = try String(contentsOf: getDocumentsDirectory().appendingPathComponent(filename), encoding: .utf8)
     } catch {
         // handle error
+        return nil
     }
 
     return jsonString
@@ -107,7 +109,7 @@ func makeNetworkCallForSeatingData(withCompletion completion: @escaping (Data?) 
     let urlRequest = URLRequest(url: timeUrl)
     let session = URLSession(configuration: URLSessionConfiguration.default)
     let task = session.dataTask(with: urlRequest) {
-        (data, response, error) in
+        (data, _, error) in
         guard error == nil else {
             print("error calling time API")
             print(error!)

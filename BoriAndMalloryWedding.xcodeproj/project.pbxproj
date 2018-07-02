@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		510D87C120E9CEA7004E9472 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510D87C020E9CEA7004E9472 /* Reachability.swift */; };
 		519DA0EF20D25C73002A43A7 /* BMLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519DA0EE20D25C73002A43A7 /* BMLabel.swift */; };
 		519DA0F020D4A7A2002A43A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51B8C5352084204E00FD5358 /* Assets.xcassets */; };
 		51B71A4320B7A4F20073DB3D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B71A4220B7A4F20073DB3D /* HomeViewController.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		510D87C020E9CEA7004E9472 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		519DA0EE20D25C73002A43A7 /* BMLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMLabel.swift; sourceTree = "<group>"; };
 		51B71A4220B7A4F20073DB3D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		51B71A4520B8AD5A0073DB3D /* UtilityExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityExtensions.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				51B71A4820B8B7850073DB3D /* HelperFunctions.swift */,
 				51EEEF3E20D5F71400E26E9F /* DataModel.swift */,
 				EDDB734820DB453100F342BF /* SeatingInfoDataController.swift */,
+				510D87C020E9CEA7004E9472 /* Reachability.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				510D87C120E9CEA7004E9472 /* Reachability.swift in Sources */,
 				51B71A4920B8B7850073DB3D /* HelperFunctions.swift in Sources */,
 				519DA0EF20D25C73002A43A7 /* BMLabel.swift in Sources */,
 				51B8C5312084204D00FD5358 /* ViewController.swift in Sources */,
