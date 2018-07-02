@@ -107,6 +107,8 @@ class SeatingInfoViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.seatingTableView.reloadData()
                 }
+            } else {
+                fetchDataAndSaveLocally()
             }
 
             return
@@ -147,21 +149,42 @@ class SeatingInfoViewController: UIViewController {
     private func stopActivityIndicator() {
         DispatchQueue.main.async {
             self.activityIndicator.stopAnimating()
-
             self.activityIndicatorDarkBaseView.removeFromSuperview()
         }
     }
 
     func showAlert(title: String, message: String) {
         // No internet connection
+        let retryButton = UIAlertAction(title: "Retry", style: .default) { (_:UIAlertAction) in
+            DispatchQueue.main.async {
+                self.startActivityIndicator()
+                self.fetchDataAndSaveLocally()
+            }
+        }
+
+        // animates transition back to the first page if there's a network error
+        let okButton = UIAlertAction(title: "Dismiss", style: .default) { (_:UIAlertAction) in
+            DispatchQueue.main.async {
+                if let tabBarController = self.tabBarController {
+                    let fromView: UIView = tabBarController.selectedViewController!.view
+                    let toView: UIView = (self.tabBarController?.viewControllers![0].view)!
+                    UIView.transition(from: fromView, to: toView, duration: 0.5, options: UIViewAnimationOptions.transitionFlipFromRight, completion: nil)
+                    tabBarController.selectedIndex = 0
+                }
+            }
+        }
         if !Reachability.isConnectedToNetwork() {
             DispatchQueue.main.async {
-                let alertController = UIAlertController(title: "No Internet Connection", message: "Looks like you're not connected to the internet", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "No Internet Connection", message: "Looks like you're not connected to the internet. Try connecting to WiFi or get a better cell connection.", preferredStyle: .alert)
+                alertController.addAction(retryButton)
+                alertController.addAction(okButton)
                 self.present(alertController, animated: true, completion: nil)
             }
         } else {
             DispatchQueue.main.async {
                 let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+                alertController.addAction(retryButton)
+                alertController.addAction(okButton)
                 self.present(alertController, animated: true, completion: nil)
             }
         }
