@@ -21,7 +21,7 @@ private var json = """
         "table": "2"
     },
     {
-        "name": "Dad McDonald",
+        "name": "Dads McDonald",
         "table": "1"
     }
 ]
@@ -68,7 +68,6 @@ func getTimeFromAPI(withCompletion completion: @escaping (String?) -> Void ) {
         }
 
         let responseString = String(data: responseData, encoding: .utf8)!
-        print("RESPONSE --- \(responseString)")
         completion(responseString)
     }
     task.resume()
@@ -121,8 +120,6 @@ func makeNetworkCallForSeatingData(withCompletion completion: @escaping (Data?) 
             return
         }
 
-        let responseString = String(data: responseData, encoding: .utf8)!
-        print("RESPONSE --- \(responseString)")
         completion(responseData)
     }
     task.resume()

@@ -11,8 +11,8 @@ import UIKit
 class SeatingInfoViewController: UIViewController {
 
     private let data: [SeatInfo] = [SeatInfo(name: "Mallory Oludemi", table: "1"),
-                            SeatInfo(name: "Bori Oludemi", table: "2"),
-                            SeatInfo(name: "Daddy Oludemi", table: "3")]
+                                    SeatInfo(name: "Bori Oludemi", table: "2"),
+                                    SeatInfo(name: "Daddy Oludemi", table: "3")]
     private var dataFromDisk: [SeatInfo] = []
     let activityIndicator = UIActivityIndicatorView()
     let activityIndicatorDarkBaseView = UIView()
@@ -69,12 +69,11 @@ class SeatingInfoViewController: UIViewController {
     }
 
     private func fetchDataAndSaveLocally() {
-        makeNetworkCallForSeatingData { jsonString in
-            guard jsonString != nil else {
+        makeNetworkCallForSeatingData { jsonData in
+            guard jsonData != nil else {
                 return
             }
-//            let jsonData = jsonString?.data(using: .utf8)
-            guard let jsonDataUnwrapped = jsonString else {
+            guard let jsonDataUnwrapped = jsonData else {
                 return
             }
             print(jsonDataUnwrapped)
@@ -90,32 +89,21 @@ class SeatingInfoViewController: UIViewController {
             let jsonStringFromDisk = getFile()
             if let jsonStringFromDiskUnwrapped = jsonStringFromDisk {
                 let jsonData = jsonStringFromDiskUnwrapped.data(using: .utf8)!
-                do {
-                    let jsonDataWithoutFragment = try JSONSerialization.jsonObject(with: jsonData, options: .allowFragments)
-                    guard let seatInfoArray = getSeatInformationArray(jsonData: jsonData),
-                        (getSeatInformationArray(jsonData: jsonData)?.count)! > 0 else {
-                            // Error handle not able to get seat info array
-                            return
-                    }
-                    self.dataFromDisk = seatInfoArray
-                    self.stopActivityIndicator()
+                guard let seatInfoArray = getSeatInformationArray(jsonData: jsonData),
+                    (getSeatInformationArray(jsonData: jsonData)?.count)! > 0 else {
+                        // Error handle not able to get seat info array
+                        return
+                }
+                self.dataFromDisk = seatInfoArray
+                self.stopActivityIndicator()
+                DispatchQueue.main.async {
                     self.seatingTableView.reloadData()
-                } catch {
-                    // Handle Error here
                 }
             }
 
             return
         }
-        do {
-            if let jsonDataWithoutFragment = try JSONSerialization.jsonObject(with: jsonUnwrapped, options: .allowFragments) as? Any {
-                print(jsonDataWithoutFragment)
-            } else {
-                print("didnt work")
-            }
-        } catch {
-            
-        }
+
         guard let seatInfoArray = getSeatInformationArray(jsonData: jsonUnwrapped),
             (getSeatInformationArray(jsonData: jsonUnwrapped)?.count)! > 0 else {
                 // Error handle not able to get seat info array
@@ -123,7 +111,9 @@ class SeatingInfoViewController: UIViewController {
         }
         self.dataFromDisk = seatInfoArray
         self.stopActivityIndicator()
-        self.seatingTableView.reloadData()
+        DispatchQueue.main.async {
+            self.seatingTableView.reloadData()
+        }
     }
 
     private func setupView() {
