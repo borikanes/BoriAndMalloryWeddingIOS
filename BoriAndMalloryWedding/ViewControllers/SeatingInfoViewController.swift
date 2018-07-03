@@ -99,7 +99,9 @@ class SeatingInfoViewController: UIViewController {
                         self.showAlert(title: "Something went awry", message: "Something went wrong internally, please try again")
                         return
                 }
+
                 self.dataFromDisk = seatInfoArray
+                self.dataFromDisk.sort(by: { $0.name < $1.name })
                 self.stopActivityIndicator()
                 DispatchQueue.main.async {
                     self.seatingTableView.reloadData()
@@ -119,6 +121,7 @@ class SeatingInfoViewController: UIViewController {
                 return
         }
         self.dataFromDisk = seatInfoArray
+        self.dataFromDisk.sort(by: { $0.name < $1.name })
         self.stopActivityIndicator()
         DispatchQueue.main.async {
             self.seatingTableView.reloadData()
@@ -126,8 +129,8 @@ class SeatingInfoViewController: UIViewController {
     }
 
     private func setupView() {
-        if isPlusPhone() {
-            seatingInfoLabel.font = seatingInfoLabel.font.withSize(35)
+        if isPlusPhone() || isIphone10() {
+            seatingInfoLabel.font = seatingInfoLabel.font.withSize(45)
         } else if isIphone5AndBelow() {
             seatingInfoLabel.font.withSize(21)
         }

@@ -658,11 +658,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="16G-qA-fWe">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="94.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="113.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seating Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPR-MU-YYz">
-                                        <rect key="frame" x="8" y="11.5" width="304" height="27.5"/>
-                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                        <rect key="frame" x="8" y="14.5" width="304" height="43.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="heightClass=regular-widthClass=regular">
@@ -670,7 +670,7 @@
                                         </variation>
                                     </label>
                                     <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search for your name" translatesAutoresizingMaskIntoConstraints="NO" id="dWh-kd-UxN">
-                                        <rect key="frame" x="0.0" y="38" width="320" height="56"/>
+                                        <rect key="frame" x="0.0" y="57" width="320" height="56"/>
                                         <color key="backgroundColor" red="0.50196078430000002" green="0.0" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet" returnKeyType="search" enablesReturnKeyAutomatically="YES" textContentType="name"/>
@@ -690,7 +690,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6gz-BK-zpX">
-                                <rect key="frame" x="0.0" y="95" width="320" height="424"/>
+                                <rect key="frame" x="0.0" y="114" width="320" height="405"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="seatingInformationCell" rowHeight="71" id="L2n-lg-XL5" customClass="SeatingInfoTableViewCell" customModule="BoriAndMalloryWedding" customModuleProvider="target">
@@ -778,7 +778,7 @@
                         <constraints>
                             <constraint firstItem="16G-qA-fWe" firstAttribute="leading" secondItem="MN4-V2-Hha" secondAttribute="leading" id="1M1-sB-yqT"/>
                             <constraint firstItem="6gz-BK-zpX" firstAttribute="trailing" secondItem="MN4-V2-Hha" secondAttribute="trailing" id="8dk-Xi-e1Y"/>
-                            <constraint firstItem="16G-qA-fWe" firstAttribute="height" secondItem="D7A-Qy-DbS" secondAttribute="height" multiplier="1:6" id="DYh-3c-pF7"/>
+                            <constraint firstItem="16G-qA-fWe" firstAttribute="height" secondItem="D7A-Qy-DbS" secondAttribute="height" multiplier="1:5" id="DYh-3c-pF7"/>
                             <constraint firstItem="16G-qA-fWe" firstAttribute="trailing" secondItem="MN4-V2-Hha" secondAttribute="trailing" id="Gin-pX-9Xh"/>
                             <constraint firstItem="6gz-BK-zpX" firstAttribute="top" secondItem="16G-qA-fWe" secondAttribute="bottom" constant="0.5" id="VRc-aR-gOq"/>
                             <constraint firstItem="6gz-BK-zpX" firstAttribute="leading" secondItem="MN4-V2-Hha" secondAttribute="leading" id="VaI-1u-zEx"/>
