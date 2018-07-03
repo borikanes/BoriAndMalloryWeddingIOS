@@ -14,9 +14,6 @@ class SeatingInfoViewController: UIViewController {
     let activityIndicator = UIActivityIndicatorView()
     let activityIndicatorDarkBaseView = UIView()
 
-    let noInternetAlertTitle = "No Internet Connection"
-    let noInternetAlertMessage = "Looks like you're not connected to the internet"
-
     @IBOutlet var seatingInfoLabel: UILabel!
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var seatingTableView: UITableView!
@@ -131,7 +128,11 @@ class SeatingInfoViewController: UIViewController {
     private func setupView() {
         if isPlusPhone() {
             seatingInfoLabel.font = seatingInfoLabel.font.withSize(35)
+        } else if isIphone5AndBelow() {
+            seatingInfoLabel.font.withSize(21)
         }
+        self.searchBar.tintColor = .white
+        self.searchBar.textColor = UIColor.white
     }
 
     private func startActivityIndicator() {
@@ -154,7 +155,6 @@ class SeatingInfoViewController: UIViewController {
     }
 
     func showAlert(title: String, message: String) {
-        // No internet connection
         let retryButton = UIAlertAction(title: "Retry", style: .default) { (_:UIAlertAction) in
             DispatchQueue.main.async {
                 self.startActivityIndicator()
@@ -173,6 +173,8 @@ class SeatingInfoViewController: UIViewController {
                 }
             }
         }
+
+        // No internet connection
         if !Reachability.isConnectedToNetwork() {
             DispatchQueue.main.async {
                 let alertController = UIAlertController(title: "No Internet Connection", message: "Looks like you're not connected to the internet. Try connecting to WiFi or get a better cell connection.", preferredStyle: .alert)
@@ -214,5 +216,16 @@ extension SeatingInfoViewController: UITableViewDataSource {
 
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         return ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+    }
+}
+
+extension SeatingInfoViewController: UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+    }
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        searchBar.showsCancelButton = false
     }
 }
