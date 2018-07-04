@@ -11,8 +11,10 @@ import UIKit
 class SeatingInfoViewController: UIViewController {
 
     private var dataFromDisk: [SeatInfo] = []
+    private var filteredSeatData: [SeatInfo] = []
     let activityIndicator = UIActivityIndicatorView()
     let activityIndicatorDarkBaseView = UIView()
+    private let refreshControl = UIRefreshControl()
 
     @IBOutlet var seatingInfoLabel: UILabel!
     @IBOutlet var searchBar: UISearchBar!
@@ -104,6 +106,9 @@ class SeatingInfoViewController: UIViewController {
                 self.dataFromDisk.sort(by: { $0.name < $1.name })
                 self.stopActivityIndicator()
                 DispatchQueue.main.async {
+                    if self.refreshControl.isRefreshing {
+                        self.refreshControl.endRefreshing()
+                    }
                     self.seatingTableView.reloadData()
                 }
             } else {
@@ -124,6 +129,9 @@ class SeatingInfoViewController: UIViewController {
         self.dataFromDisk.sort(by: { $0.name < $1.name })
         self.stopActivityIndicator()
         DispatchQueue.main.async {
+            if self.refreshControl.isRefreshing {
+                self.refreshControl.endRefreshing()
+            }
             self.seatingTableView.reloadData()
         }
     }
@@ -136,6 +144,19 @@ class SeatingInfoViewController: UIViewController {
         }
         self.searchBar.tintColor = .white
         self.searchBar.textColor = UIColor.white
+        self.searchBar.accessibilityLabel = "seating search bar" // For UI testing purposes
+
+        seatingTableView.refreshControl = refreshControl
+        refreshControl.tintColor = UIColor(red: 0.502, green: 0.0, blue: 0.125, alpha: 1.0)
+        if let meriendaFont = UIFont(name: "Merienda One", size: 12.0) {
+            let attributes = [NSAttributedStringKey.font : meriendaFont]
+            refreshControl.attributedTitle = NSAttributedString(string: "Fetching new seating data", attributes: attributes)
+        }
+        refreshControl.addTarget(self, action: #selector(refreshTableView(_:)), for: .valueChanged)
+    }
+
+    @objc private func refreshTableView(_ sender: Any) {
+        fetchDataAndSaveLocally()
     }
 
     private func startActivityIndicator() {
@@ -204,17 +225,22 @@ extension SeatingInfoViewController: UITableViewDelegate {
 
 extension SeatingInfoViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataFromDisk.count
+        return searchBarIsEmpty() ? dataFromDisk.count : filteredSeatData.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "seatingInformationCell", for: indexPath) as? SeatingInfoTableViewCell else {
             return UITableViewCell() // what should i return here
         }
-
-        cell.nameLabel.text = dataFromDisk[indexPath.row].name
-        cell.seatingNumberLabel.text = dataFromDisk[indexPath.row].table
+        if searchBarIsEmpty() {
+            cell.nameLabel.text = dataFromDisk[indexPath.row].name
+            cell.seatingNumberLabel.text = dataFromDisk[indexPath.row].table
+        } else {
+            cell.nameLabel.text = filteredSeatData[indexPath.row].name
+            cell.seatingNumberLabel.text = filteredSeatData[indexPath.row].table
+        }
         return cell
+
     }
 
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
@@ -230,5 +256,24 @@ extension SeatingInfoViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         searchBar.showsCancelButton = false
+    }
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if !searchBar.text!.isEmpty {
+            filterContentForSearchText(searchBar.text!)
+        }
+    }
+
+    // https://www.raywenderlich.com/157864/uisearchcontroller-tutorial-getting-started
+    func filterContentForSearchText(_ searchText: String) {
+        filteredSeatData = dataFromDisk.filter({( seatInfo : SeatInfo) -> Bool in
+            return seatInfo.name.lowercased().contains(searchText.lowercased())
+        })
+
+        seatingTableView.reloadData()
+    }
+
+    func searchBarIsEmpty() -> Bool {
+        return searchBar.text?.isEmpty ?? true
     }
 }

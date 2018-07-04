@@ -9,6 +9,7 @@
 import XCTest
 
 class BoriAndMalloryWeddingUITests: XCTestCase {
+    let app = XCUIApplication()
 
     override func setUp() {
         super.setUp()
@@ -28,9 +29,58 @@ class BoriAndMalloryWeddingUITests: XCTestCase {
         super.tearDown()
     }
 
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testOrchestrate() {
+        testTabBarsExists()
+        testHomeUIElements()
+        testSeatingInfoVC()
+        testScheduleVC()
     }
 
+    func testTabBarsExists() {
+        XCTAssert(app.tabBars.buttons["Seating"].exists)
+        XCTAssert(app.tabBars.buttons["Home"].exists)
+        XCTAssert(app.tabBars.buttons["Food"].exists)
+        XCTAssert(app.tabBars.buttons["Schedule"].exists)
+    }
+
+    func testHomeUIElements() {
+        app.tabBars.buttons["Home"].tap()
+        let elementsQuery = app.scrollViews.otherElements
+        XCTAssert(elementsQuery.staticTexts["Time to wedding day"].exists)
+        XCTAssert(elementsQuery.staticTexts["College Park"].exists)
+        XCTAssert(elementsQuery.staticTexts["&"].exists)
+        XCTAssert(elementsQuery.staticTexts["Laurel, MD"].exists)
+        XCTAssert(elementsQuery.staticTexts["September"].exists)
+        XCTAssert(elementsQuery.staticTexts["22"].exists)
+        XCTAssert(elementsQuery.staticTexts["#maluwabori"].exists)
+        XCTAssert(app.staticTexts["Bori & Mallory"].exists)
+        
+    }
+
+    func testScheduleVC() {
+        app.tabBars.buttons["Schedule"].tap()
+        let elementsQuery = app.scrollViews.otherElements
+
+        XCTAssert(app/*@START_MENU_TOKEN@*/.staticTexts["11:00am"]/*[[".scrollViews.staticTexts[\"11:00am\"]",".staticTexts[\"11:00am\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.exists)
+        XCTAssert(elementsQuery.staticTexts["Church ceremony"].exists)
+        XCTAssert(elementsQuery.staticTexts["UMD Chapel"].exists)
+
+        XCTAssert(app/*@START_MENU_TOKEN@*/.staticTexts["12:30pm"]/*[[".scrollViews.staticTexts[\"12:30pm\"]",".staticTexts[\"12:30pm\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.exists)
+        XCTAssert(elementsQuery.staticTexts["Hors d’oeuvres / snacks"].exists)
+
+        XCTAssert(app/*@START_MENU_TOKEN@*/.staticTexts["02:00pm"]/*[[".scrollViews.staticTexts[\"02:00pm\"]",".staticTexts[\"02:00pm\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.exists)
+        XCTAssert(elementsQuery.staticTexts["Nigerian traditional ceremony"].exists)
+
+        XCTAssert(app/*@START_MENU_TOKEN@*/.staticTexts["04:00pm"]/*[[".scrollViews.staticTexts[\"04:00pm\"]",".staticTexts[\"04:00pm\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.exists)
+        XCTAssert(elementsQuery.staticTexts["Lunch & Reception"].exists)
+    }
+
+    func testSeatingInfoVC() {
+        app.tabBars.buttons["Seating"].tap()
+        XCTAssert(app.otherElements["seating search bar"].exists)
+        XCTAssert(app.searchFields["Search for your name"].exists)
+        XCTAssert(app.staticTexts["Seating Info"].exists)
+        XCUIApplication().tabBars.buttons["Seating"].tap()
+                
+    }
 }
