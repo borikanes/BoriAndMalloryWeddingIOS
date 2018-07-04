@@ -41,6 +41,11 @@ class BoriAndMalloryWeddingUITests: XCTestCase {
         XCTAssert(app.tabBars.buttons["Home"].exists)
         XCTAssert(app.tabBars.buttons["Food"].exists)
         XCTAssert(app.tabBars.buttons["Schedule"].exists)
+
+        app.tabBars.buttons["Seating"].tap()
+        app.tabBars.buttons["Home"].tap()
+        app.tabBars.buttons["Food"].tap()
+        app.tabBars.buttons["Schedule"].tap()
     }
 
     func testHomeUIElements() {
