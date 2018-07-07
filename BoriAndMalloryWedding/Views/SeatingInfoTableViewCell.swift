@@ -16,7 +16,9 @@ class SeatingInfoTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+//        if isPlusPhone() {
+//            self.nameLabel.font = self.nameLabel.font.withSize(35)
+//        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

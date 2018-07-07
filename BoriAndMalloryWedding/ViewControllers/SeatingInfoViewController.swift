@@ -24,8 +24,6 @@ class SeatingInfoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -70,6 +68,7 @@ class SeatingInfoViewController: UIViewController {
 
     }
 
+    // MARK: Helper functions for VC
     private func fetchDataAndSaveLocally() {
         makeNetworkCallForSeatingData { jsonData in
             guard jsonData != nil else {
@@ -217,12 +216,14 @@ class SeatingInfoViewController: UIViewController {
     }
 }
 
+// MARK: UITableViewDelegate
 extension SeatingInfoViewController: UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 }
 
+// MARK: UITableViewDataSource
 extension SeatingInfoViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchBarIsEmpty() ? dataFromDisk.count : filteredSeatData.count
@@ -232,6 +233,7 @@ extension SeatingInfoViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "seatingInformationCell", for: indexPath) as? SeatingInfoTableViewCell else {
             return UITableViewCell() // what should i return here
         }
+
         if searchBarIsEmpty() {
             cell.nameLabel.text = dataFromDisk[indexPath.row].name
             cell.seatingNumberLabel.text = dataFromDisk[indexPath.row].table
@@ -242,12 +244,9 @@ extension SeatingInfoViewController: UITableViewDataSource {
         return cell
 
     }
-
-    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-        return ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-    }
 }
 
+// MARK: UISearchBarDelegate
 extension SeatingInfoViewController: UISearchBarDelegate {
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = true
@@ -255,15 +254,25 @@ extension SeatingInfoViewController: UISearchBarDelegate {
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
+        self.seatingTableView.reloadData() // when cancel button is clicked, it should refresh tableview
         searchBar.showsCancelButton = false
     }
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if !searchBar.text!.isEmpty {
             filterContentForSearchText(searchBar.text!)
+        } else {
+            // This is really for the x button. when it's clicked, it should refresh the tableview
+            seatingTableView.reloadData()
         }
     }
 
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        searchBar.showsCancelButton = false
+    }
+
+    // MARK: Helper functions for Search Bar
     // https://www.raywenderlich.com/157864/uisearchcontroller-tutorial-getting-started
     func filterContentForSearchText(_ searchText: String) {
         filteredSeatData = dataFromDisk.filter({( seatInfo : SeatInfo) -> Bool in
