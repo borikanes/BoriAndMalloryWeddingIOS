@@ -236,6 +236,13 @@ extension SeatingInfoViewController: UITableViewDataSource {
             } else if isIphone5AndBelow() {
                 customCell.nameLabel.font = customCell.nameLabel.font.withSize(18)
             }
+            if isIpadPro129() || isIpad105() {
+                if let nameLabelText = customCell.nameLabel.text {
+                    let attributedString = NSMutableAttributedString(string: nameLabelText)
+                    attributedString.addAttribute(NSAttributedStringKey.kern, value: 2, range: NSRange(location: 0, length: attributedString.length - 1))
+                    customCell.nameLabel.attributedText = attributedString
+                }
+            }
         }
     }
 
