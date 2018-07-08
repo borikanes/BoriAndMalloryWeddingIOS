@@ -229,6 +229,16 @@ extension SeatingInfoViewController: UITableViewDataSource {
         return searchBarIsEmpty() ? dataFromDisk.count : filteredSeatData.count
     }
 
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if let customCell = cell as? SeatingInfoTableViewCell {
+            if isPlusPhone() || isIphone10() {
+                customCell.nameLabel.font = customCell.nameLabel.font.withSize(23)
+            } else if isIphone5AndBelow() {
+                customCell.nameLabel.font = customCell.nameLabel.font.withSize(18)
+            }
+        }
+    }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "seatingInformationCell", for: indexPath) as? SeatingInfoTableViewCell else {
             return UITableViewCell() // what should i return here
@@ -241,6 +251,7 @@ extension SeatingInfoViewController: UITableViewDataSource {
             cell.nameLabel.text = filteredSeatData[indexPath.row].name
             cell.seatingNumberLabel.text = filteredSeatData[indexPath.row].table
         }
+
         return cell
 
     }
