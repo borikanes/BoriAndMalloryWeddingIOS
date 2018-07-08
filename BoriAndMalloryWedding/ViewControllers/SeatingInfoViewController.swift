@@ -228,15 +228,17 @@ extension SeatingInfoViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchBarIsEmpty() ? dataFromDisk.count : filteredSeatData.count
     }
-
+    // Set font size before cell appears
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let customCell = cell as? SeatingInfoTableViewCell {
+            customCell.tableLabel.text = "Table"
             if isPlusPhone() || isIphone10() {
                 customCell.nameLabel.font = customCell.nameLabel.font.withSize(23)
             } else if isIphone5AndBelow() {
                 customCell.nameLabel.font = customCell.nameLabel.font.withSize(18)
             }
             if isIpadPro129() || isIpad105() {
+                customCell.seatingNumberBaseView.cornerRadius = customCell.seatingNumberBaseView.frame.width / 2.0
                 if let nameLabelText = customCell.nameLabel.text {
                     let attributedString = NSMutableAttributedString(string: nameLabelText)
                     attributedString.addAttribute(NSAttributedStringKey.kern, value: 2, range: NSRange(location: 0, length: attributedString.length - 1))

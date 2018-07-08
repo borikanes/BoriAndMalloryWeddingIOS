@@ -704,11 +704,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="70.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="ZnO-sb-wnO">
-                                                    <rect key="frame" x="13" y="8" width="739" height="55"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="1KZ-uG-nkA">
+                                                    <rect key="frame" x="12" y="2" width="748" height="66.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mallory Ellyn Oludemi " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cif-MT-3A8">
-                                                            <rect key="frame" x="0.0" y="0.0" width="684" height="55"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="449" height="66.5"/>
                                                             <fontDescription key="fontDescription" name="MeriendaOne-Regular" family="Merienda One" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -716,40 +716,43 @@
                                                                 <fontDescription key="fontDescription" name="MeriendaOne-Regular" family="Merienda One" pointSize="40"/>
                                                             </variation>
                                                         </label>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8yx-ye-bBC">
-                                                            <rect key="frame" x="699" y="0.0" width="40" height="55"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WJh-sq-xJx">
+                                                            <rect key="frame" x="662.5" y="0.0" width="85.5" height="66.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Table" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYW-EG-p4W">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="40" height="15"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="placehold" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYW-EG-p4W">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="85.5" height="24.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                     <variation key="heightClass=regular-widthClass=regular">
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                     </variation>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dc2-s9-lEA" customClass="BMView" customModule="BoriAndMalloryWedding" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="15" width="40" height="40"/>
+                                                                    <rect key="frame" x="22" y="24.5" width="42" height="42"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="33" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jh-2l-yY5">
-                                                                            <rect key="frame" x="2" y="2" width="36" height="36"/>
-                                                                            <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="17"/>
+                                                                            <rect key="frame" x="1" y="1" width="40" height="40"/>
+                                                                            <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="17"/>
                                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
+                                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                                <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="22"/>
+                                                                            </variation>
                                                                         </label>
                                                                     </subviews>
                                                                     <color key="backgroundColor" red="0.50196078430000002" green="0.0" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <constraints>
-                                                                        <constraint firstItem="8jh-2l-yY5" firstAttribute="top" secondItem="Dc2-s9-lEA" secondAttribute="top" constant="2" id="1RM-wh-g9d"/>
-                                                                        <constraint firstAttribute="height" constant="37" id="4jg-I4-aLj">
-                                                                            <variation key="heightClass=regular-widthClass=regular" constant="40"/>
+                                                                        <constraint firstItem="8jh-2l-yY5" firstAttribute="leading" secondItem="Dc2-s9-lEA" secondAttribute="leading" constant="1" id="49d-lz-3Ez"/>
+                                                                        <constraint firstAttribute="width" constant="37" id="9Gd-YR-yJ0">
+                                                                            <variation key="heightClass=regular-widthClass=regular" constant="42"/>
                                                                         </constraint>
-                                                                        <constraint firstAttribute="width" constant="37" id="KLj-Ga-5ag">
-                                                                            <variation key="heightClass=regular-widthClass=regular" constant="40"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="8jh-2l-yY5" secondAttribute="bottom" constant="1" id="CgG-pJ-qpF"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="8jh-2l-yY5" secondAttribute="trailing" constant="1" id="Vvd-v4-fGS"/>
+                                                                        <constraint firstItem="8jh-2l-yY5" firstAttribute="top" secondItem="Dc2-s9-lEA" secondAttribute="top" constant="1" id="n4k-OW-PUl"/>
+                                                                        <constraint firstAttribute="height" constant="37" id="zt0-SE-jQ9">
+                                                                            <variation key="heightClass=regular-widthClass=regular" constant="42"/>
                                                                         </constraint>
-                                                                        <constraint firstAttribute="bottom" secondItem="8jh-2l-yY5" secondAttribute="bottom" constant="2" id="Kth-Mo-Kw0"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="8jh-2l-yY5" secondAttribute="trailing" constant="2" id="Xtz-cP-cOw"/>
-                                                                        <constraint firstItem="8jh-2l-yY5" firstAttribute="leading" secondItem="Dc2-s9-lEA" secondAttribute="leading" constant="2" id="lVi-RJ-FwY"/>
                                                                     </constraints>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -758,32 +761,15 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </view>
                                                             </subviews>
-                                                            <constraints>
-                                                                <constraint firstItem="DYW-EG-p4W" firstAttribute="centerX" secondItem="8yx-ye-bBC" secondAttribute="centerX" id="KOG-Vd-Aml"/>
-                                                                <constraint firstItem="Dc2-s9-lEA" firstAttribute="centerX" secondItem="8yx-ye-bBC" secondAttribute="centerX" id="io5-nA-I7X"/>
-                                                            </constraints>
-                                                            <variation key="default">
-                                                                <mask key="constraints">
-                                                                    <exclude reference="KOG-Vd-Aml"/>
-                                                                    <exclude reference="io5-nA-I7X"/>
-                                                                </mask>
-                                                            </variation>
-                                                            <variation key="heightClass=regular-widthClass=regular">
-                                                                <mask key="constraints">
-                                                                    <include reference="KOG-Vd-Aml"/>
-                                                                    <include reference="io5-nA-I7X"/>
-                                                                </mask>
-                                                            </variation>
                                                         </stackView>
                                                     </subviews>
-                                                    <variation key="heightClass=regular-widthClass=regular" spacing="15"/>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="ZnO-sb-wnO" secondAttribute="trailing" constant="16" id="Igt-PD-Ape"/>
-                                                <constraint firstItem="ZnO-sb-wnO" firstAttribute="top" secondItem="yXj-Am-hgR" secondAttribute="top" constant="8" id="UJ5-Yf-Uzb"/>
-                                                <constraint firstAttribute="bottom" secondItem="ZnO-sb-wnO" secondAttribute="bottom" constant="7.6699999999999999" id="XEg-qf-szy"/>
-                                                <constraint firstItem="ZnO-sb-wnO" firstAttribute="leading" secondItem="yXj-Am-hgR" secondAttribute="leading" constant="13" id="bp5-mb-c7x"/>
+                                                <constraint firstItem="1KZ-uG-nkA" firstAttribute="leading" secondItem="yXj-Am-hgR" secondAttribute="leading" constant="12" id="8X7-QZ-9le"/>
+                                                <constraint firstAttribute="bottom" secondItem="1KZ-uG-nkA" secondAttribute="bottom" constant="2" id="KOa-2I-N8Y"/>
+                                                <constraint firstItem="1KZ-uG-nkA" firstAttribute="top" secondItem="yXj-Am-hgR" secondAttribute="top" constant="2" id="bIS-qt-yNQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="1KZ-uG-nkA" secondAttribute="trailing" constant="8" id="tvr-yq-Bj6"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -822,7 +808,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XAf-Yg-SEZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1030.4347826086957" y="579.61956521739137"/>
+            <point key="canvasLocation" x="1028.985507246377" y="578.804347826087"/>
         </scene>
         <!--Food-->
         <scene sceneID="of3-WQ-wDd">
