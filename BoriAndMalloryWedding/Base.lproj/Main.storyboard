@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rMM-Ur-egH">
-    <device id="ipad10_5" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rMM-Ur-egH">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="Cookie-Regular.ttf">
             <string>Cookie-Regular</string>
+        </array>
+        <array key="MeriendaOne-Regular.ttf">
+            <string>MeriendaOne-Regular</string>
         </array>
         <array key="Satisfy-Regular.ttf">
             <string>Satisfy-Regular</string>
@@ -23,11 +26,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="BoriAndMalloryWedding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_image_default" translatesAutoresizingMaskIntoConstraints="NO" id="vLt-6w-a96">
-                                <rect key="frame" x="0.0" y="0.0" width="834" height="450"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="450"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="UWT-FO-MB5"/>
                                     <constraint firstAttribute="height" constant="450" id="lPp-Vf-xKW"/>
@@ -50,16 +53,16 @@
                                 </variation>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mvF-Ij-9lj">
-                                <rect key="frame" x="0.0" y="450" width="834" height="612"/>
+                                <rect key="frame" x="0.0" y="450" width="768" height="524"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u0w-nw-mzI" userLabel="Timer View">
-                                        <rect key="frame" x="20" y="20" width="794" height="160"/>
+                                        <rect key="frame" x="20" y="20" width="728" height="160"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6MA-GB-2hr">
-                                                <rect key="frame" x="8" y="29" width="778" height="102"/>
+                                                <rect key="frame" x="8" y="29" width="712" height="102"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time to wedding day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JA3-fu-nX5">
-                                                        <rect key="frame" x="252" y="0.0" width="274.5" height="50"/>
+                                                        <rect key="frame" x="219" y="0.0" width="274.5" height="50"/>
                                                         <fontDescription key="fontDescription" name="Satisfy-Regular" family="Satisfy" pointSize="25"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -68,7 +71,7 @@
                                                         </variation>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120 Days" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jV-cf-VlJ">
-                                                        <rect key="frame" x="315" y="60" width="148" height="42"/>
+                                                        <rect key="frame" x="282" y="60" width="148" height="42"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -108,13 +111,13 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tGK-lK-6FI" userLabel="Left View">
-                                        <rect key="frame" x="20" y="210" width="382" height="280"/>
+                                        <rect key="frame" x="20" y="210" width="349" height="280"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Kie-NG-Du4">
-                                                <rect key="frame" x="8" y="34" width="366" height="212"/>
+                                                <rect key="frame" x="8" y="34" width="333" height="212"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="College Park" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7F-bV-hC9">
-                                                        <rect key="frame" x="68.5" y="0.0" width="229.5" height="67"/>
+                                                        <rect key="frame" x="52" y="0.0" width="229.5" height="67"/>
                                                         <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="36"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -123,7 +126,7 @@
                                                         </variation>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&amp;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEb-Cr-4i7">
-                                                        <rect key="frame" x="165.5" y="67" width="35" height="72.5"/>
+                                                        <rect key="frame" x="149" y="67" width="35" height="72.5"/>
                                                         <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="36"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -132,7 +135,7 @@
                                                         </variation>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laurel, MD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sn6-kB-v6b">
-                                                        <rect key="frame" x="65.5" y="139.5" width="235" height="72.5"/>
+                                                        <rect key="frame" x="49" y="139.5" width="235" height="72.5"/>
                                                         <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="36"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -172,13 +175,13 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F4y-TL-X3Q" userLabel="Right View">
-                                        <rect key="frame" x="432" y="210" width="382" height="280"/>
+                                        <rect key="frame" x="399" y="210" width="349" height="280"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Njx-iW-711">
-                                                <rect key="frame" x="8" y="31.5" width="366" height="217.5"/>
+                                                <rect key="frame" x="8" y="31.5" width="333" height="217.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="September" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLm-bm-i9u">
-                                                        <rect key="frame" x="83" y="0.0" width="200" height="72.5"/>
+                                                        <rect key="frame" x="66.5" y="0.0" width="200" height="72.5"/>
                                                         <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="36"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -187,7 +190,7 @@
                                                         </variation>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSu-yM-pnt">
-                                                        <rect key="frame" x="156" y="72.5" width="54" height="72.5"/>
+                                                        <rect key="frame" x="139.5" y="72.5" width="54" height="72.5"/>
                                                         <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="36"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -196,7 +199,7 @@
                                                         </variation>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#maluwabori" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbI-ht-S1F">
-                                                        <rect key="frame" x="52" y="145" width="262.5" height="72.5"/>
+                                                        <rect key="frame" x="35.5" y="145" width="262.5" height="72.5"/>
                                                         <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="36"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -268,7 +271,7 @@
                                 </variation>
                             </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bori &amp; Mallory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8DA-Ub-e3n">
-                                <rect key="frame" x="8" y="342" width="818" height="100"/>
+                                <rect key="frame" x="8" y="342" width="752" height="100"/>
                                 <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="48"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -350,14 +353,14 @@
             <objects>
                 <viewController id="MAe-9S-Djg" customClass="ScheduleViewController" customModule="BoriAndMalloryWedding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s50-al-6SB">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fxb-NP-r6e">
-                                <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:00am" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOt-Dw-p8d">
-                                        <rect key="frame" x="32" y="36" width="770" height="35"/>
+                                        <rect key="frame" x="32" y="36" width="704" height="35"/>
                                         <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -366,7 +369,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:30pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uon-GE-YHY">
-                                        <rect key="frame" x="32" y="289" width="770" height="35"/>
+                                        <rect key="frame" x="32" y="274" width="704" height="35"/>
                                         <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -375,7 +378,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02:00pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVI-SV-mzT">
-                                        <rect key="frame" x="32" y="541.5" width="770" height="35"/>
+                                        <rect key="frame" x="32" y="512" width="704" height="35"/>
                                         <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -384,13 +387,13 @@
                                         </variation>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="osS-g9-H36" customClass="GradientView" customModule="BoriAndMalloryWedding" customModuleProvider="target">
-                                        <rect key="frame" x="32" y="584.5" width="770" height="194"/>
+                                        <rect key="frame" x="32" y="555" width="704" height="179.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LfL-Df-KMZ">
-                                                <rect key="frame" x="5" y="5" width="760" height="184"/>
+                                                <rect key="frame" x="5" y="5" width="694" height="169.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nigerian traditional ceremony" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZD-5p-SUE" customClass="BMLabel" customModule="BoriAndMalloryWedding" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="380" height="184"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="169.5"/>
                                                         <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="35"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -404,7 +407,7 @@
                                                         </variation>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nigerian_image" translatesAutoresizingMaskIntoConstraints="NO" id="MjZ-RE-fqV">
-                                                        <rect key="frame" x="380" y="0.0" width="380" height="184"/>
+                                                        <rect key="frame" x="351" y="0.0" width="343" height="169.5"/>
                                                     </imageView>
                                                 </subviews>
                                                 <variation key="heightClass=regular-widthClass=regular" distribution="fill"/>
@@ -443,7 +446,7 @@
                                         </variation>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="04:00pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ae9-do-om4">
-                                        <rect key="frame" x="32" y="794.5" width="770" height="35"/>
+                                        <rect key="frame" x="32" y="750.5" width="704" height="35"/>
                                         <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -452,13 +455,13 @@
                                         </variation>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wII-Lg-djA" customClass="GradientView" customModule="BoriAndMalloryWedding" customModuleProvider="target">
-                                        <rect key="frame" x="32" y="837.5" width="770" height="193.5"/>
+                                        <rect key="frame" x="32" y="793.5" width="704" height="179"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="YJq-23-zBO">
-                                                <rect key="frame" x="5" y="30" width="760" height="133.5"/>
+                                                <rect key="frame" x="5" y="22.5" width="694" height="133.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lunch &amp; Reception" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Isj-g6-EV5" customClass="BMLabel" customModule="BoriAndMalloryWedding" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="368.5" height="133.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="335.5" height="133.5"/>
                                                         <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="35"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -472,7 +475,7 @@
                                                         </variation>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="disco_image" translatesAutoresizingMaskIntoConstraints="NO" id="KDO-9Y-j0u">
-                                                        <rect key="frame" x="391.5" y="0.0" width="368.5" height="133.5"/>
+                                                        <rect key="frame" x="358.5" y="0.0" width="335.5" height="133.5"/>
                                                     </imageView>
                                                 </subviews>
                                                 <variation key="heightClass=regular-widthClass=regular" distribution="fillEqually"/>
@@ -495,16 +498,16 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zv0-YL-xGm">
-                                        <rect key="frame" x="32" y="79" width="770" height="194"/>
+                                        <rect key="frame" x="32" y="79" width="704" height="179"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rWu-Ub-cm7">
-                                                <rect key="frame" x="4" y="4" width="762" height="186"/>
+                                                <rect key="frame" x="4" y="4" width="696" height="171"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="dOp-yC-D3F">
-                                                        <rect key="frame" x="0.0" y="0.0" width="254" height="186"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="232" height="171"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Church ceremony" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8AR-LW-em0" customClass="BMLabel" customModule="BoriAndMalloryWedding" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="186"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="165.5" height="171"/>
                                                                 <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="35"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -520,10 +523,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="haI-kj-akb">
-                                                        <rect key="frame" x="254" y="0.0" width="254" height="186"/>
+                                                        <rect key="frame" x="232" y="0.0" width="232" height="171"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UMD Chapel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ala-49-t8Z">
-                                                                <rect key="frame" x="0.0" y="0.0" width="254" height="33.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="UMD Chapel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ala-49-t8Z">
+                                                                <rect key="frame" x="0.0" y="0.0" width="232" height="33.5"/>
                                                                 <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="20"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -532,12 +535,12 @@
                                                                 </variation>
                                                             </label>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="couple_image" translatesAutoresizingMaskIntoConstraints="NO" id="zXL-Ot-V3d">
-                                                                <rect key="frame" x="0.0" y="33.5" width="254" height="152.5"/>
+                                                                <rect key="frame" x="0.0" y="33.5" width="232" height="137.5"/>
                                                             </imageView>
                                                         </subviews>
                                                     </stackView>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="church_image" translatesAutoresizingMaskIntoConstraints="NO" id="4tr-2z-RPx">
-                                                        <rect key="frame" x="508" y="0.0" width="254" height="186"/>
+                                                        <rect key="frame" x="464" y="0.0" width="232" height="171"/>
                                                     </imageView>
                                                 </subviews>
                                                 <variation key="heightClass=regular-widthClass=regular" alignment="fill" distribution="fillEqually"/>
@@ -552,13 +555,13 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ma6-8L-Gv9">
-                                        <rect key="frame" x="32" y="332" width="770" height="193.5"/>
+                                        <rect key="frame" x="32" y="317" width="704" height="179"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="L4U-4x-vKf">
-                                                <rect key="frame" x="5" y="30" width="760" height="133.5"/>
+                                                <rect key="frame" x="5" y="23" width="694" height="133.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hors d’oeuvres / snacks" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="I3j-8P-qJc" customClass="BMLabel" customModule="BoriAndMalloryWedding" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="367.5" height="133.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="334.5" height="133.5"/>
                                                         <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="35"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -567,7 +570,7 @@
                                                         </variation>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grape_image" translatesAutoresizingMaskIntoConstraints="NO" id="B4k-jI-hct">
-                                                        <rect key="frame" x="392.5" y="0.0" width="367.5" height="133.5"/>
+                                                        <rect key="frame" x="359.5" y="0.0" width="334.5" height="133.5"/>
                                                     </imageView>
                                                 </subviews>
                                                 <variation key="heightClass=regular-widthClass=regular" distribution="fill"/>
@@ -649,25 +652,170 @@
         <!--Seating-->
         <scene sceneID="n2Z-qC-aio">
             <objects>
-                <viewController id="xEz-sz-oiF" sceneMemberID="viewController">
+                <viewController id="xEz-sz-oiF" customClass="SeatingInfoViewController" customModule="BoriAndMalloryWedding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D7A-Qy-DbS">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="16G-qA-fWe">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="205"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seating Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPR-MU-YYz">
+                                        <rect key="frame" x="8" y="61.5" width="752" height="65.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="60"/>
+                                        </variation>
+                                    </label>
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search for your name" translatesAutoresizingMaskIntoConstraints="NO" id="dWh-kd-UxN">
+                                        <rect key="frame" x="0.0" y="147" width="768" height="50"/>
+                                        <color key="backgroundColor" red="0.50196078430000002" green="0.0" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet" returnKeyType="search" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="xEz-sz-oiF" id="FTO-3q-4MV"/>
+                                        </connections>
+                                    </searchBar>
+                                </subviews>
+                                <color key="backgroundColor" red="0.50196078431372548" green="0.0" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="dWh-kd-UxN" firstAttribute="top" secondItem="wPR-MU-YYz" secondAttribute="bottom" constant="-1" id="7rC-gU-wWW">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="20"/>
+                                    </constraint>
+                                    <constraint firstAttribute="bottom" secondItem="dWh-kd-UxN" secondAttribute="bottom" constant="0.5" id="9yc-ip-EFX">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="8"/>
+                                    </constraint>
+                                    <constraint firstItem="wPR-MU-YYz" firstAttribute="leading" secondItem="16G-qA-fWe" secondAttribute="leading" constant="8" id="Ls2-f3-xvW"/>
+                                    <constraint firstAttribute="trailing" secondItem="wPR-MU-YYz" secondAttribute="trailing" constant="8" id="hhs-Hu-Mid"/>
+                                    <constraint firstItem="dWh-kd-UxN" firstAttribute="leading" secondItem="16G-qA-fWe" secondAttribute="leading" id="pBj-8v-k4o"/>
+                                    <constraint firstAttribute="trailing" secondItem="dWh-kd-UxN" secondAttribute="trailing" id="uGx-kn-Enj"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6gz-BK-zpX">
+                                <rect key="frame" x="0.0" y="205.5" width="768" height="768.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="seatingInformationCell" rowHeight="71" id="L2n-lg-XL5" customClass="SeatingInfoTableViewCell" customModule="BoriAndMalloryWedding" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="768" height="71"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L2n-lg-XL5" id="yXj-Am-hgR">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="70.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="1KZ-uG-nkA">
+                                                    <rect key="frame" x="12" y="2" width="748" height="66.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mallory Ellyn Oludemi " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cif-MT-3A8">
+                                                            <rect key="frame" x="0.0" y="0.0" width="628.5" height="66.5"/>
+                                                            <fontDescription key="fontDescription" name="MeriendaOne-Regular" family="Merienda One" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                <fontDescription key="fontDescription" name="MeriendaOne-Regular" family="Merienda One" pointSize="40"/>
+                                                            </variation>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WJh-sq-xJx">
+                                                            <rect key="frame" x="628.5" y="0.0" width="119.5" height="66.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="placehold" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYW-EG-p4W">
+                                                                    <rect key="frame" x="17" y="0.0" width="85.5" height="24.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                    </variation>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dc2-s9-lEA" customClass="BMView" customModule="BoriAndMalloryWedding" customModuleProvider="target">
+                                                                    <rect key="frame" x="38.5" y="24.5" width="42" height="42"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="33" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jh-2l-yY5">
+                                                                            <rect key="frame" x="1" y="1" width="40" height="40"/>
+                                                                            <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="17"/>
+                                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                                <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="22"/>
+                                                                            </variation>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" red="0.50196078430000002" green="0.0" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstItem="8jh-2l-yY5" firstAttribute="leading" secondItem="Dc2-s9-lEA" secondAttribute="leading" constant="1" id="49d-lz-3Ez"/>
+                                                                        <constraint firstAttribute="width" constant="37" id="9Gd-YR-yJ0">
+                                                                            <variation key="heightClass=regular-widthClass=regular" constant="42"/>
+                                                                        </constraint>
+                                                                        <constraint firstAttribute="bottom" secondItem="8jh-2l-yY5" secondAttribute="bottom" constant="1" id="CgG-pJ-qpF"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="8jh-2l-yY5" secondAttribute="trailing" constant="1" id="Vvd-v4-fGS"/>
+                                                                        <constraint firstItem="8jh-2l-yY5" firstAttribute="top" secondItem="Dc2-s9-lEA" secondAttribute="top" constant="1" id="n4k-OW-PUl"/>
+                                                                        <constraint firstAttribute="height" constant="37" id="zt0-SE-jQ9">
+                                                                            <variation key="heightClass=regular-widthClass=regular" constant="42"/>
+                                                                        </constraint>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <real key="value" value="18.5"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1KZ-uG-nkA" firstAttribute="leading" secondItem="yXj-Am-hgR" secondAttribute="leading" constant="12" id="8X7-QZ-9le"/>
+                                                <constraint firstAttribute="bottom" secondItem="1KZ-uG-nkA" secondAttribute="bottom" constant="2" id="KOa-2I-N8Y"/>
+                                                <constraint firstItem="1KZ-uG-nkA" firstAttribute="top" secondItem="yXj-Am-hgR" secondAttribute="top" constant="2" id="bIS-qt-yNQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="1KZ-uG-nkA" secondAttribute="trailing" constant="8" id="tvr-yq-Bj6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="cif-MT-3A8" id="e3s-Sx-MHq"/>
+                                            <outlet property="seatingNumberBaseView" destination="Dc2-s9-lEA" id="8a6-FK-bt9"/>
+                                            <outlet property="seatingNumberLabel" destination="8jh-2l-yY5" id="tHh-Db-LoC"/>
+                                            <outlet property="tableLabel" destination="DYW-EG-p4W" id="D2r-PL-ym2"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="xEz-sz-oiF" id="x68-Sp-dK4"/>
+                                    <outlet property="delegate" destination="xEz-sz-oiF" id="CPp-V2-e06"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="16G-qA-fWe" firstAttribute="leading" secondItem="MN4-V2-Hha" secondAttribute="leading" id="1M1-sB-yqT"/>
+                            <constraint firstItem="6gz-BK-zpX" firstAttribute="trailing" secondItem="MN4-V2-Hha" secondAttribute="trailing" id="8dk-Xi-e1Y"/>
+                            <constraint firstItem="16G-qA-fWe" firstAttribute="height" secondItem="D7A-Qy-DbS" secondAttribute="height" multiplier="1:5" id="DYh-3c-pF7"/>
+                            <constraint firstItem="16G-qA-fWe" firstAttribute="trailing" secondItem="MN4-V2-Hha" secondAttribute="trailing" id="Gin-pX-9Xh"/>
+                            <constraint firstItem="6gz-BK-zpX" firstAttribute="top" secondItem="16G-qA-fWe" secondAttribute="bottom" constant="0.5" id="VRc-aR-gOq"/>
+                            <constraint firstItem="6gz-BK-zpX" firstAttribute="leading" secondItem="MN4-V2-Hha" secondAttribute="leading" id="VaI-1u-zEx"/>
+                            <constraint firstItem="16G-qA-fWe" firstAttribute="top" secondItem="D7A-Qy-DbS" secondAttribute="top" id="ZoE-jS-UGY"/>
+                            <constraint firstItem="6gz-BK-zpX" firstAttribute="bottom" secondItem="MN4-V2-Hha" secondAttribute="bottom" id="hcs-eY-y3R"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="MN4-V2-Hha"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Seating" image="seating_icon" selectedImage="seating_icon_highlighted" id="fMa-Hr-ge9"/>
+                    <connections>
+                        <outlet property="searchBar" destination="dWh-kd-UxN" id="poc-xY-GdN"/>
+                        <outlet property="seatingInfoLabel" destination="wPR-MU-YYz" id="C6M-MO-aAn"/>
+                        <outlet property="seatingTableView" destination="6gz-BK-zpX" id="zcn-AF-XAa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XAf-Yg-SEZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1033" y="580"/>
+            <point key="canvasLocation" x="1028.985507246377" y="578.804347826087"/>
         </scene>
         <!--Food-->
         <scene sceneID="of3-WQ-wDd">
             <objects>
                 <viewController id="cXE-Uz-Cur" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qvA-hJ-EBv">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4qX-Gi-3rm"/>

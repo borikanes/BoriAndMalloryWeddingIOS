@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		510D87C120E9CEA7004E9472 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510D87C020E9CEA7004E9472 /* Reachability.swift */; };
 		519DA0EF20D25C73002A43A7 /* BMLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519DA0EE20D25C73002A43A7 /* BMLabel.swift */; };
 		519DA0F020D4A7A2002A43A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51B8C5352084204E00FD5358 /* Assets.xcassets */; };
 		51B71A4320B7A4F20073DB3D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B71A4220B7A4F20073DB3D /* HomeViewController.swift */; };
@@ -26,6 +27,10 @@
 		51E66DDE20BFC503002DFAD1 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E66DDD20BFC503002DFAD1 /* GradientView.swift */; };
 		51E66DE020BFCAC2002DFAD1 /* BMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E66DDF20BFCAC2002DFAD1 /* BMView.swift */; };
 		51E66DE220C4D090002DFAD1 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E66DE120C4D090002DFAD1 /* ScheduleViewController.swift */; };
+		51EEEF3B20D5744C00E26E9F /* SeatingInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EEEF3A20D5744C00E26E9F /* SeatingInfoViewController.swift */; };
+		51EEEF3D20D5D64700E26E9F /* SeatingInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EEEF3C20D5D64700E26E9F /* SeatingInfoTableViewCell.swift */; };
+		51EEEF3F20D5F71400E26E9F /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EEEF3E20D5F71400E26E9F /* DataModel.swift */; };
+		EDDB734920DB453100F342BF /* SeatingInfoDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDB734820DB453100F342BF /* SeatingInfoDataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		510D87C020E9CEA7004E9472 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		519DA0EE20D25C73002A43A7 /* BMLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMLabel.swift; sourceTree = "<group>"; };
 		51B71A4220B7A4F20073DB3D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		51B71A4520B8AD5A0073DB3D /* UtilityExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityExtensions.swift; sourceTree = "<group>"; };
@@ -71,6 +77,10 @@
 		51E66DDD20BFC503002DFAD1 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		51E66DDF20BFCAC2002DFAD1 /* BMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMView.swift; sourceTree = "<group>"; };
 		51E66DE120C4D090002DFAD1 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		51EEEF3A20D5744C00E26E9F /* SeatingInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatingInfoViewController.swift; sourceTree = "<group>"; };
+		51EEEF3C20D5D64700E26E9F /* SeatingInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatingInfoTableViewCell.swift; sourceTree = "<group>"; };
+		51EEEF3E20D5F71400E26E9F /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		EDDB734820DB453100F342BF /* SeatingInfoDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatingInfoDataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +114,7 @@
 				51B71A4220B7A4F20073DB3D /* HomeViewController.swift */,
 				51B8C5302084204D00FD5358 /* ViewController.swift */,
 				51E66DE120C4D090002DFAD1 /* ScheduleViewController.swift */,
+				51EEEF3A20D5744C00E26E9F /* SeatingInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -120,6 +131,9 @@
 			isa = PBXGroup;
 			children = (
 				51B71A4820B8B7850073DB3D /* HelperFunctions.swift */,
+				51EEEF3E20D5F71400E26E9F /* DataModel.swift */,
+				EDDB734820DB453100F342BF /* SeatingInfoDataController.swift */,
+				510D87C020E9CEA7004E9472 /* Reachability.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -205,6 +219,7 @@
 				51E66DDD20BFC503002DFAD1 /* GradientView.swift */,
 				51E66DDF20BFCAC2002DFAD1 /* BMView.swift */,
 				519DA0EE20D25C73002A43A7 /* BMLabel.swift */,
+				51EEEF3C20D5D64700E26E9F /* SeatingInfoTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -352,7 +367,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -361,14 +376,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				510D87C120E9CEA7004E9472 /* Reachability.swift in Sources */,
 				51B71A4920B8B7850073DB3D /* HelperFunctions.swift in Sources */,
 				519DA0EF20D25C73002A43A7 /* BMLabel.swift in Sources */,
 				51B8C5312084204D00FD5358 /* ViewController.swift in Sources */,
+				EDDB734920DB453100F342BF /* SeatingInfoDataController.swift in Sources */,
 				51E66DDE20BFC503002DFAD1 /* GradientView.swift in Sources */,
+				51EEEF3D20D5D64700E26E9F /* SeatingInfoTableViewCell.swift in Sources */,
+				51EEEF3F20D5F71400E26E9F /* DataModel.swift in Sources */,
 				51E66DE220C4D090002DFAD1 /* ScheduleViewController.swift in Sources */,
 				51E66DE020BFCAC2002DFAD1 /* BMView.swift in Sources */,
 				51B8C52F2084204D00FD5358 /* AppDelegate.swift in Sources */,
 				51B71A4620B8AD5A0073DB3D /* UtilityExtensions.swift in Sources */,
+				51EEEF3B20D5744C00E26E9F /* SeatingInfoViewController.swift in Sources */,
 				51B71A4320B7A4F20073DB3D /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
