@@ -507,7 +507,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="232" height="171"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Church ceremony" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8AR-LW-em0" customClass="BMLabel" customModule="BoriAndMalloryWedding" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="171"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="165.5" height="171"/>
                                                                 <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="35"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -704,11 +704,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="70.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="1KZ-uG-nkA">
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="1KZ-uG-nkA">
                                                     <rect key="frame" x="12" y="2" width="748" height="66.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mallory Ellyn Oludemi " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cif-MT-3A8">
-                                                            <rect key="frame" x="0.0" y="0.0" width="449" height="66.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="628.5" height="66.5"/>
                                                             <fontDescription key="fontDescription" name="MeriendaOne-Regular" family="Merienda One" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -717,10 +717,10 @@
                                                             </variation>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WJh-sq-xJx">
-                                                            <rect key="frame" x="662.5" y="0.0" width="85.5" height="66.5"/>
+                                                            <rect key="frame" x="628.5" y="0.0" width="119.5" height="66.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="placehold" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYW-EG-p4W">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="85.5" height="24.5"/>
+                                                                    <rect key="frame" x="17" y="0.0" width="85.5" height="24.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -729,7 +729,7 @@
                                                                     </variation>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dc2-s9-lEA" customClass="BMView" customModule="BoriAndMalloryWedding" customModuleProvider="target">
-                                                                    <rect key="frame" x="22" y="24.5" width="42" height="42"/>
+                                                                    <rect key="frame" x="38.5" y="24.5" width="42" height="42"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="33" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jh-2l-yY5">
                                                                             <rect key="frame" x="1" y="1" width="40" height="40"/>
