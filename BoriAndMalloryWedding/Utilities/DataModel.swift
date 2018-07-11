@@ -42,3 +42,8 @@ func getSeatInformationArray(jsonData: Data = json) -> [SeatInfo]? {
 
     return seatInfoArray
 }
+
+struct FoodInfo {
+    var name: String
+    var imageName: String
+}
