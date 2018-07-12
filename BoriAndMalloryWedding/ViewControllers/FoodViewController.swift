@@ -52,3 +52,13 @@ extension FoodViewController: UICollectionViewDataSource {
     }
 
 }
+
+extension FoodViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if self.view.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClass.regular &&
+            self.view.traitCollection.verticalSizeClass == UIUserInterfaceSizeClass.regular {
+            return CGSize(width: 500.0, height: 429.0)
+        }
+        return CGSize(width: 320.0, height: 249.0)
+    }
+}
