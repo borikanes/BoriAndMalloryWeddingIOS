@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 private var json = """
 [
@@ -46,4 +47,5 @@ func getSeatInformationArray(jsonData: Data = json) -> [SeatInfo]? {
 struct FoodInfo {
     var name: String
     var imageName: String
+    var textColor: UIColor
 }

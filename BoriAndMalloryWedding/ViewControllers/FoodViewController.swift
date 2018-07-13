@@ -10,7 +10,7 @@ import UIKit
 
 class FoodViewController: UIViewController {
     let collectionCellReuseIdentifier = "foodCollectionViewCell"
-    var foodInfoArray: [FoodInfo] = [FoodInfo(name: "Meat Pie", imageName: "meat-pie"), FoodInfo(name: "Puff-Puff", imageName: "puff_puff"), FoodInfo(name: "chin chin", imageName: "chin_chin"), FoodInfo(name: "Jollof Rice", imageName: "jollof"), FoodInfo(name: "Nigerian fried rice", imageName: "nigerian_fried_rice")]
+    var foodInfoArray: [FoodInfo] = [FoodInfo(name: "Meat Pie", imageName: "meat-pie", textColor: UIColor.white), FoodInfo(name: "Puff-Puff", imageName: "puff_puff", textColor: UIColor.black), FoodInfo(name: "Scotch egg", imageName: "scotch_egg", textColor: UIColor.white), FoodInfo(name: "chin chin", imageName: "chin_chin", textColor: UIColor.white), FoodInfo(name: "Jollof Rice", imageName: "jollof", textColor: UIColor.white), FoodInfo(name: "Nigerian fried rice", imageName: "nigerian_fried_rice", textColor: UIColor.white), FoodInfo(name: "Pounded yam & egusi", imageName: "efo_elegusi", textColor: UIColor.white)]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +45,7 @@ extension FoodViewController: UICollectionViewDataSource {
         }
         let currentFood = foodInfoArray[indexPath.row]
         cell.foodName.text = currentFood.name
+        cell.foodName.textColor = currentFood.textColor
         if let image = UIImage(named: currentFood.imageName) {
             cell.foodImage.image = image
         }

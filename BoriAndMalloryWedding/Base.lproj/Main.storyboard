@@ -820,7 +820,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dfp-fJ-b4B">
                                 <rect key="frame" x="0.0" y="71" width="320" height="448"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5VX-2b-4Ra">
                                     <size key="itemSize" width="320" height="249"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -867,7 +867,7 @@
                                             <constraint firstItem="1yd-7E-eGi" firstAttribute="leading" secondItem="tst-zX-amk" secondAttribute="leading" id="Ic4-ob-LJe"/>
                                             <constraint firstItem="1yd-7E-eGi" firstAttribute="top" secondItem="tst-zX-amk" secondAttribute="top" id="RSU-lo-66n"/>
                                             <constraint firstItem="ojA-p8-ILN" firstAttribute="bottom" secondItem="tst-zX-amk" secondAttribute="bottomMargin" id="WOD-WN-mGa">
-                                                <variation key="heightClass=regular-widthClass=regular" constant="-10"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="-15"/>
                                             </constraint>
                                             <constraint firstItem="ojA-p8-ILN" firstAttribute="leading" secondItem="tst-zX-amk" secondAttribute="leadingMargin" constant="5" id="als-FZ-PyR"/>
                                             <constraint firstItem="ojA-p8-ILN" firstAttribute="top" secondItem="1yd-7E-eGi" secondAttribute="bottom" constant="8" id="hWT-g4-g7D"/>
@@ -890,9 +890,12 @@
                                 <fontDescription key="fontDescription" name="MeriendaOne-Regular" family="Merienda One" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="MeriendaOne-Regular" family="Merienda One" pointSize="35"/>
+                                </variation>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dfp-fJ-b4B" firstAttribute="top" secondItem="qzd-kC-Fzl" secondAttribute="bottom" constant="6.5" id="30a-1T-OVU"/>
                             <constraint firstItem="dfp-fJ-b4B" firstAttribute="bottom" secondItem="4qX-Gi-3rm" secondAttribute="bottom" id="BqW-Qn-Svf"/>
