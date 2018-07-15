@@ -10,6 +10,7 @@
 		510D87C120E9CEA7004E9472 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510D87C020E9CEA7004E9472 /* Reachability.swift */; };
 		5189BA3F20F30F950027576B /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5189BA3E20F30F950027576B /* FoodViewController.swift */; };
 		5189BA4120F30FEE0027576B /* FoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5189BA4020F30FEE0027576B /* FoodCollectionViewCell.swift */; };
+		5189BA4320FA4A3C0027576B /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5189BA4220FA4A3C0027576B /* FoodDetailViewController.swift */; };
 		519DA0EF20D25C73002A43A7 /* BMLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519DA0EE20D25C73002A43A7 /* BMLabel.swift */; };
 		519DA0F020D4A7A2002A43A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51B8C5352084204E00FD5358 /* Assets.xcassets */; };
 		51B71A4320B7A4F20073DB3D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B71A4220B7A4F20073DB3D /* HomeViewController.swift */; };
@@ -56,6 +57,7 @@
 		510D87C020E9CEA7004E9472 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		5189BA3E20F30F950027576B /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		5189BA4020F30FEE0027576B /* FoodCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCollectionViewCell.swift; sourceTree = "<group>"; };
+		5189BA4220FA4A3C0027576B /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
 		519DA0EE20D25C73002A43A7 /* BMLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMLabel.swift; sourceTree = "<group>"; };
 		51B71A4220B7A4F20073DB3D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		51B71A4520B8AD5A0073DB3D /* UtilityExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityExtensions.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				51E66DE120C4D090002DFAD1 /* ScheduleViewController.swift */,
 				51EEEF3A20D5744C00E26E9F /* SeatingInfoViewController.swift */,
 				5189BA3E20F30F950027576B /* FoodViewController.swift */,
+				5189BA4220FA4A3C0027576B /* FoodDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				5189BA3F20F30F950027576B /* FoodViewController.swift in Sources */,
 				51B71A4920B8B7850073DB3D /* HelperFunctions.swift in Sources */,
 				519DA0EF20D25C73002A43A7 /* BMLabel.swift in Sources */,
+				5189BA4320FA4A3C0027576B /* FoodDetailViewController.swift in Sources */,
 				51B8C5312084204D00FD5358 /* ViewController.swift in Sources */,
 				EDDB734920DB453100F342BF /* SeatingInfoDataController.swift in Sources */,
 				5189BA4120F30FEE0027576B /* FoodCollectionViewCell.swift in Sources */,

@@ -48,4 +48,5 @@ struct FoodInfo {
     var name: String
     var imageName: String
     var textColor: UIColor
+    var indicatorImageName: String
 }
