@@ -29,14 +29,18 @@ class FoodViewController: UIViewController {
      // Pass the selected object to the new view controller.
         if segue.identifier == "foodToDetailSegue" {
             if let foodDetailViewController = segue.destination as? FoodDetailViewController, let index = selectedIndex {
-//                if let indexPathRow = collectionView.indexPath(for: selectedCell)?.row {
                     let currentFood = foodInfoArray[index]
                     foodDetailViewController.navBarText = currentFood.name
+                if currentFood.imageName == "nigerian_fried_rice" || currentFood.imageName == "scotch_egg" || currentFood.imageName == "efo_elegusi" {
+                    if UIImage(named: "\(currentFood.imageName)_clean") != nil {
+                        foodDetailViewController.imageName = "\(currentFood.imageName)_clean"
+                    } // ELSE should show default image
+                } else {
                     if UIImage(named: currentFood.imageName) != nil {
                         foodDetailViewController.imageName = currentFood.imageName
                     } // ELSE should show default image
+                }
                     foodDetailViewController.textViewText = "This is the greatest meal alive, don't mess with it"
-//                }
             }
         }
      }
@@ -85,7 +89,7 @@ extension FoodViewController: UICollectionViewDataSource {
         }
         if let image = UIImage(named: currentFood.imageName), let indicatorImage = UIImage(named: currentFood.indicatorImageName) {
             cell.foodImage.image = image
-            cell.detailButton.imageView?.image = indicatorImage
+            cell.angleIndicatorImageView.image = indicatorImage
         }
         // Add tap gesture to cell
 //        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(FoodViewController.cellClicked))
@@ -101,6 +105,6 @@ extension FoodViewController: UICollectionViewDelegateFlowLayout {
             self.view.traitCollection.verticalSizeClass == UIUserInterfaceSizeClass.regular {
             return CGSize(width: 480.0, height: 373.5)
         }
-        return CGSize(width: 320.0, height: 249.0)
+        return CGSize(width: 320.0, height: 239.0)
     }
 }

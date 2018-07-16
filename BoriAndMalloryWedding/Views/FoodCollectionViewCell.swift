@@ -11,6 +11,6 @@ import UIKit
 class FoodCollectionViewCell: UICollectionViewCell {
     @IBOutlet var foodImage: UIImageView!
     @IBOutlet var foodName: UILabel!
-    @IBOutlet var detailButton: UIButton!
-
+    @IBOutlet var angleIndicatorImageView: UIImageView!
+    
 }

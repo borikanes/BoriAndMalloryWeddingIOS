@@ -31,7 +31,7 @@ class FoodDetailViewController: UIViewController {
 
     private func setupView() {
         if isIphone10() {
-
+            stackViewTopConstraint.constant -= 42.0
         } else if isIpadPro129() {
 
         }

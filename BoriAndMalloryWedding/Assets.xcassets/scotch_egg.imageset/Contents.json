@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "scotch_egg.png",
+      "filename" : "scotch_egg.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "scotch_egg@2x.png",
+      "filename" : "scotch_egg@2x.jpg",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "scotch_egg@3x.png",
+      "filename" : "scotch_egg@3x.jpg",
       "scale" : "3x"
     }
   ],
