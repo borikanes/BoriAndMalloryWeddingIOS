@@ -9,6 +9,10 @@
 import UIKit
 
 class FoodViewController: UIViewController {
+
+    @IBOutlet var collectionView: UICollectionView!
+    var selectedIndex: Int?
+
     let collectionCellReuseIdentifier = "foodCollectionViewCell"
     var foodInfoArray: [FoodInfo] = [FoodInfo(name: "Meat Pie", imageName: "meat-pie", textColor: UIColor.white, indicatorImageName: "angle_indicator_white"), FoodInfo(name: "Puff-Puff", imageName: "puff_puff", textColor: UIColor.black, indicatorImageName: "angle_indicator"), FoodInfo(name: "Scotch egg", imageName: "scotch_egg", textColor: UIColor.white, indicatorImageName: "angle_indicator"), FoodInfo(name: "chin chin", imageName: "chin_chin", textColor: UIColor.white, indicatorImageName: "angle_indicator_white"), FoodInfo(name: "Jollof Rice", imageName: "jollof", textColor: UIColor.white, indicatorImageName: "angle_indicator"), FoodInfo(name: "Nigerian fried rice", imageName: "nigerian_fried_rice", textColor: UIColor.white, indicatorImageName: "angle_indicator_white"), FoodInfo(name: "Pounded yam & egusi", imageName: "efo_elegusi", textColor: UIColor.white, indicatorImageName: "angle_indicator")]
 
@@ -23,11 +27,22 @@ class FoodViewController: UIViewController {
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destination.
      // Pass the selected object to the new view controller.
-
+        if segue.identifier == "foodToDetailSegue" {
+            if let foodDetailViewController = segue.destination as? FoodDetailViewController, let index = selectedIndex {
+//                if let indexPathRow = collectionView.indexPath(for: selectedCell)?.row {
+                    let currentFood = foodInfoArray[index]
+                    foodDetailViewController.navBarText = currentFood.name
+                    if UIImage(named: currentFood.imageName) != nil {
+                        foodDetailViewController.imageName = currentFood.imageName
+                    } // ELSE should show default image
+                    foodDetailViewController.textViewText = "This is the greatest meal alive, don't mess with it"
+//                }
+            }
+        }
      }
 
     @objc func cellClicked(sender: UITapGestureRecognizer) {
-        performSegue(withIdentifier: "foodToDetailSegue", sender: nil)
+//        performSegue(withIdentifier: "foodToDetailSegue", sender: nil)
     }
 
     @IBAction func unwindFromDetailToFoodVC(segue: UIStoryboardSegue) {
@@ -43,10 +58,11 @@ extension FoodViewController: UICollectionViewDelegate {
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
+        performSegue(withIdentifier: "foodToDetailSegue", sender: nil)
     }
 
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        selectedIndex = indexPath.row
         return true
     }
 }
@@ -72,8 +88,8 @@ extension FoodViewController: UICollectionViewDataSource {
             cell.detailButton.imageView?.image = indicatorImage
         }
         // Add tap gesture to cell
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(FoodViewController.cellClicked))
-        cell.addGestureRecognizer(tapGesture)
+//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(FoodViewController.cellClicked))
+//        cell.addGestureRecognizer(tapGesture)
         return cell
     }
 
