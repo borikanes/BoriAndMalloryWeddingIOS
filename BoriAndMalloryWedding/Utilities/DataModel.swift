@@ -50,3 +50,15 @@ struct FoodInfo {
     var textColor: UIColor
     var indicatorImageName: String
 }
+
+struct FoodDescriptionInfo: Decodable {
+    // swiftlint:disable identifier_name
+    var puff_puff: String
+    var jollof: String
+    var efo_elegusi_clean: String
+    var chin_chin: String
+    var nigerian_fried_rice_clean: String
+    var scotch_egg_clean: String
+    var meat_pie: String
+    var default_image: String
+}

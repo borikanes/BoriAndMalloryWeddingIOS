@@ -12,5 +12,5 @@ class FoodCollectionViewCell: UICollectionViewCell {
     @IBOutlet var foodImage: UIImageView!
     @IBOutlet var foodName: UILabel!
     @IBOutlet var angleIndicatorImageView: UIImageView!
-    
+
 }

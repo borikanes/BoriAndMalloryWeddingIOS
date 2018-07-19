@@ -14,7 +14,7 @@ class FoodViewController: UIViewController {
     var selectedIndex: Int?
 
     let collectionCellReuseIdentifier = "foodCollectionViewCell"
-    var foodInfoArray: [FoodInfo] = [FoodInfo(name: "Meat Pie", imageName: "meat-pie", textColor: UIColor.white, indicatorImageName: "angle_indicator_white"), FoodInfo(name: "Puff-Puff", imageName: "puff_puff", textColor: UIColor.black, indicatorImageName: "angle_indicator"), FoodInfo(name: "Scotch egg", imageName: "scotch_egg", textColor: UIColor.white, indicatorImageName: "angle_indicator"), FoodInfo(name: "chin chin", imageName: "chin_chin", textColor: UIColor.white, indicatorImageName: "angle_indicator_white"), FoodInfo(name: "Jollof Rice", imageName: "jollof", textColor: UIColor.white, indicatorImageName: "angle_indicator"), FoodInfo(name: "Nigerian fried rice", imageName: "nigerian_fried_rice", textColor: UIColor.white, indicatorImageName: "angle_indicator_white"), FoodInfo(name: "Pounded yam & egusi", imageName: "efo_elegusi", textColor: UIColor.white, indicatorImageName: "angle_indicator")]
+    var foodInfoArray: [FoodInfo] = [FoodInfo(name: "Meat Pie", imageName: "meat_pie", textColor: UIColor.white, indicatorImageName: "angle_indicator_white"), FoodInfo(name: "Puff Puff", imageName: "puff_puff", textColor: UIColor.black, indicatorImageName: "angle_indicator"), FoodInfo(name: "Scotch egg", imageName: "scotch_egg", textColor: UIColor.white, indicatorImageName: "angle_indicator"), FoodInfo(name: "chin chin", imageName: "chin_chin", textColor: UIColor.white, indicatorImageName: "angle_indicator_white"), FoodInfo(name: "Jollof Rice", imageName: "jollof", textColor: UIColor.white, indicatorImageName: "angle_indicator"), FoodInfo(name: "Nigerian fried rice", imageName: "nigerian_fried_rice", textColor: UIColor.white, indicatorImageName: "angle_indicator_white"), FoodInfo(name: "Pounded yam & egusi", imageName: "efo_elegusi", textColor: UIColor.white, indicatorImageName: "angle_indicator")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +22,7 @@ class FoodViewController: UIViewController {
     }
 
      // MARK: - Navigation
-
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
         if segue.identifier == "foodToDetailSegue" {
             if let foodDetailViewController = segue.destination as? FoodDetailViewController, let index = selectedIndex {
                     let currentFood = foodInfoArray[index]
@@ -40,13 +36,11 @@ class FoodViewController: UIViewController {
                         foodDetailViewController.imageName = currentFood.imageName
                     } // ELSE should show default image
                 }
-                    foodDetailViewController.textViewText = "This is the greatest meal alive, don't mess with it"
             }
         }
      }
 
     @objc func cellClicked(sender: UITapGestureRecognizer) {
-//        performSegue(withIdentifier: "foodToDetailSegue", sender: nil)
     }
 
     @IBAction func unwindFromDetailToFoodVC(segue: UIStoryboardSegue) {

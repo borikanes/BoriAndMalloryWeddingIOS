@@ -12,9 +12,10 @@ class SeatingInfoViewController: UIViewController {
 
     private var dataFromDisk: [SeatInfo] = []
     private var filteredSeatData: [SeatInfo] = []
-    let activityIndicator = UIActivityIndicatorView()
-    let activityIndicatorDarkBaseView = UIView()
+    private let activityIndicator = UIActivityIndicatorView()
+    private let activityIndicatorDarkBaseView = UIView()
     private let refreshControl = UIRefreshControl()
+    private let filename = "seating-data.json"
 
     @IBOutlet var seatingInfoLabel: UILabel!
     @IBOutlet var searchBar: UISearchBar!
@@ -39,7 +40,7 @@ class SeatingInfoViewController: UIViewController {
 
             let defaults = UserDefaults.standard
             // if file doesn't exist at all then fetch.
-            if !doesJsonFileExistInFileSystem() {
+            if !doesJsonFileExistInFileSystem(filename: self.filename) {
                 self.fetchDataAndSaveLocally()
             }
             // if time exists already, just check to make sure the time is the same
@@ -55,7 +56,7 @@ class SeatingInfoViewController: UIViewController {
                 // Stop indicator here
             } else {
                 // Save time in user defaults
-                saveModifiedTimeToUserDefaultDB(time: time)
+                saveModifiedTimeToUserDefaultDB(time: time, keyName: "LastModifiedTime")
                 // Get Json from API
                 self.fetchDataAndSaveLocally()
             }
@@ -82,7 +83,7 @@ class SeatingInfoViewController: UIViewController {
                 return
             }
 
-            writeToDisk(json: jsonDataUnwrapped)
+            writeToDisk(json: jsonDataUnwrapped, filename: self.filename)
             self.prepareDataSourceForTableView(json: jsonDataUnwrapped)
         }
     }
@@ -90,7 +91,7 @@ class SeatingInfoViewController: UIViewController {
     private func prepareDataSourceForTableView(json: Data? = nil) {
         guard let jsonUnwrapped = json else {
             // fetch from disk
-            let jsonStringFromDisk = getFile()
+            let jsonStringFromDisk = getFile(filename: filename)
             if let jsonStringFromDiskUnwrapped = jsonStringFromDisk {
                 let jsonData = jsonStringFromDiskUnwrapped.data(using: .utf8)!
                 guard let seatInfoArray = getSeatInformationArray(jsonData: jsonData),
