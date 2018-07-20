@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rMM-Ur-egH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rMM-Ur-egH">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14278.2"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -181,7 +181,7 @@
                                                 <rect key="frame" x="8" y="32" width="177.33333333333334" height="120"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="September" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLm-bm-i9u">
-                                                        <rect key="frame" x="33.333333333333343" y="0.0" width="110.66666666666669" height="40"/>
+                                                        <rect key="frame" x="33.33333333333335" y="0.0" width="110.66666666666669" height="40"/>
                                                         <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="36"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -507,7 +507,7 @@
                                                         <rect key="frame" x="0.0" y="22.666666666666671" width="130" height="77.666666666666671"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Church ceremony" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8AR-LW-em0" customClass="BMLabel" customModule="BoriAndMalloryWedding" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="96.666666666666671" height="77.666666666666671"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="110.66666666666667" height="77.666666666666671"/>
                                                                 <fontDescription key="fontDescription" name="Cookie-Regular" family="Cookie" pointSize="35"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -705,10 +705,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="1KZ-uG-nkA">
-                                                    <rect key="frame" x="12" y="2" width="1004" height="66.666666666666671"/>
+                                                    <rect key="frame" x="12" y="2" width="394" height="66.666666666666671"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mallory Ellyn Oludemi " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cif-MT-3A8">
-                                                            <rect key="frame" x="0.0" y="0.0" width="773" height="66.666666666666671"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="303.33333333333331" height="66.666666666666671"/>
                                                             <fontDescription key="fontDescription" name="MeriendaOne-Regular" family="Merienda One" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -717,10 +717,10 @@
                                                             </variation>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WJh-sq-xJx">
-                                                            <rect key="frame" x="773" y="0.0" width="231" height="66.666666666666671"/>
+                                                            <rect key="frame" x="303.33333333333331" y="0.0" width="90.666666666666686" height="66.666666666666671"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="placehold" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYW-EG-p4W">
-                                                                    <rect key="frame" x="82" y="0.0" width="67" height="29.666666666666668"/>
+                                                                    <rect key="frame" x="12" y="0.0" width="67" height="29.666666666666668"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -729,7 +729,7 @@
                                                                     </variation>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dc2-s9-lEA" customClass="BMView" customModule="BoriAndMalloryWedding" customModuleProvider="target">
-                                                                    <rect key="frame" x="97" y="29.666666666666671" width="37" height="37"/>
+                                                                    <rect key="frame" x="27" y="29.666666666666671" width="37" height="37"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="33" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jh-2l-yY5">
                                                                             <rect key="frame" x="1" y="0.99999999999999645" width="35" height="35"/>
@@ -819,7 +819,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dfp-fJ-b4B">
-                                <rect key="frame" x="0.0" y="71" width="414" height="616"/>
+                                <rect key="frame" x="0.0" y="71" width="414" height="620"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5VX-2b-4Ra">
                                     <size key="itemSize" width="320" height="259"/>
@@ -836,10 +836,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nigerian_fried_rice" translatesAutoresizingMaskIntoConstraints="NO" id="1yd-7E-eGi">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="197"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="207"/>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ojA-p8-ILN">
-                                                    <rect key="frame" x="13" y="205" width="294" height="38"/>
+                                                    <rect key="frame" x="13" y="215" width="294" height="38"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Name of Food placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Beu-Oj-zYy">
                                                             <rect key="frame" x="0.0" y="0.0" width="254" height="38"/>
@@ -897,7 +897,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dfp-fJ-b4B" firstAttribute="top" secondItem="qzd-kC-Fzl" secondAttribute="bottom" constant="6.5" id="30a-1T-OVU"/>
-                            <constraint firstItem="dfp-fJ-b4B" firstAttribute="bottom" secondItem="4qX-Gi-3rm" secondAttribute="bottom" id="BqW-Qn-Svf"/>
+                            <constraint firstItem="dfp-fJ-b4B" firstAttribute="bottom" secondItem="4qX-Gi-3rm" secondAttribute="bottom" constant="4" id="BqW-Qn-Svf"/>
                             <constraint firstItem="4qX-Gi-3rm" firstAttribute="trailing" secondItem="qzd-kC-Fzl" secondAttribute="trailing" constant="8" id="Epi-r2-kkY"/>
                             <constraint firstItem="qzd-kC-Fzl" firstAttribute="leading" secondItem="4qX-Gi-3rm" secondAttribute="leading" constant="8" id="nuk-eh-iHL"/>
                             <constraint firstItem="qzd-kC-Fzl" firstAttribute="top" secondItem="4qX-Gi-3rm" secondAttribute="top" constant="8" id="oMH-cs-QRj"/>
@@ -974,6 +974,9 @@
                                         <string key="text">If you see this, i'm sorry but something went wrong. All our food are delicious though, we promise. If it isn't you can blame no one. Ok but actually this shouldn't happen, inform bori. thanks</string>
                                         <fontDescription key="fontDescription" name="MeriendaOne-Regular" family="Merienda One" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="MeriendaOne-Regular" family="Merienda One" pointSize="27"/>
+                                        </variation>
                                     </textView>
                                 </subviews>
                             </stackView>

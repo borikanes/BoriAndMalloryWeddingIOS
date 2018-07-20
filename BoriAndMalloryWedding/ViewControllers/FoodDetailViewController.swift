@@ -49,6 +49,9 @@ class FoodDetailViewController: UIViewController {
 
         } else if isIpad105() {
 
+        } else if isIphone5AndBelow() {
+            stackViewTopConstraint.constant -= 1.0
+//            foodDescriptionTextView.font = foodDescriptionTextView.font?.withSize(14)
         }
     }
 
@@ -174,6 +177,8 @@ class FoodDetailViewController: UIViewController {
                 foodDescriptionTextView.text = foodDescriptionJson.chin_chin
             case "efo_elegusi_clean":
                 foodDescriptionTextView.text = foodDescriptionJson.efo_elegusi_clean
+            case "italian_chicken":
+                foodDescriptionTextView.text = foodDescriptionJson.italian_chicken
             case "jollof":
                 foodDescriptionTextView.text = foodDescriptionJson.jollof
             case "meat_pie":
@@ -182,6 +187,8 @@ class FoodDetailViewController: UIViewController {
                 foodDescriptionTextView.text = foodDescriptionJson.nigerian_fried_rice_clean
             case "puff_puff":
                 foodDescriptionTextView.text = foodDescriptionJson.puff_puff
+            case "salmon":
+                foodDescriptionTextView.text = foodDescriptionJson.salmon
             case "scotch_egg_clean":
                 foodDescriptionTextView.text = foodDescriptionJson.scotch_egg_clean
             default:

@@ -60,5 +60,7 @@ struct FoodDescriptionInfo: Decodable {
     var nigerian_fried_rice_clean: String
     var scotch_egg_clean: String
     var meat_pie: String
+    var salmon: String
+    var italian_chicken: String
     var default_image: String
 }
