@@ -32,7 +32,8 @@ class FoodDetailViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        checkLastModifiedTime()
+        checkLastModifiedTime()
+        foodDescriptionTextView.text = ""
     }
 
     override func viewWillLayoutSubviews() {
@@ -41,8 +42,12 @@ class FoodDetailViewController: UIViewController {
 
     private func setupView() {
         if isIphone10() {
-            stackViewTopConstraint.constant -= 42.0
+            stackViewTopConstraint.constant -= 21.0
         } else if isIpadPro129() {
+
+        } else if isPlusPhone() {
+
+        } else if isIpad105() {
 
         }
     }

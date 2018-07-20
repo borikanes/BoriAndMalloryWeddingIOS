@@ -963,13 +963,13 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dig-mZ-VdA">
-                                <rect key="frame" x="0.0" y="140" width="414" height="596"/>
+                                <rect key="frame" x="0.0" y="131" width="414" height="605"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="puff_puff" translatesAutoresizingMaskIntoConstraints="NO" id="ykC-UX-eEb">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="295.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PNa-xc-sMl">
-                                        <rect key="frame" x="0.0" y="300.66666666666674" width="414" height="295.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="305" width="414" height="300"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">If you see this, i'm sorry but something went wrong. All our food are delicious though, we promise. If it isn't you can blame no one. Ok but actually this shouldn't happen, inform bori. thanks</string>
                                         <fontDescription key="fontDescription" name="MeriendaOne-Regular" family="Merienda One" pointSize="17"/>
@@ -986,7 +986,7 @@
                             <constraint firstItem="dig-mZ-VdA" firstAttribute="trailing" secondItem="kEX-9d-zzJ" secondAttribute="trailing" id="YyO-Ty-xaS"/>
                             <constraint firstAttribute="bottom" secondItem="dig-mZ-VdA" secondAttribute="bottom" id="lbr-t6-y4m"/>
                             <constraint firstItem="ewN-uu-vs4" firstAttribute="leading" secondItem="kEX-9d-zzJ" secondAttribute="leading" id="oMR-TB-16q"/>
-                            <constraint firstItem="dig-mZ-VdA" firstAttribute="top" secondItem="ewN-uu-vs4" secondAttribute="bottom" constant="50" id="rX7-Zv-aCK">
+                            <constraint firstItem="dig-mZ-VdA" firstAttribute="top" secondItem="ewN-uu-vs4" secondAttribute="bottom" constant="41" id="rX7-Zv-aCK">
                                 <variation key="heightClass=regular-widthClass=regular" constant="180"/>
                             </constraint>
                         </constraints>

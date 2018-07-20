@@ -149,7 +149,7 @@ class HomeViewController: UIViewController {
     /**
      Helps set drop shadow for views in home page.
      */
-    fileprivate func setDropShadow(on view: UIView, bounds: CGRect?) {
+    private func setDropShadow(on view: UIView, bounds: CGRect?) {
         view.layer.masksToBounds = false
         view.layer.shadowColor = UIColor.black.cgColor
         view.layer.shadowOpacity = 0.8
