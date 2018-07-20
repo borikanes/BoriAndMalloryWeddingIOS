@@ -51,7 +51,6 @@ class FoodDetailViewController: UIViewController {
 
         } else if isIphone5AndBelow() {
             stackViewTopConstraint.constant -= 1.0
-//            foodDescriptionTextView.font = foodDescriptionTextView.font?.withSize(14)
         }
     }
 
@@ -91,43 +90,60 @@ class FoodDetailViewController: UIViewController {
 
     private func checkLastModifiedTime() {
         self.startActivityIndicator()
-        makeNetworkCall(for: "https://styf7r70gj.execute-api.us-east-1.amazonaws.com/prod/time?for=food") { timeData in
-            guard let time = timeData else {
-                // Handle error here
-                DispatchQueue.main.async {
-                    self.showTextViewDefaultMessage()
-                }
-                self.stopActivityIndicator()
-                return
-            }
-            guard let timeString = String(data: time, encoding: .utf8) else {
-                DispatchQueue.main.async {
-                    self.showTextViewDefaultMessage()
-                }
-                self.stopActivityIndicator()
-                return
-            }
-            let defaults = UserDefaults.standard
-            if let timeSavedInDefaults = defaults.object(forKey: "FoodLastModifiedTime") as? String {
-                if timeSavedInDefaults != timeString {
-                    // New data, re-fetch json
-                    self.fetchDataAndSaveJsonFileLocally()
-                    self.stopActivityIndicator()
-                } else {
+        if Reachability.isConnectedToNetwork() {
+            makeNetworkCall(for: "https://styf7r70gj.execute-api.us-east-1.amazonaws.com/prod/time?for=food") { timeData in
+                guard let time = timeData else {
+                    // Handle error here
                     DispatchQueue.main.async {
-                        self.fetchFileFromLocalAndSetTextView()
+                        self.showTextViewDefaultMessage()
                     }
                     self.stopActivityIndicator()
+                    return
                 }
-            } else {
-                // Save time in user defaults
-                saveModifiedTimeToUserDefaultDB(time: timeString, keyName: "FoodLastModifiedTime")
-                // Get Json from API
-                self.fetchDataAndSaveJsonFileLocally()
+                guard let timeString = String(data: time, encoding: .utf8) else {
+                    DispatchQueue.main.async {
+                        self.showTextViewDefaultMessage()
+                    }
+                    self.stopActivityIndicator()
+                    return
+                }
+                let defaults = UserDefaults.standard
+                if let timeSavedInDefaults = defaults.object(forKey: "FoodLastModifiedTime") as? String {
+                    if timeSavedInDefaults != timeString {
+                        // New data, re-fetch json
+                        self.fetchDataAndSaveJsonFileLocally()
+                        self.stopActivityIndicator()
+                    } else {
+                        DispatchQueue.main.async {
+                            self.fetchFileFromLocalAndSetTextView()
+                        }
+                        self.stopActivityIndicator()
+                    }
+                } else {
+                    // Save time in user defaults
+                    saveModifiedTimeToUserDefaultDB(time: timeString, keyName: "FoodLastModifiedTime")
+                    // Get Json from API
+                    self.fetchDataAndSaveJsonFileLocally()
+                }
             }
+        } else {
+            stopActivityIndicator()
+            showAlert(title: "No Internet Connection", message: "Looks like you're not connected to the internet. Try connecting to WiFi or get a better cell connection.")
         }
     }
 
+    private func showAlert(title: String, message: String) {
+        self.showTextViewDefaultMessage()
+        let okButton = UIAlertAction(title: "Dismiss", style: .default) { (_:UIAlertAction) in
+            DispatchQueue.main.async {
+                self.showTextViewDefaultMessage()
+            }
+        }
+
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(okButton)
+        self.present(alertController, animated: true, completion: nil)
+    }
     private func fetchDataAndSaveJsonFileLocally() {
         makeNetworkCall(for: "https://styf7r70gj.execute-api.us-east-1.amazonaws.com/prod/food-description") { foodDescriptionData in
             guard let foodDescriptionDataUnwrapped = foodDescriptionData else {
