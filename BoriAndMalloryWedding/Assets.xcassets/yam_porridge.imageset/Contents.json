@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "scotch_egg.jpg",
+      "filename" : "yam_porridge.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "scotch_egg@2x.jpg",
+      "filename" : "yam_porridge@2x.jpg",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "scotch_egg@3x.jpg",
+      "filename" : "yam_porridge@3x.jpg",
       "scale" : "3x"
     }
   ],

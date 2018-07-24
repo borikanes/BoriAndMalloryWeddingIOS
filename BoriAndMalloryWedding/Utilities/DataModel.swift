@@ -58,9 +58,12 @@ struct FoodDescriptionInfo: Decodable {
     var efo_elegusi_clean: String
     var chin_chin: String
     var nigerian_fried_rice_clean: String
-    var scotch_egg_clean: String
     var meat_pie: String
     var salmon: String
     var italian_chicken: String
+    var yam_porridge_clean: String
+    var stewed_chicken: String
+    var vegetable_stew_clean: String
+    var moin_moin: String
     var default_image: String
 }

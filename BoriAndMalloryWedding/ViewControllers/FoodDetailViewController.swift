@@ -127,8 +127,9 @@ class FoodDetailViewController: UIViewController {
                 }
             }
         } else {
-            stopActivityIndicator()
-            showAlert(title: "No Internet Connection", message: "Looks like you're not connected to the internet. Try connecting to WiFi or get a better cell connection.")
+            self.fetchFileFromLocalAndSetTextView()
+//            stopActivityIndicator()
+//            showAlert(title: "No Internet Connection", message: "Looks like you're not connected to the internet. Try connecting to WiFi or get a better cell connection.")
         }
     }
 
@@ -145,16 +146,26 @@ class FoodDetailViewController: UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     private func fetchDataAndSaveJsonFileLocally() {
-        makeNetworkCall(for: "https://styf7r70gj.execute-api.us-east-1.amazonaws.com/prod/food-description") { foodDescriptionData in
-            guard let foodDescriptionDataUnwrapped = foodDescriptionData else {
+        DispatchQueue.main.async {
+            if !self.activityIndicator.isAnimating {
+                self.startActivityIndicator()
+            }
+        }
+        if Reachability.isConnectedToNetwork() {
+            makeNetworkCall(for: "https://styf7r70gj.execute-api.us-east-1.amazonaws.com/prod/food-description") { foodDescriptionData in
+                guard let foodDescriptionDataUnwrapped = foodDescriptionData else {
+                    self.stopActivityIndicator()
+                    return
+                }
+                writeToDisk(json: foodDescriptionDataUnwrapped, filename: self.filename)
+                DispatchQueue.main.async {
+                    self.setTextViewText(with: foodDescriptionDataUnwrapped)
+                }
                 self.stopActivityIndicator()
-                return
             }
-            writeToDisk(json: foodDescriptionDataUnwrapped, filename: self.filename)
-            DispatchQueue.main.async {
-                self.setTextViewText(with: foodDescriptionDataUnwrapped)
-            }
-            self.stopActivityIndicator()
+        } else {
+            stopActivityIndicator()
+            showAlert(title: "No Internet Connection", message: "Looks like you're not connected to the internet. Try connecting to WiFi or get a better cell connection.")
         }
     }
 
@@ -205,8 +216,14 @@ class FoodDetailViewController: UIViewController {
                 foodDescriptionTextView.text = foodDescriptionJson.puff_puff
             case "salmon":
                 foodDescriptionTextView.text = foodDescriptionJson.salmon
-            case "scotch_egg_clean":
-                foodDescriptionTextView.text = foodDescriptionJson.scotch_egg_clean
+            case "yam_porridge_clean":
+                foodDescriptionTextView.text = foodDescriptionJson.yam_porridge_clean
+            case "vegetable_stew_clean":
+                foodDescriptionTextView.text = foodDescriptionJson.vegetable_stew_clean
+            case "moin_moin":
+                foodDescriptionTextView.text = foodDescriptionJson.moin_moin
+            case "stewed_chicken":
+                foodDescriptionTextView.text = foodDescriptionJson.stewed_chicken
             default:
                 foodDescriptionTextView.text = foodDescriptionJson.default_image
             }

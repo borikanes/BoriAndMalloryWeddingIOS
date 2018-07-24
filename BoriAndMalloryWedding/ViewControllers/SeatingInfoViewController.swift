@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os
 
 class SeatingInfoViewController: UIViewController {
 
@@ -118,13 +119,15 @@ class SeatingInfoViewController: UIViewController {
             return
         }
 
-        guard let seatInfoArray = getSeatInformationArray(jsonData: jsonUnwrapped),
-            (getSeatInformationArray(jsonData: jsonUnwrapped)?.count)! > 0 else {
+        let seatInfo = getSeatInformationArray(jsonData: jsonUnwrapped)
+        guard let seatInfoArray = seatInfo,
+            (seatInfo?.count)! > 0 else {
                 // Error handle not able to get seat info array
                 self.stopActivityIndicator()
                 self.showAlert(title: "Something went awry", message: "Something went wrong internally, please try again")
                 return
         }
+        print("Seat info array size \(seatInfoArray.count)")
         self.dataFromDisk = seatInfoArray
         self.dataFromDisk.sort(by: { $0.name < $1.name })
         self.stopActivityIndicator()
