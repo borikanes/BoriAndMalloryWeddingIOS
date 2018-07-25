@@ -8,7 +8,7 @@
 
 import Foundation
 
-let filename = "data.json"
+let filename = "seating-data.json"
 
 private var json = """
 [
@@ -27,7 +27,7 @@ private var json = """
 ]
 """.data(using: .utf8)!
 
-func writeToDisk(json: Data = json) {
+func writeToDisk(json: Data = json, filename: String) {
     let file = getDocumentsDirectory().appendingPathComponent(filename)
     print(file.absoluteString)
     do {
@@ -38,14 +38,9 @@ func writeToDisk(json: Data = json) {
     }
 }
 
-func saveModifiedTimeToUserDefaultDB(time: String) {
-    let defaults = UserDefaults.standard
-    defaults.set(time, forKey: "LastModifiedTime")
-}
-
 func getTimeFromAPI(withCompletion completion: @escaping (String?) -> Void ) {
     // Call API here and save to UserDefault
-    let timeEndpoint = "https://styf7r70gj.execute-api.us-east-1.amazonaws.com/prod/time"
+    let timeEndpoint = "https://styf7r70gj.execute-api.us-east-1.amazonaws.com/prod/time?for=seating"
     guard let timeUrl = URL(string: timeEndpoint) else {
         print("Error: cannot create URL")
         completion(nil)
@@ -79,7 +74,7 @@ func getDocumentsDirectory() -> URL {
     return paths[0]
 }
 
-func getFile() -> String? {
+func getFile(filename: String) -> String? {
     var jsonString: String? = nil
     do {
         jsonString = try String(contentsOf: getDocumentsDirectory().appendingPathComponent(filename), encoding: .utf8)
@@ -91,7 +86,7 @@ func getFile() -> String? {
     return jsonString
 }
 
-func doesJsonFileExistInFileSystem() -> Bool {
+func doesJsonFileExistInFileSystem(filename: String) -> Bool {
     let filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
     let fileURL = URL(fileURLWithPath: filePath)
     let fileComponentPath = fileURL.appendingPathComponent(filename)

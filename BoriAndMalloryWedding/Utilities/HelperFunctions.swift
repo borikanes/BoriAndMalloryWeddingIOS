@@ -84,3 +84,37 @@ func isIpad105() -> Bool {
     return (currentModel.range(of: "iPad7,4") != nil ||
         currentModel.range(of: "iPad7,3") != nil )
 }
+
+func makeNetworkCall(for endpoint: String, withCompletion completion: @escaping (Data?) -> Void) {
+//    let timeEndpoint = "https://styf7r70gj.execute-api.us-east-1.amazonaws.com/prod/seating"
+    guard let timeUrl = URL(string: endpoint) else {
+        print("Error: cannot create URL")
+        completion(nil)
+        return
+    }
+    let urlRequest = URLRequest(url: timeUrl)
+    let session = URLSession(configuration: URLSessionConfiguration.default)
+    let task = session.dataTask(with: urlRequest) {
+        (data, _, error) in
+        guard error == nil else {
+            print("error calling time API")
+            print(error!)
+            completion(nil)
+            return
+        }
+        guard let responseData = data else {
+            print("Error: did not receive data")
+            completion(nil)
+            return
+        }
+
+        completion(responseData)
+    }
+    task.resume()
+
+}
+
+func saveModifiedTimeToUserDefaultDB(time: String, keyName: String) {
+    let defaults = UserDefaults.standard
+    defaults.set(time, forKey: keyName)
+}

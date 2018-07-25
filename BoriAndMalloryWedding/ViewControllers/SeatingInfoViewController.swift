@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import os
 
 class SeatingInfoViewController: UIViewController {
 
     private var dataFromDisk: [SeatInfo] = []
     private var filteredSeatData: [SeatInfo] = []
-    let activityIndicator = UIActivityIndicatorView()
-    let activityIndicatorDarkBaseView = UIView()
+    private let activityIndicator = UIActivityIndicatorView()
+    private let activityIndicatorDarkBaseView = UIView()
     private let refreshControl = UIRefreshControl()
+    private let filename = "seating-data.json"
 
     @IBOutlet var seatingInfoLabel: UILabel!
     @IBOutlet var searchBar: UISearchBar!
@@ -39,7 +41,7 @@ class SeatingInfoViewController: UIViewController {
 
             let defaults = UserDefaults.standard
             // if file doesn't exist at all then fetch.
-            if !doesJsonFileExistInFileSystem() {
+            if !doesJsonFileExistInFileSystem(filename: self.filename) {
                 self.fetchDataAndSaveLocally()
             }
             // if time exists already, just check to make sure the time is the same
@@ -55,7 +57,7 @@ class SeatingInfoViewController: UIViewController {
                 // Stop indicator here
             } else {
                 // Save time in user defaults
-                saveModifiedTimeToUserDefaultDB(time: time)
+                saveModifiedTimeToUserDefaultDB(time: time, keyName: "LastModifiedTime")
                 // Get Json from API
                 self.fetchDataAndSaveLocally()
             }
@@ -82,7 +84,7 @@ class SeatingInfoViewController: UIViewController {
                 return
             }
 
-            writeToDisk(json: jsonDataUnwrapped)
+            writeToDisk(json: jsonDataUnwrapped, filename: self.filename)
             self.prepareDataSourceForTableView(json: jsonDataUnwrapped)
         }
     }
@@ -90,7 +92,7 @@ class SeatingInfoViewController: UIViewController {
     private func prepareDataSourceForTableView(json: Data? = nil) {
         guard let jsonUnwrapped = json else {
             // fetch from disk
-            let jsonStringFromDisk = getFile()
+            let jsonStringFromDisk = getFile(filename: filename)
             if let jsonStringFromDiskUnwrapped = jsonStringFromDisk {
                 let jsonData = jsonStringFromDiskUnwrapped.data(using: .utf8)!
                 guard let seatInfoArray = getSeatInformationArray(jsonData: jsonData),
@@ -117,13 +119,15 @@ class SeatingInfoViewController: UIViewController {
             return
         }
 
-        guard let seatInfoArray = getSeatInformationArray(jsonData: jsonUnwrapped),
-            (getSeatInformationArray(jsonData: jsonUnwrapped)?.count)! > 0 else {
+        let seatInfo = getSeatInformationArray(jsonData: jsonUnwrapped)
+        guard let seatInfoArray = seatInfo,
+            (seatInfo?.count)! > 0 else {
                 // Error handle not able to get seat info array
                 self.stopActivityIndicator()
                 self.showAlert(title: "Something went awry", message: "Something went wrong internally, please try again")
                 return
         }
+        print("Seat info array size \(seatInfoArray.count)")
         self.dataFromDisk = seatInfoArray
         self.dataFromDisk.sort(by: { $0.name < $1.name })
         self.stopActivityIndicator()
