@@ -48,7 +48,7 @@ class FoodDetailViewController: UIViewController {
         }
         if self.view.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClass.regular &&
             self.view.traitCollection.verticalSizeClass == UIUserInterfaceSizeClass.regular {
-            stackViewTopConstraint.constant -= 7.0
+            stackViewTopConstraint.constant = isIpadPro129() ? stackViewTopConstraint.constant + 18.0 : stackViewTopConstraint.constant - 7.0
         }
     }
 
