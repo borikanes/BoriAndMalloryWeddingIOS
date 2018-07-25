@@ -43,14 +43,12 @@ class FoodDetailViewController: UIViewController {
     private func setupView() {
         if isIphone10() {
             stackViewTopConstraint.constant -= 21.0
-        } else if isIpadPro129() {
-
-        } else if isPlusPhone() {
-
-        } else if isIpad105() {
-
         } else if isIphone5AndBelow() {
             stackViewTopConstraint.constant -= 1.0
+        }
+        if self.view.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClass.regular &&
+            self.view.traitCollection.verticalSizeClass == UIUserInterfaceSizeClass.regular {
+            stackViewTopConstraint.constant -= 7.0
         }
     }
 
@@ -111,13 +109,11 @@ class FoodDetailViewController: UIViewController {
                 if let timeSavedInDefaults = defaults.object(forKey: "FoodLastModifiedTime") as? String {
                     if timeSavedInDefaults != timeString {
                         // New data, re-fetch json
-                        self.fetchDataAndSaveJsonFileLocally()
-                        self.stopActivityIndicator()
+                        self.fetchDataAndSaveJsonFileLocally() // this function stops indicator
                     } else {
                         DispatchQueue.main.async {
                             self.fetchFileFromLocalAndSetTextView()
                         }
-                        self.stopActivityIndicator()
                     }
                 } else {
                     // Save time in user defaults
@@ -128,8 +124,7 @@ class FoodDetailViewController: UIViewController {
             }
         } else {
             self.fetchFileFromLocalAndSetTextView()
-//            stopActivityIndicator()
-//            showAlert(title: "No Internet Connection", message: "Looks like you're not connected to the internet. Try connecting to WiFi or get a better cell connection.")
+            showAlert(title: "No Internet Connection", message: "Looks like you're not connected to the internet. Try connecting to WiFi or get a better cell connection.")
         }
     }
 
@@ -164,14 +159,16 @@ class FoodDetailViewController: UIViewController {
                 self.stopActivityIndicator()
             }
         } else {
-            stopActivityIndicator()
-            showAlert(title: "No Internet Connection", message: "Looks like you're not connected to the internet. Try connecting to WiFi or get a better cell connection.")
+            DispatchQueue.main.async {
+                self.stopActivityIndicator()
+                self.showAlert(title: "No Internet Connection", message: "Looks like you're not connected to the internet. Try connecting to WiFi or get a better cell connection.")
+            }
         }
     }
 
     private func fetchFileFromLocalAndSetTextView() {
         if !doesJsonFileExistInFileSystem(filename: filename) {
-            fetchDataAndSaveJsonFileLocally()
+            fetchDataAndSaveJsonFileLocally() // this function stops indicator
         } else {
             if let foodDescriptionJson = getFoodDescriptionJsonFile(from: self.filename) {
                 setTextViewText(with: foodDescriptionJson)
