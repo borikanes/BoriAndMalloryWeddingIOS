@@ -24,6 +24,7 @@ line_length: 110
 type_body_length:
   - 300 # warning
   - 400 # error
+cyclomatic_complexity: 15
 # or they can set both explicitly
 file_length:
   warning: 500

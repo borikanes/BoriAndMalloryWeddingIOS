@@ -94,8 +94,7 @@ func makeNetworkCall(for endpoint: String, withCompletion completion: @escaping 
     }
     let urlRequest = URLRequest(url: timeUrl)
     let session = URLSession(configuration: URLSessionConfiguration.default)
-    let task = session.dataTask(with: urlRequest) {
-        (data, _, error) in
+    let task = session.dataTask(with: urlRequest) { (data, _, error) in
         guard error == nil else {
             print("error calling time API")
             print(error!)

@@ -15,6 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        if let tabVC = self.window?.rootViewController as? UITabBarController {
+            if tabVC.view.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClass.regular &&
+                tabVC.view.traitCollection.verticalSizeClass == UIUserInterfaceSizeClass.regular {
+                if let helveticaFont = UIFont(name: "Helvetica Neue", size: 20) {
+                    UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: helveticaFont], for: UIControlState.normal)
+                }
+            }
+        }
         return true
     }
 

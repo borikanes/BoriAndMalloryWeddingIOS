@@ -49,8 +49,7 @@ func getTimeFromAPI(withCompletion completion: @escaping (String?) -> Void ) {
     print("Get TIME called")
     let urlRequest = URLRequest(url: timeUrl)
     let session = URLSession(configuration: URLSessionConfiguration.default)
-    let task = session.dataTask(with: urlRequest) {
-        (data, _, error) in
+    let task = session.dataTask(with: urlRequest) { (data, _, error) in
         guard error == nil else {
             print("error calling time API")
             print(error!)
@@ -103,8 +102,7 @@ func makeNetworkCallForSeatingData(withCompletion completion: @escaping (Data?) 
     }
     let urlRequest = URLRequest(url: timeUrl)
     let session = URLSession(configuration: URLSessionConfiguration.default)
-    let task = session.dataTask(with: urlRequest) {
-        (data, _, error) in
+    let task = session.dataTask(with: urlRequest) { (data, _, error) in
         guard error == nil else {
             print("error calling time API")
             print(error!)
