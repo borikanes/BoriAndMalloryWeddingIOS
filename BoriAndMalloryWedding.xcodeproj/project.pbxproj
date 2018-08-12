@@ -28,6 +28,7 @@
 		51B8C55F2084208500FD5358 /* Satisfy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51B8C55E2084208500FD5358 /* Satisfy-Regular.ttf */; };
 		51B8C5622084218400FD5358 /* MeriendaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51B8C5612084218400FD5358 /* MeriendaOne-Regular.ttf */; };
 		51B8C563208421F400FD5358 /* GreatVibes-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51B8C560208420C100FD5358 /* GreatVibes-Regular.ttf */; };
+		51CECF32211DB334000D8121 /* CellGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CECF31211DB334000D8121 /* CellGradientView.swift */; };
 		51E66DDE20BFC503002DFAD1 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E66DDD20BFC503002DFAD1 /* GradientView.swift */; };
 		51E66DE020BFCAC2002DFAD1 /* BMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E66DDF20BFCAC2002DFAD1 /* BMView.swift */; };
 		51E66DE220C4D090002DFAD1 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E66DE120C4D090002DFAD1 /* ScheduleViewController.swift */; };
@@ -81,6 +82,7 @@
 		51B8C55E2084208500FD5358 /* Satisfy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satisfy-Regular.ttf"; sourceTree = "<group>"; };
 		51B8C560208420C100FD5358 /* GreatVibes-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GreatVibes-Regular.ttf"; sourceTree = "<group>"; };
 		51B8C5612084218400FD5358 /* MeriendaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MeriendaOne-Regular.ttf"; sourceTree = "<group>"; };
+		51CECF31211DB334000D8121 /* CellGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellGradientView.swift; sourceTree = "<group>"; };
 		51E66DDD20BFC503002DFAD1 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		51E66DDF20BFCAC2002DFAD1 /* BMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMView.swift; sourceTree = "<group>"; };
 		51E66DE120C4D090002DFAD1 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				519DA0EE20D25C73002A43A7 /* BMLabel.swift */,
 				51EEEF3C20D5D64700E26E9F /* SeatingInfoTableViewCell.swift */,
 				5189BA4020F30FEE0027576B /* FoodCollectionViewCell.swift */,
+				51CECF31211DB334000D8121 /* CellGradientView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				519DA0EF20D25C73002A43A7 /* BMLabel.swift in Sources */,
 				5189BA4320FA4A3C0027576B /* FoodDetailViewController.swift in Sources */,
 				51B8C5312084204D00FD5358 /* ViewController.swift in Sources */,
+				51CECF32211DB334000D8121 /* CellGradientView.swift in Sources */,
 				EDDB734920DB453100F342BF /* SeatingInfoDataController.swift in Sources */,
 				5189BA4120F30FEE0027576B /* FoodCollectionViewCell.swift in Sources */,
 				51E66DDE20BFC503002DFAD1 /* GradientView.swift in Sources */,
