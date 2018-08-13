@@ -27,18 +27,12 @@ class FoodViewController: UIViewController {
             if let foodDetailViewController = segue.destination as? FoodDetailViewController, let index = selectedIndex {
                     let currentFood = foodInfoArray[index]
                     foodDetailViewController.navBarText = currentFood.name
-               /* if currentFood.imageName == "vegetable_stew" || currentFood.imageName == "nigerian_fried_rice" ||  currentFood.imageName == "efo_elegusi" || currentFood.imageName == "yam_porridge" {
-                    if UIImage(named: "\(currentFood.imageName)_clean") != nil {
-                        foodDetailViewController.imageName = "\(currentFood.imageName)_clean"
-                    } // ELSE should show default image
-                } else {
-                    if UIImage(named: currentFood.imageName) != nil {
-                        foodDetailViewController.imageName = currentFood.imageName
-                    } // ELSE should show default image
-                }*/
+
                 if UIImage(named: "\(currentFood.imageName)_clean") != nil {
                     foodDetailViewController.imageName = "\(currentFood.imageName)_clean"
-                } // ELSE should show default image
+                } else {
+                    foodDetailViewController.imageName = "default_image"
+                }
             }
         }
      }
