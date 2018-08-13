@@ -49,7 +49,6 @@ class SeatingInfoViewController: UIViewController {
                 if timeSavedInDefaults != time {
                     // New data, re-fetch json
                     self.fetchDataAndSaveLocally()
-                    self.stopActivityIndicator()
                 } else {
                     self.prepareDataSourceForTableView()
                     self.stopActivityIndicator()
@@ -86,6 +85,7 @@ class SeatingInfoViewController: UIViewController {
 
             writeToDisk(json: jsonDataUnwrapped, filename: self.filename)
             self.prepareDataSourceForTableView(json: jsonDataUnwrapped)
+            self.stopActivityIndicator()
         }
     }
 
