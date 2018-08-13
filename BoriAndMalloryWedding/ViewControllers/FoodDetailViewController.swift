@@ -26,8 +26,7 @@ class FoodDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navBarTitle.text = navBarText ?? "Something is wrong"
-        foodImageView.image = UIImage(named: imageName!) // create default image
-//        foodDescriptionTextView.text = textViewText ?? defaultTextviewText
+        foodImageView.image = UIImage(named: imageName ?? "default_image") ?? UIImage(named: "default_image")
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -110,6 +109,7 @@ class FoodDetailViewController: UIViewController {
                     if timeSavedInDefaults != timeString {
                         // New data, re-fetch json
                         self.fetchDataAndSaveJsonFileLocally() // this function stops indicator
+                        saveModifiedTimeToUserDefaultDB(time: timeString, keyName: "FoodLastModifiedTime")
                     } else {
                         DispatchQueue.main.async {
                             self.fetchFileFromLocalAndSetTextView()
@@ -149,14 +149,16 @@ class FoodDetailViewController: UIViewController {
         if Reachability.isConnectedToNetwork() {
             makeNetworkCall(for: "https://styf7r70gj.execute-api.us-east-1.amazonaws.com/prod/food-description") { foodDescriptionData in
                 guard let foodDescriptionDataUnwrapped = foodDescriptionData else {
-                    self.stopActivityIndicator()
+                    DispatchQueue.main.async {
+                        self.stopActivityIndicator()
+                    }
                     return
                 }
                 writeToDisk(json: foodDescriptionDataUnwrapped, filename: self.filename)
                 DispatchQueue.main.async {
                     self.setTextViewText(with: foodDescriptionDataUnwrapped)
+                    self.stopActivityIndicator()
                 }
-                self.stopActivityIndicator()
             }
         } else {
             DispatchQueue.main.async {
@@ -197,29 +199,29 @@ class FoodDetailViewController: UIViewController {
                 return
             }
             switch imageNameUnwrapped {
-            case "chin_chin":
+            case "chin_chin_clean":
                 foodDescriptionTextView.text = foodDescriptionJson.chin_chin
             case "efo_elegusi_clean":
                 foodDescriptionTextView.text = foodDescriptionJson.efo_elegusi_clean
-            case "italian_chicken":
+            case "italian_chicken_clean":
                 foodDescriptionTextView.text = foodDescriptionJson.italian_chicken
-            case "jollof":
+            case "jollof_clean":
                 foodDescriptionTextView.text = foodDescriptionJson.jollof
-            case "meat_pie":
+            case "meat_pie_clean":
                 foodDescriptionTextView.text = foodDescriptionJson.meat_pie
             case "nigerian_fried_rice_clean":
                 foodDescriptionTextView.text = foodDescriptionJson.nigerian_fried_rice_clean
-            case "puff_puff":
+            case "puff_puff_clean":
                 foodDescriptionTextView.text = foodDescriptionJson.puff_puff
-            case "salmon":
+            case "salmon_clean":
                 foodDescriptionTextView.text = foodDescriptionJson.salmon
             case "yam_porridge_clean":
                 foodDescriptionTextView.text = foodDescriptionJson.yam_porridge_clean
             case "vegetable_stew_clean":
                 foodDescriptionTextView.text = foodDescriptionJson.vegetable_stew_clean
-            case "moin_moin":
+            case "moin_moin_clean":
                 foodDescriptionTextView.text = foodDescriptionJson.moin_moin
-            case "stewed_chicken":
+            case "stewed_chicken_clean":
                 foodDescriptionTextView.text = foodDescriptionJson.stewed_chicken
             default:
                 foodDescriptionTextView.text = foodDescriptionJson.default_image
@@ -229,15 +231,6 @@ class FoodDetailViewController: UIViewController {
         }
 
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
 
     @IBAction func backButtonClicked(_ sender: UIButton) {
     }

@@ -14,7 +14,7 @@ class FoodViewController: UIViewController {
     var selectedIndex: Int?
 
     let collectionCellReuseIdentifier = "foodCollectionViewCell"
-    var foodInfoArray: [FoodInfo] = [FoodInfo(name: "Meat Pie", imageName: "meat_pie", textColor: UIColor.white, indicatorImageName: "angle_indicator_white"), FoodInfo(name: "Puff Puff", imageName: "puff_puff", textColor: UIColor.black, indicatorImageName: "angle_indicator"), FoodInfo(name: "chin chin", imageName: "chin_chin", textColor: UIColor.white, indicatorImageName: "angle_indicator_white"), FoodInfo(name: "Jollof Rice", imageName: "jollof", textColor: UIColor.white, indicatorImageName: "angle_indicator"), FoodInfo(name: "Nigerian fried rice", imageName: "nigerian_fried_rice", textColor: UIColor.white, indicatorImageName: "angle_indicator_white"), FoodInfo(name: "Pounded yam & egusi", imageName: "efo_elegusi", textColor: UIColor.white, indicatorImageName: "angle_indicator"), FoodInfo(name: "Moin Moin", imageName: "moin_moin", textColor: UIColor.white, indicatorImageName: "angle_indicator_white"), FoodInfo(name: "Yam Porridge", imageName: "yam_porridge", textColor: UIColor.black, indicatorImageName: "angle_indicator"), FoodInfo(name: "Vegetable Stew", imageName: "vegetable_stew", textColor: UIColor.black, indicatorImageName: "angle_indicator"), FoodInfo(name: "Stewed Chicken", imageName: "stewed_chicken", textColor: UIColor.black, indicatorImageName: "angle_indicator"), FoodInfo(name: "Baked Salmon", imageName: "salmon", textColor: UIColor.white, indicatorImageName: "angle_indicator"), FoodInfo(name: "Italian seasoned chicken", imageName: "italian_chicken", textColor: UIColor.black, indicatorImageName: "angle_indicator")]
+    var foodInfoArray: [FoodInfo] = [FoodInfo(name: "Meat Pie", imageName: "meat_pie", textColor: UIColor.white, indicatorImageName: "angle_indicator_white"), FoodInfo(name: "Puff Puff", imageName: "puff_puff", textColor: UIColor.white, indicatorImageName: "angle_indicator_white"), FoodInfo(name: "Chin Chin", imageName: "chin_chin", textColor: UIColor.white, indicatorImageName: "angle_indicator_white"), FoodInfo(name: "Jollof Rice", imageName: "jollof", textColor: UIColor.white, indicatorImageName: "angle_indicator_white"), FoodInfo(name: "Nigerian fried rice", imageName: "nigerian_fried_rice", textColor: UIColor.white, indicatorImageName: "angle_indicator_white"), FoodInfo(name: "Pounded yam & egusi", imageName: "efo_elegusi", textColor: UIColor.white, indicatorImageName: "angle_indicator_white"), FoodInfo(name: "Moin Moin", imageName: "moin_moin", textColor: UIColor.white, indicatorImageName: "angle_indicator_white"), FoodInfo(name: "Yam Porridge", imageName: "yam_porridge", textColor: UIColor.white, indicatorImageName: "angle_indicator_white"), FoodInfo(name: "Vegetable Stew", imageName: "vegetable_stew", textColor: UIColor.white, indicatorImageName: "angle_indicator_white"), FoodInfo(name: "Stewed Chicken", imageName: "stewed_chicken", textColor: UIColor.white, indicatorImageName: "angle_indicator_white"), FoodInfo(name: "Baked Salmon", imageName: "salmon", textColor: UIColor.white, indicatorImageName: "angle_indicator_white"), FoodInfo(name: "Italian seasoned chicken", imageName: "italian_chicken", textColor: UIColor.white, indicatorImageName: "angle_indicator_white")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,14 +27,11 @@ class FoodViewController: UIViewController {
             if let foodDetailViewController = segue.destination as? FoodDetailViewController, let index = selectedIndex {
                     let currentFood = foodInfoArray[index]
                     foodDetailViewController.navBarText = currentFood.name
-                if currentFood.imageName == "vegetable_stew" || currentFood.imageName == "nigerian_fried_rice" ||  currentFood.imageName == "efo_elegusi" || currentFood.imageName == "yam_porridge" {
-                    if UIImage(named: "\(currentFood.imageName)_clean") != nil {
-                        foodDetailViewController.imageName = "\(currentFood.imageName)_clean"
-                    } // ELSE should show default image
+
+                if UIImage(named: "\(currentFood.imageName)_clean") != nil {
+                    foodDetailViewController.imageName = "\(currentFood.imageName)_clean"
                 } else {
-                    if UIImage(named: currentFood.imageName) != nil {
-                        foodDetailViewController.imageName = currentFood.imageName
-                    } // ELSE should show default image
+                    foodDetailViewController.imageName = "default_image"
                 }
             }
         }
@@ -75,6 +72,7 @@ extension FoodViewController: UICollectionViewDataSource {
                                                             for: indexPath) as? FoodCollectionViewCell else {
                                                                 return UICollectionViewCell()
         }
+
         cell.layer.cornerRadius = 5.0
         let currentFood = foodInfoArray[indexPath.row]
         cell.foodName.text = currentFood.name
