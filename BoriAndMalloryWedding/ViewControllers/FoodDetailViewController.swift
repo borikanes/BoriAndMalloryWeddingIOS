@@ -26,8 +26,7 @@ class FoodDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navBarTitle.text = navBarText ?? "Something is wrong"
-        foodImageView.image = UIImage(named: imageName!) // create default image
-//        foodDescriptionTextView.text = textViewText ?? defaultTextviewText
+        foodImageView.image = UIImage(named: imageName ?? "default_image") ?? UIImage(named: "default_image")
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -232,15 +231,6 @@ class FoodDetailViewController: UIViewController {
         }
 
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
 
     @IBAction func backButtonClicked(_ sender: UIButton) {
     }
