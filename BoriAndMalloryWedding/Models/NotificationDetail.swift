@@ -11,10 +11,10 @@ import UserNotifications
 
 struct NotificationDetail {
     
-    let triggerDate: DateComponents
-    let identifier: String
     let content = UNMutableNotificationContent()
+    let identifier: String
     let trigger: UNCalendarNotificationTrigger
+    let triggerDate: DateComponents
     let request: UNNotificationRequest
     
     init(title: String, subtitle: String?, body: String, triggerDate: DateComponents, identifier: String) {
