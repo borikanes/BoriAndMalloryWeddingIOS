@@ -25,6 +25,7 @@ struct NotificationDetail {
             self.content.subtitle = subtitle
         }
         self.content.body = body
+        self.content.sound = UNNotificationSound.default()  // Possible formats: .aiff, .wav, or .caf
         self.trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
         self.request = UNNotificationRequest(identifier: self.identifier, content: self.content, trigger: self.trigger)
     }
