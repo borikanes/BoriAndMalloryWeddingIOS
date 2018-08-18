@@ -74,7 +74,7 @@ func getDocumentsDirectory() -> URL {
 }
 
 func getFile(filename: String) -> String? {
-    var jsonString: String? = nil
+    var jsonString: String?
     do {
         jsonString = try String(contentsOf: getDocumentsDirectory().appendingPathComponent(filename), encoding: .utf8)
     } catch {
