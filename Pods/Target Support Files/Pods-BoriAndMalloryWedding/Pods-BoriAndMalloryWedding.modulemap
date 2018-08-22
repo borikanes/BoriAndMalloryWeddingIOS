@@ -1,0 +1,6 @@
+framework module Pods_BoriAndMalloryWedding {
+  umbrella header "Pods-BoriAndMalloryWedding-umbrella.h"
+
+  export *
+  module * { export * }
+}

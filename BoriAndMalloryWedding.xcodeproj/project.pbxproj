@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E4528D33E0CB6453353DDBF /* Pods_BoriAndMalloryWedding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D216C97E078BD4517C60167 /* Pods_BoriAndMalloryWedding.framework */; };
+		0E7AD0324AF1D0708A3FBFA8 /* Pods_BoriAndMalloryWeddingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A49BB3B656B6BBCF5325C92 /* Pods_BoriAndMalloryWeddingUITests.framework */; };
 		510D87C120E9CEA7004E9472 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510D87C020E9CEA7004E9472 /* Reachability.swift */; };
+		51542E03212BD5D4009A3CF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51542E02212BD5D3009A3CF9 /* GoogleService-Info.plist */; };
+		51542E05212BD79E009A3CF9 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 51542E04212BD79E009A3CF9 /* Podfile */; };
 		5189BA3F20F30F950027576B /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5189BA3E20F30F950027576B /* FoodViewController.swift */; };
 		5189BA4120F30FEE0027576B /* FoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5189BA4020F30FEE0027576B /* FoodCollectionViewCell.swift */; };
 		5189BA4320FA4A3C0027576B /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5189BA4220FA4A3C0027576B /* FoodDetailViewController.swift */; };
@@ -34,6 +38,7 @@
 		51EEEF3B20D5744C00E26E9F /* SeatingInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EEEF3A20D5744C00E26E9F /* SeatingInfoViewController.swift */; };
 		51EEEF3D20D5D64700E26E9F /* SeatingInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EEEF3C20D5D64700E26E9F /* SeatingInfoTableViewCell.swift */; };
 		51EEEF3F20D5F71400E26E9F /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EEEF3E20D5F71400E26E9F /* DataModel.swift */; };
+		7976D196A60DC2AB8DE0F9C0 /* Pods_BoriAndMalloryWeddingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBCF12CF2C4E7BB2E769061 /* Pods_BoriAndMalloryWeddingTests.framework */; };
 		EDDB734920DB453100F342BF /* SeatingInfoDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDB734820DB453100F342BF /* SeatingInfoDataController.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,10 +60,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0CBCF12CF2C4E7BB2E769061 /* Pods_BoriAndMalloryWeddingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoriAndMalloryWeddingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D216C97E078BD4517C60167 /* Pods_BoriAndMalloryWedding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoriAndMalloryWedding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DE3B4F3D1AE749C6D04BCD6 /* Pods-BoriAndMalloryWeddingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoriAndMalloryWeddingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoriAndMalloryWeddingUITests/Pods-BoriAndMalloryWeddingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3E18066A9E0ECA45C9800DB0 /* Pods-BoriAndMalloryWeddingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoriAndMalloryWeddingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BoriAndMalloryWeddingUITests/Pods-BoriAndMalloryWeddingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		498CD7A8DAAC2D84A49438FA /* Pods-BoriAndMalloryWeddingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoriAndMalloryWeddingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoriAndMalloryWeddingTests/Pods-BoriAndMalloryWeddingTests.release.xcconfig"; sourceTree = "<group>"; };
 		510D87C020E9CEA7004E9472 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		51542E02212BD5D3009A3CF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		51542E04212BD79E009A3CF9 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5189BA3E20F30F950027576B /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		5189BA4020F30FEE0027576B /* FoodCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCollectionViewCell.swift; sourceTree = "<group>"; };
 		5189BA4220FA4A3C0027576B /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
+		518C3E7A212BE78800C1E5AC /* BoriAndMalloryWedding.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BoriAndMalloryWedding.entitlements; sourceTree = "<group>"; };
 		519DA0EE20D25C73002A43A7 /* BMLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMLabel.swift; sourceTree = "<group>"; };
 		51B71A4220B7A4F20073DB3D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		51B71A4520B8AD5A0073DB3D /* UtilityExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityExtensions.swift; sourceTree = "<group>"; };
@@ -87,7 +100,11 @@
 		51EEEF3A20D5744C00E26E9F /* SeatingInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatingInfoViewController.swift; sourceTree = "<group>"; };
 		51EEEF3C20D5D64700E26E9F /* SeatingInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatingInfoTableViewCell.swift; sourceTree = "<group>"; };
 		51EEEF3E20D5F71400E26E9F /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		93635BE845CBE0CD8D150139 /* Pods-BoriAndMalloryWedding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoriAndMalloryWedding.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BoriAndMalloryWedding/Pods-BoriAndMalloryWedding.debug.xcconfig"; sourceTree = "<group>"; };
+		9A49BB3B656B6BBCF5325C92 /* Pods_BoriAndMalloryWeddingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoriAndMalloryWeddingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF928FE9E8F7F115EADF46B3 /* Pods-BoriAndMalloryWedding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoriAndMalloryWedding.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoriAndMalloryWedding/Pods-BoriAndMalloryWedding.release.xcconfig"; sourceTree = "<group>"; };
 		EDDB734820DB453100F342BF /* SeatingInfoDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatingInfoDataController.swift; sourceTree = "<group>"; };
+		FB0B2D4523F82E1D93D8CAD2 /* Pods-BoriAndMalloryWeddingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoriAndMalloryWeddingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BoriAndMalloryWeddingTests/Pods-BoriAndMalloryWeddingTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E4528D33E0CB6453353DDBF /* Pods_BoriAndMalloryWedding.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7976D196A60DC2AB8DE0F9C0 /* Pods_BoriAndMalloryWeddingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E7AD0324AF1D0708A3FBFA8 /* Pods_BoriAndMalloryWeddingUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +175,8 @@
 				51B8C5422084204E00FD5358 /* BoriAndMalloryWeddingTests */,
 				51B8C54D2084204E00FD5358 /* BoriAndMalloryWeddingUITests */,
 				51B8C52C2084204D00FD5358 /* Products */,
+				D450291381F390501C5DFFF0 /* Pods */,
+				8F70B96ED9715ADFC669B3C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,6 +193,9 @@
 		51B8C52D2084204D00FD5358 /* BoriAndMalloryWedding */ = {
 			isa = PBXGroup;
 			children = (
+				518C3E7A212BE78800C1E5AC /* BoriAndMalloryWedding.entitlements */,
+				51542E04212BD79E009A3CF9 /* Podfile */,
+				51542E02212BD5D3009A3CF9 /* GoogleService-Info.plist */,
 				51E66DDC20BFC4B9002DFAD1 /* Views */,
 				5150865020B8C6800084D15C /* ViewControllers */,
 				51B71A4720B8B7670073DB3D /* Utilities */,
@@ -234,6 +259,29 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		8F70B96ED9715ADFC669B3C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D216C97E078BD4517C60167 /* Pods_BoriAndMalloryWedding.framework */,
+				0CBCF12CF2C4E7BB2E769061 /* Pods_BoriAndMalloryWeddingTests.framework */,
+				9A49BB3B656B6BBCF5325C92 /* Pods_BoriAndMalloryWeddingUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D450291381F390501C5DFFF0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				93635BE845CBE0CD8D150139 /* Pods-BoriAndMalloryWedding.debug.xcconfig */,
+				CF928FE9E8F7F115EADF46B3 /* Pods-BoriAndMalloryWedding.release.xcconfig */,
+				FB0B2D4523F82E1D93D8CAD2 /* Pods-BoriAndMalloryWeddingTests.debug.xcconfig */,
+				498CD7A8DAAC2D84A49438FA /* Pods-BoriAndMalloryWeddingTests.release.xcconfig */,
+				3E18066A9E0ECA45C9800DB0 /* Pods-BoriAndMalloryWeddingUITests.debug.xcconfig */,
+				2DE3B4F3D1AE749C6D04BCD6 /* Pods-BoriAndMalloryWeddingUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -241,10 +289,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 51B8C5532084204E00FD5358 /* Build configuration list for PBXNativeTarget "BoriAndMalloryWedding" */;
 			buildPhases = (
+				9C5AF11896C892606D024029 /* [CP] Check Pods Manifest.lock */,
 				51B8C5272084204D00FD5358 /* Sources */,
 				51B8C5282084204D00FD5358 /* Frameworks */,
 				51B8C5292084204D00FD5358 /* Resources */,
 				51B71A4E20BD1A600073DB3D /* ShellScript */,
+				295B4102F76F7D10747DB052 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -259,6 +309,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 51B8C5562084204E00FD5358 /* Build configuration list for PBXNativeTarget "BoriAndMalloryWeddingTests" */;
 			buildPhases = (
+				36083311DDCC51927E601888 /* [CP] Check Pods Manifest.lock */,
 				51B8C53B2084204E00FD5358 /* Sources */,
 				51B8C53C2084204E00FD5358 /* Frameworks */,
 				51B8C53D2084204E00FD5358 /* Resources */,
@@ -277,6 +328,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 51B8C5592084204E00FD5358 /* Build configuration list for PBXNativeTarget "BoriAndMalloryWeddingUITests" */;
 			buildPhases = (
+				9F8444C4CB5D14803CBCB036 /* [CP] Check Pods Manifest.lock */,
 				51B8C5462084204E00FD5358 /* Sources */,
 				51B8C5472084204E00FD5358 /* Frameworks */,
 				51B8C5482084204E00FD5358 /* Resources */,
@@ -303,6 +355,11 @@
 				TargetAttributes = {
 					51B8C52A2084204D00FD5358 = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					51B8C53E2084204E00FD5358 = {
 						CreatedOnToolsVersion = 9.3;
@@ -340,10 +397,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				51B8C563208421F400FD5358 /* GreatVibes-Regular.ttf in Resources */,
+				51542E03212BD5D4009A3CF9 /* GoogleService-Info.plist in Resources */,
 				51B8C5622084218400FD5358 /* MeriendaOne-Regular.ttf in Resources */,
 				51B71A4B20BBCBF90073DB3D /* Cookie-Regular.ttf in Resources */,
 				51B8C5392084204E00FD5358 /* LaunchScreen.storyboard in Resources */,
 				519DA0F020D4A7A2002A43A7 /* Assets.xcassets in Resources */,
+				51542E05212BD79E009A3CF9 /* Podfile in Resources */,
 				51B8C55F2084208500FD5358 /* Satisfy-Regular.ttf in Resources */,
 				51B8C5342084204D00FD5358 /* Main.storyboard in Resources */,
 			);
@@ -367,6 +426,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		295B4102F76F7D10747DB052 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BoriAndMalloryWedding/Pods-BoriAndMalloryWedding-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BoriAndMalloryWedding/Pods-BoriAndMalloryWedding-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36083311DDCC51927E601888 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BoriAndMalloryWeddingTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		51B71A4E20BD1A600073DB3D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -379,6 +476,42 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		9C5AF11896C892606D024029 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BoriAndMalloryWedding-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F8444C4CB5D14803CBCB036 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BoriAndMalloryWeddingUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -575,8 +708,10 @@
 		};
 		51B8C5542084204E00FD5358 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93635BE845CBE0CD8D150139 /* Pods-BoriAndMalloryWedding.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BoriAndMalloryWedding/BoriAndMalloryWedding.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7B6H8LADVH;
 				INFOPLIST_FILE = BoriAndMalloryWedding/Info.plist;
@@ -593,8 +728,10 @@
 		};
 		51B8C5552084204E00FD5358 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF928FE9E8F7F115EADF46B3 /* Pods-BoriAndMalloryWedding.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BoriAndMalloryWedding/BoriAndMalloryWedding.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7B6H8LADVH;
 				INFOPLIST_FILE = BoriAndMalloryWedding/Info.plist;
@@ -611,6 +748,7 @@
 		};
 		51B8C5572084204E00FD5358 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB0B2D4523F82E1D93D8CAD2 /* Pods-BoriAndMalloryWeddingTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -632,6 +770,7 @@
 		};
 		51B8C5582084204E00FD5358 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 498CD7A8DAAC2D84A49438FA /* Pods-BoriAndMalloryWeddingTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -653,6 +792,7 @@
 		};
 		51B8C55A2084204E00FD5358 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E18066A9E0ECA45C9800DB0 /* Pods-BoriAndMalloryWeddingUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -673,6 +813,7 @@
 		};
 		51B8C55B2084204E00FD5358 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DE3B4F3D1AE749C6D04BCD6 /* Pods-BoriAndMalloryWeddingUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
