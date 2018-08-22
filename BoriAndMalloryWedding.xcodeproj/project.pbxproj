@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		124265602120A51B00AD6BDD /* NotificationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1242655F2120A51B00AD6BDD /* NotificationDetail.swift */; };
+		124265622120AFB800AD6BDD /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124265612120AFB800AD6BDD /* NotificationHelper.swift */; };
 		510D87C120E9CEA7004E9472 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510D87C020E9CEA7004E9472 /* Reachability.swift */; };
 		5189BA3F20F30F950027576B /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5189BA3E20F30F950027576B /* FoodViewController.swift */; };
 		5189BA4120F30FEE0027576B /* FoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5189BA4020F30FEE0027576B /* FoodCollectionViewCell.swift */; };
@@ -55,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1242655F2120A51B00AD6BDD /* NotificationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDetail.swift; sourceTree = "<group>"; };
+		124265612120AFB800AD6BDD /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		510D87C020E9CEA7004E9472 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		5189BA3E20F30F950027576B /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		5189BA4020F30FEE0027576B /* FoodCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -115,6 +119,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1242655E2120A4B900AD6BDD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				51EEEF3E20D5F71400E26E9F /* DataModel.swift */,
+				1242655F2120A51B00AD6BDD /* NotificationDetail.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		5150865020B8C6800084D15C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,9 +153,9 @@
 			isa = PBXGroup;
 			children = (
 				51B71A4820B8B7850073DB3D /* HelperFunctions.swift */,
-				51EEEF3E20D5F71400E26E9F /* DataModel.swift */,
 				EDDB734820DB453100F342BF /* SeatingInfoDataController.swift */,
 				510D87C020E9CEA7004E9472 /* Reachability.swift */,
+				124265612120AFB800AD6BDD /* NotificationHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -175,6 +188,7 @@
 				5150865020B8C6800084D15C /* ViewControllers */,
 				51B71A4720B8B7670073DB3D /* Utilities */,
 				51B71A4420B8AD190073DB3D /* Extensions */,
+				1242655E2120A4B900AD6BDD /* Models */,
 				51B8C52E2084204D00FD5358 /* AppDelegate.swift */,
 				51B8C5322084204D00FD5358 /* Main.storyboard */,
 				51B8C5352084204E00FD5358 /* Assets.xcassets */,
@@ -391,6 +405,7 @@
 				5189BA3F20F30F950027576B /* FoodViewController.swift in Sources */,
 				51B71A4920B8B7850073DB3D /* HelperFunctions.swift in Sources */,
 				519DA0EF20D25C73002A43A7 /* BMLabel.swift in Sources */,
+				124265602120A51B00AD6BDD /* NotificationDetail.swift in Sources */,
 				5189BA4320FA4A3C0027576B /* FoodDetailViewController.swift in Sources */,
 				51B8C5312084204D00FD5358 /* ViewController.swift in Sources */,
 				EDDB734920DB453100F342BF /* SeatingInfoDataController.swift in Sources */,
@@ -402,6 +417,7 @@
 				51E66DE020BFCAC2002DFAD1 /* BMView.swift in Sources */,
 				51B8C52F2084204D00FD5358 /* AppDelegate.swift in Sources */,
 				51B71A4620B8AD5A0073DB3D /* UtilityExtensions.swift in Sources */,
+				124265622120AFB800AD6BDD /* NotificationHelper.swift in Sources */,
 				51EEEF3B20D5744C00E26E9F /* SeatingInfoViewController.swift in Sources */,
 				51B71A4320B7A4F20073DB3D /* HomeViewController.swift in Sources */,
 			);
@@ -578,7 +594,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7B6H8LADVH;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = BoriAndMalloryWedding/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -596,7 +612,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7B6H8LADVH;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = BoriAndMalloryWedding/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let center = UNUserNotificationCenter.current()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -23,6 +25,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
         }
+        
+        // Request permission to display alerts and play sounds.
+        center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+            guard error == nil else {
+                print("Something went wrong with requesting notification permission: \(error!)")
+                return
+            }
+            
+            if !granted {
+                print("Was not granted permission...")
+            } else {
+                self.center.delegate = self
+                let notifcationHelper = NotificationHelper()
+                notifcationHelper.configureNotifications(onCompletion: {
+                    print("Notifications successfully created...")
+                }, onError: { (error) in
+                    print("Error creating notifications: \(error)")
+                })
+            }
+        }
+        
         return true
     }
 
@@ -50,4 +73,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        NotificationCenter.default.removeObserver(someObserver)
     }
 
+}
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    
+    // This allows notifications to show up even when app is in foreground...
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .sound])
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        if let tabBarController = self.window?.rootViewController as? UITabBarController {
+            // When notification is selected, move to Schedule VC
+            tabBarController.selectedIndex = 1
+        }
+        
+        completionHandler()
+    }
 }
