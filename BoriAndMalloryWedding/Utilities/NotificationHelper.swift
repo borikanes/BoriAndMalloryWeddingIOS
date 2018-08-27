@@ -16,22 +16,7 @@ class NotificationHelper {
                            subtitle: nil,
                            body: "The ceremony is about to begin at the UMD Chapel!",
                            triggerDate: DateComponents(month: 9, day: 22, hour: 10, minute: 50),
-                           identifier: "Notification1"),
-        NotificationDetail(title: "Hors d'oeurves",
-                           subtitle: nil,
-                           body: "Snacks are now being served at the banquet hall!",
-                           triggerDate: DateComponents(month: 9, day: 22, hour: 12, minute: 30),
-                           identifier: "Notification2"),
-        NotificationDetail(title: "Traditional Ceremony",
-                           subtitle: nil,
-                           body: "The traditional Nigerian ceremony is about to begin at the banquet hall!",
-                           triggerDate: DateComponents(month: 9, day: 22, hour: 14, minute: 00),
-                           identifier: "Notification3"),
-        NotificationDetail(title: "Lunch Time",
-                           subtitle: nil,
-                           body: "Lunch and Reception is happening now at the banquet hall!",
-                           triggerDate: DateComponents(month: 9, day: 22, hour: 16, minute: 00),
-                           identifier: "Notification4")
+                           identifier: "Notification1")
     ]
     
     let notificationCenter = UNUserNotificationCenter.current()
